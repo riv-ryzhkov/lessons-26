@@ -86,21 +86,21 @@
 #     print('.' * 80)
 #
 #
-#     command = red
-#     while True:
-#         traffic_light.change_state(command)
-#         print(traffic_light.move())
-#
-#         if command == red:
-#             command = yellow
-#             time.sleep(2)
-#         elif command == yellow:
-#             command = green
-#             time.sleep(.5)
-#         else:
-#             command = red
-#             time.sleep(3)
-#         print('.' * 80)
+#     # command = red
+#     # while True:
+#     #     traffic_light.change_state(command)
+#     #     print(traffic_light.move())
+#     #
+#     #     if command == red:
+#     #         command = yellow
+#     #         time.sleep(2)
+#     #     elif command == yellow:
+#     #         command = green
+#     #         time.sleep(.5)
+#     #     else:
+#     #         command = red
+#     #         time.sleep(3)
+#     #     print('.' * 80)
 
 
 
@@ -250,7 +250,7 @@
 #         print(obj.close())
 #         print(obj.lock())  # Locking the door
 #         print(obj.unlock())
-
+#
 
 # """
 # У цьому прикладі ми моделюємо двері,

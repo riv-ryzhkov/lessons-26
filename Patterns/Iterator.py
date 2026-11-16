@@ -1,4 +1,4 @@
-# Клас ітератора
+# # Клас ітератора
 # class Iterator:
 #     def __init__(self, collection):
 #         self.collection = collection
@@ -52,15 +52,15 @@
 #             print('StopIteration!!!!!!!!!!!!!!!!!!')
 #             break
 #     print('.' * 80)
-
-    # for i in range(len(collection.items)):
-    #     try:
-    #         item = iterator.next()
-    #         print(item, end='   ')
-    #     except StopIteration:
-    #         print('Except!!!!')
-    #         break
-    # print('.' * 80)
+#
+#     # for i in range(len(collection.items)):
+#     #     try:
+#     #         item = iterator.next()
+#     #         print(item)
+#     #     except StopIteration:
+#     #         print('Except!!!!')
+#     #         break
+#     # print('.' * 80)
 
 
 """
@@ -134,10 +134,25 @@
 # # task5 = Task("Review my emails for today!")
 #
 #
-# # task1 = Task(2025.03)
-# # task2 = Task([1, 2, 3])
-# # task3 = Task(True)
+# task1 = Task(2025.03)
+# task2 = Task([1, 2, 3])
+# task3 = Task(True)
+# task4 = Task(True)
+# task5 = Task(True)
 #
+# #
+#
+#
+# #
+# task_list = TaskList()
+#
+# task_list.add_task(task1)
+# task_list.add_task(task2)
+# task_list.add_task(task3)
+# task_list.add_task(task4)
+# task_list.add_task(task5)
+#
+# #
 #
 # my_tasks = [
 #     'Have breakfast',
@@ -151,32 +166,31 @@
 #     6786
 # ]
 #
-# # my_tasks = []
-# text = ''
-#
-# while text != 'exit':
-#     text = input('Input next task : ')
-#     my_tasks.append(text)
-#
-#
-#
-# task_list = TaskList()
-#
-#
-# # task_list.add_task(task1)
-# # task_list.add_task(task2)
-# # task_list.add_task(task3)
-# # task_list.add_task(task4)
-# # task_list.add_task(task5)
-#
-#
 # for elem in my_tasks:
 #     task_list.add_task(Task(elem))
 #
 #
 #
+#
+# #
+# # my_tasks = []
+# # text = 'work'
+# #
+# # while text != '':
+# #     text = input('Input next task : ')
+# #     my_tasks.append(text)
+# #
+# # for elem in my_tasks:
+# #      task_list.add_task(Task(elem))
+# #
+# #
+#
+#
+# #
 # # Створимо ітератор для списку завдань
 # iterator = TaskListIterator(task_list)
+#
+#
 #
 # # Перебираємо та виводимо завдання
 # while True:

@@ -1,8 +1,8 @@
 # Змінна упорядкована послідовність об'єктів
 
 # l1 = [23, 3.14, 'sdf', True, [1, 2, [3, 4, 6]], 9999]
-
-
+#
+#
 # print(l1)
 # print(*l1, sep='\n')
 #
@@ -18,7 +18,6 @@
 # print(l1)
 # print(len(l1))
 
-# print(*l1, sep='\n')
 
 # print(dir(l1))
 # print(*dir(l1), sep='\n')
@@ -49,7 +48,7 @@
 
 ###################################################
 
-# l = ['a', 'b', 'c', 'd']
+l = ['a', 'b', 'c', 'd']
 #
 # print(*l)
 #
@@ -68,20 +67,20 @@
 
 
 # l = []                     # False  ''  []  ()   {}  0   0.0
-# l = list()
-# l = 0.0
+# # l = list()
+# # l = 0.0
 # print(type(l), l, id(l))
 # print(bool(l))
 
 # ..........................
 ###################################
+# print('Hello,'+' world!')
 
-#
-# l1 = [1, 2, 3]
+l1 = [1, 2, 3]
 # l2 = [12, 22, 32]
 # print(l1 + l2)
-#
-# print('Hello,'+' world!')
+
+
 
 # print(l1, id(l1))
 # l1 += l1
@@ -102,17 +101,18 @@
 # print('l1=', l1, id(l1))
 
 # l1.append(4)
-
-
+#
 # print(l1.append(4))
+# print(l1)
 
 # l55 = l1.append(99)
-# # print('l55 = ',l55)
+# print('l55 = ',l55)
 # l1.append('Hello')
 # l1.append([444, 88])
+# # l1.append(444, 88) #!!!!!!!!!!!!!!!!!!
 # l1.append([444, 777]+[99999])
 # l1.append(l2)
-# # #
+# # # #
 # print('l1=', l1, id(l1))
 # print('len = ', len(l1))
 
@@ -121,14 +121,14 @@
 
 # l1 = [1, 2, 3]
 # print('l1=', l1, id(l1))
-#
-# # l1.extend([444, 666])
+
+# l1.extend([444, 666])
 # l1 += [444, 666]
 # l2 = [11, 21, 31]
-# # l1.extend(l2)
+# l1.extend(l2)
 # l1 += l2
-# # print('l1=', l1, id(l1))
-# # print(l1.extend([4, 5]))
+# print('l1=', l1, id(l1))
+# print(l1.extend([4, 5]))
 # print('l1=', l1, id(l1))
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #
@@ -167,6 +167,7 @@
 
 
 # l6 = list(range(5))
+# print(l6, type(l6), id(l6))
 # l6 = list(map(str, range(5)))
 # print(l6, type(l6), id(l6))
 # t = ' '.join(l6)
@@ -185,29 +186,10 @@
 # print('c ===>', c, id(c))
 # print('d ===>', d, id(d))
 # print('e ===>', e, id(e))
+# print(a == c)
+# print(a is c)
 
-
-
-
-# a = 1+1e-15
-# print(a)
-
-# import math
-#
-#
-# print(math.e)
-# print(math.e**3)
-# print(math.exp(3))
-# eps = 1e-15
-#
-# if abs(math.e**3 - math.exp(3)) <= eps:
-#     print('Рівні')
-# else:
-#     print('НЕ РІВНІ!')
-
-# print(math.isclose(math.e**3, math.exp(3)))
-
-
+############################################################ KH-26!!!!
 
 #################################################
 ######## insert #################################

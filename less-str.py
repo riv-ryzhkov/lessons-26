@@ -5,9 +5,9 @@
 
 ################################################
 
-# a = 'What's your name?'
+# # a = 'What's your name?'
 # a = "What's your name?"
-#
+# #
 # print(a)
 
 ##################################################
@@ -22,7 +22,7 @@
 # I suggest running a virtual machine with
 # Ubuntu LTS before continuing any further.
 # '''
-#
+
 # print(text)
 ###############################################
 
@@ -31,7 +31,7 @@
 # we need to get the source code onto your computer.
 # These instructions are for Ubuntu Linux,
 # which's is the easiest environment to configure
-# for OpenShot development. If you are using another OS,
+# for OpenShot development. If you're using another OS,
 # I suggest running a virtual machine
 # with Ubuntu LTS before continuing any further.
 # """
@@ -68,20 +68,21 @@
 # text = 'W' + text[1:]
 # print('text :', text, id(text))
 # print('text1 :', text1, id(text1))
-
+# text = "Hi!"
+# print('text :', text, id(text))
 ###################################
 
 # text = 'How are you!'
 # print(len(text))
 # for i in range(len(text)): # 0,1,2,3....11
-#     print(i, text[i], sep='->', end='    ')
+#     print(i, text[i], sep='->', end=' ')
 # print()
-# print()
+#
 # for key, vol in enumerate(text):
-#     print(key, vol,  sep='->', end='    ')
+#     print(key, vol,  sep='->', end=' ')
 
 
-############################################
+##########################################
 
 # a = r"C:\temp\new.txt"
 # print(a)
@@ -95,25 +96,7 @@
 
 # print(r'C:\temp\new.txt')
 
-##############################################
 
-# a = 'How Are You!'
-a = 'duan.edu.ua'
-
-
-# for i in range(256):
-#     print(i, '->', chr(i), '\t', hex(i))
-
-
-
-# for i in a:
-#     print(i, '->', ord(i))
-
-# print('Temperature is ' + chr(177) +'2' + chr(176) + 'C')
-
-# print(a.startswith('How Are'))
-# print(a.endswith('.ua') or a.endswith('.com'))
-# print(a)
 
 ######################################
 
@@ -124,8 +107,8 @@ a = 'duan.edu.ua'
 # print(a, type(a), id(a))
 # print(b, type(b))
 # #
-# a = ' '.join(b)
-# print(a, type(a), id(a))
+# c = ' '.join(b)
+# print(c, type(c), id(c))
 
 ##########################################
 # a = '------Hel------lo!-----'
@@ -143,10 +126,6 @@ a = 'duan.edu.ua'
 # b = '   Hello          '.strip()
 # print(a, b, a == b)
 
-# print('=========================')
-# b = a.lstrip('-')
-# print(a)
-# print(b)
 
 ############################################
 # a = 'How are You!'
@@ -166,7 +145,7 @@ a = 'duan.edu.ua'
 
 # a = 'How are Yooooooooooooou!'
 # print(a, id(a))
-# b = a.replace('o', 'O', 5)
+# b = a.replace('o', 'O',7)
 # # a = a.replace('o', 'O', 5)
 # print(a.replace('H', 'W'))
 # print(a, id(a))
@@ -185,11 +164,11 @@ a = 'duan.edu.ua'
 # a = 'University'
 # b = 'Ukraine'
 # c = 'Dnipro'
-
+#
 # print('I love {0}, {1}, and {0}'.format(a, b, c))
 # print('I love {str3}, {str2}, and {str2}'.format(str0=a+b, str1=a, str2='Victory', str3=c))
-
-# print(f'I love {a}, {b} and {c+a}')
+#
+# print(f'I love {a}, {b} and {c+" and " + a}')
 #
 # name = 'Vasya'
 # surname = 'Koval'
@@ -199,14 +178,15 @@ a = 'duan.edu.ua'
 # print(f'I am {age} years old.')
 
 ###############################
-# a = 'How are You!'
-# print(a.find('ooo'))
-# t = a.find('YYY')
+a = 'How are You!'
+# print(a.find('eee'))
+# t = a.find('Y')
+# print(t)
 # print(a[t])
 # print(a.rfind('o'))
 #
-# print(a.index('YY'))
-# print(a.rindex('o'))
+# print(a.index('Ycv'))
+# print(a.rindex('oiuo'))
 
 
 #################################
@@ -227,9 +207,9 @@ a = 'duan.edu.ua'
 #
 # symbol_space = ' '
 #
-# text_our = 'Happy new year!'*3
+# # text_our = 'Happy new year!'
 #
-# # text_your = input('Input your text : ')
+# text_our = input('Input your text : ')
 #
 #
 # print(symbol_mark * line_size)
@@ -247,8 +227,21 @@ a = 'duan.edu.ua'
 # c = 'Hello, world!'
 #
 # print(a > b)
-# # print(a > c)
-# # print(b > c)
+# print(a > c)
+# print(b > c)
+
+# for i in range(256):
+#     print(i, '->', chr(i), '\t', hex(i))
+
+# for i in a:
+#     print(i, '->', ord(i))
+
+# print('Temperature is ' + chr(177) +'2' + chr(176) + ' C')
+
+
+
+
+
 # print(a, a[3], ord(a[3]))
 # print(b, b[3], ord(b[3]))
 
@@ -275,10 +268,14 @@ a = 'duan.edu.ua'
 ############################################
 
 
-# a = 'Hello! How are you!'
-# print(a.count('x')) # 0  False
+############################################
+
+
+a = 'Hello! How are you!'
+# lit = '!'
+# print(a.count(lit)) # 0  False
 #
-# if a.count('x'):
+# if a.count(lit):
 #     print('Літера існує!')
 # else:
 #     print('Літера не існує!')
@@ -287,17 +284,17 @@ a = 'duan.edu.ua'
 #
 #
 #
-# symbol = 'o'
+# symbol = 'ooo'
 # print(a[a.find(symbol)+3]*5 if a.count(symbol) else 'No symbol!')
 #
 #
 # #
-# print(a[a.find('x')])
+# print(a[a.find('x')])  # -1
 # print(a[a.index('x')])
 #
 #
 #
-# symbol = input('Inp symbol :')
+# symbol = input('Inp symbol : ')
 #
 # # if a.count(symbol):
 # if symbol in a:
@@ -319,7 +316,10 @@ a = 'duan.edu.ua'
 
 ###############################################
 
-a = '34'
+# a = '34'
+
+# b = 100_000_6587
+# print(b)
 
 # print(a, 'a.isalpha() ', a.isalpha())
 # print(a, 'a.isdigit()', a.isdigit())
@@ -346,7 +346,7 @@ a = '34'
 # text = ''
 #
 # for i in a:
-#     if i.isupper() or i.isdigit():
+#     if i.isdigit():
 #     # if not i.isspace():
 #     # if i.isdigit():
 #         digit += i
@@ -373,7 +373,7 @@ a = '34'
 # my_country = input('Where are you from? ')
 # text = "Hi {1}, let's go to {0}!".format(my_country, my_name)
 # print(text)
-#
+
 #
 # text = "Hi {name}, let's go to {country}!".format(country=my_country, name=my_name)
 # print(text)
@@ -387,8 +387,9 @@ a = '34'
 #  Поміняйте місцями два слова, що введені через пробіл
 
 # a, b = input("Введіть два слова через пробіл : ").split()
-# b = input("Введіть два слова через пробіл : ").split()
-# print(b, a)
+# # b = input("Введіть два слова через пробіл : ").split()
+# a, b = b, a
+# print(a, b)
 # print(b)
 
 

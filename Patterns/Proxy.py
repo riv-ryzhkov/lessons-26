@@ -2,7 +2,7 @@
 # Приклад з Інтернет-сайтами ===========
 # ======================================
 
-#
+
 # # Суб'єкт
 # class Internet:
 #     def connect(self, website):
@@ -63,7 +63,7 @@
 # Приклад з банківською карткою ===================
 # =================================================
 
-#
+
 # # Базовий інтерфейс для реального рахунку та проксі-рахунку
 # class BankAccount:
 #     def __init__(self, account_holder, balance):
@@ -76,7 +76,7 @@
 #     def deposit(self, amount):
 #         self.balance += amount
 #         print(f"Balance of {self.account_holder}'s "
-#               f"account has increased to {self.balance}.")
+#               f"account has increased of {amount} to {self.balance}.")
 #
 #     def withdraw(self, amount):
 #         self.balance -= amount

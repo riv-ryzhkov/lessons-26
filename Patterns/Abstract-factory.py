@@ -1,4 +1,4 @@
-
+#
 # # Абстрактні класи продуктів
 # class AbstractProductA:
 #     def operation(self):
@@ -113,13 +113,8 @@ AbstractFactory є абстрактною фабрикою з методами c
 #     def sit(self):
 #         pass
 #
-#
 # class Sofa:
 #     def relax(self):
-#         pass
-#
-# class Table:
-#     def work(self):
 #         pass
 #
 #
@@ -128,16 +123,9 @@ AbstractFactory є абстрактною фабрикою з методами c
 #     def sit(self):
 #         return "Sitting on a modern chair"
 #
-#
 # class ModernSofa(Sofa):
 #     def relax(self):
 #         return "Relaxing on a modern sofa"
-#
-#
-# class ModernTable(Table):
-#     def work(self):
-#         return "Working on a modern table"
-#
 #
 #
 # # Класи меблів у стилі класика
@@ -151,10 +139,6 @@ AbstractFactory є абстрактною фабрикою з методами c
 #         return "Relaxing on a classic sofa"
 #
 #
-# class ClassicTable(Table):
-#     def work(self):
-#         return "Working on a classic table"
-#
 # # Абстрактна фабрика меблів
 # class FurnitureFactory:
 #     def create_chair(self):
@@ -167,9 +151,6 @@ AbstractFactory є абстрактною фабрикою з методами c
 #         pass
 #
 #
-#
-#
-#
 # # Фабрика меблів у стилі модерн
 # class ModernFurnitureFactory(FurnitureFactory):
 #     def create_chair(self):
@@ -177,9 +158,6 @@ AbstractFactory є абстрактною фабрикою з методами c
 #
 #     def create_sofa(self):
 #         return ModernSofa()
-#
-#     def create_table(self):
-#         return ModernTable()
 #
 #
 #
@@ -191,9 +169,6 @@ AbstractFactory є абстрактною фабрикою з методами c
 #     def create_sofa(self):
 #         return ClassicSofa()
 #
-#     def create_table(self):
-#         return ClassicTable()
-#
 #
 # # Приклад використання
 # if __name__ == "__main__":
@@ -202,25 +177,24 @@ AbstractFactory є абстрактною фабрикою з методами c
 #
 #     modern_chair = modern_factory.create_chair()
 #     modern_sofa = modern_factory.create_sofa()
-#     modern_table = modern_factory.create_table()
+#
 #
 #
 #     print("Modern:", modern_chair.sit())
 #     print("Modern:", modern_sofa.relax())
-#     print("Modern:", modern_table.work())
-#
 #
 #     classic_factory = ClassicFurnitureFactory()
 #
 #     classic_chair = classic_factory.create_chair()
 #     classic_sofa = classic_factory.create_sofa()
-#     classic_table = classic_factory.create_table()
 #
 #
 #     print("Classic:", classic_chair.sit())
 #     print("Classic:", classic_sofa.relax())
-#     print("Classic:", classic_table.work())
 #
+
+
+
 
 
 

@@ -240,21 +240,23 @@ d1 = {'name': 'Ivan', 33: 3244, 'surname': 'Pupkin', 5: {1: 'jhlkkk'}}
 # print(d1)
 # print('name' in d1.keys())
 # print('Pupkin' in d1.values())
-############################################# KH-25-1 KH-25-2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+#############################################
 # print('name' in d1)
 # print('KH-24' in d1)
-#
+
 # for i in d1.items():
 #     print(i)
 
-#
+
 # lst = ['a', 'b', 'c', 'd']
 # # d3 = dict.fromkeys(lst, 'NoValue!')
 #
-# # d3 = dict.fromkeys(range(1, 6), input(' value : '))
-# d3 = dict.fromkeys([chr(i) for i in range(97, 110)], input(' value : '))
+# d3 = dict.fromkeys([chr(i) for i in range(97, 102)], input(' value : '))
 #
-# d3['b'] = '50x50'
+# # d3['b'] = '50x50'
+# # d3['e'] = '100'
+# for i in d3:
+#     d3[i] = input(f'{i} =')
 # print('d3', d3, id(d3))
 
 ###########################
@@ -262,34 +264,58 @@ d1 = {'name': 'Ivan', 33: 3244, 'surname': 'Pupkin', 5: {1: 'jhlkkk'}}
 
 # d3 = {}
 # for i in range(int(input('number of students = '))):
-#     d3[input('surname : ')] = input('name = ')
+#     key, value = input('surname name').split()
+#     d3[key] = value
 # print('d3', d3, id(d3))
 
 
 ###################################
 
-#
-# d5 = {}
-# d5[1] = 'aaaaaaaaaa'
-# d5[0] = 'xxxxxxxxx'
-# d5['1'] = 'bbbbbb'
-# d5['abc'] = '00000'
+
+d5 = {}
+d5[1] = 'aaaaaaaaaa'
+d5[0] = 'xxxxxxxxx'
+d5['1'] = 'bbbbbb'
+d5['abc'] = '00000'
 # d5[True] = '999999'
 # d5[False] = 'AAAAAA'
-# d5[1] = d5[0] = 0
+d5[1] = d5[0] = 0
 # print('d5', d5, id(d5))
+
+# print(2>3)
+# print(2<3)
+# x = 2 < 3
+# y = 2 > 3
+#
+# print('x =', x)
+# print('y =', y)
+#
+# print('x + 1 =', x + 1)
+# print('y + 1 =', y + 1)
+# print('x - 4 =', x - 4)
+# print('y - 4 =', y - 4)
+# print('x * 5 =', x * 5)
+# print('y * 5 =', y * 5)
+
+# print(True == 1)
+# print(True == 1.0)
+# print(1.0 == 1)
+# print(False == 0)
+# print(False == 0.0)
+# print(0.0 == 0)
+
 
 # ###################################
 #
 # # !!!!!!! MAP  ZIP !!!!!!!!!!!
 # l1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 # l2 = ['a', 'b', 'c', 'd']
-# # print('l1 =', l1)
+# print('l1 =', l1)
 #
 # def foo(x):
-#     return 2*x + 4 * x**2
-
-
+#     return 4 * x**2 + 2*x
+#
+#
 # l1 = list(map(foo, l1))
 # print('l1 =', l1)
 # print('l2 =', l2)
@@ -313,12 +339,14 @@ d1 = {'name': 'Ivan', 33: 3244, 'surname': 'Pupkin', 5: {1: 'jhlkkk'}}
 # print('dd =', dd)
 # #############################################
 #
-# print(d5)
+# print(d5, id(d5))
 # ddd = d5
+# print(ddd, id(ddd))
 # k = '1'
-# s = d5.pop(k)  # LIFO    STACK
+# s = ddd.pop(k)  # LIFO    STACK
 # print(s)
-# print(d5)
+# print(d5, id(d5))
+# print(ddd, id(ddd))
 # print(ddd is d5)
 # d5[k] = s
 # print(d5, id(d5))  # LIFO
@@ -327,33 +355,51 @@ d1 = {'name': 'Ivan', 33: 3244, 'surname': 'Pupkin', 5: {1: 'jhlkkk'}}
 # print(ddd is d5)
 #
 #
-# print(d5.popitem())
+# a1 = d5.popitem()
 # print(d5, id(d5))  # LIFO
-# print(d5.popitem())
-# print(d5, id(d5))  # LIFO
+# a2 = d5.popitem()
+# print(d5, id(d5))
+# d5[a1[0]] = a1[1]# LIFO
+# d5[a2[0]] = a2[1]# LIFO
+# print(d5, id(d5))
+#
+# l5 = list(d5.items())
+# print(l5)
+# l5.sort(key=lambda x: str(x[0]), reverse=True)
+# print(l5)
+# d5 = dict(l5)
+# print(d5, id(d5))
 
+
+# a = 1
+# b = True
+# print(a == b, id(a), id(b))
+# print(a is b)
 
 ##############################################
-#
+
 # d_stack = {}
-# for i in range(7):
+# for i in range(5):
 #     d_stack[i] = input(f'введи {i}-й елемент = ')
-# for i in range(7):
+#     print(d_stack)
+#
+# for i in range(5):
 #     print(f'{i}-й елемент = ', d_stack.popitem())
+#     print(d_stack)
 
 
 
 #######################################
 
 # dd = {x: chr(x) for x in range(97, 115)}
-#
+
 # dd = {x: chr(x) for x in range(97, 115) if x % 2 == 0}
 #
 # dd1 = {x: chr(x) for x in range(97, 115) if x % 2}
 # dd.update(dd1)
 #
 # print(dd)
-# print(dd1)
+# # print(dd1)
 # for k, v in dd.items():
 #     print(k, v, sep=' -> ')
 # print(dd[100])
@@ -365,21 +411,21 @@ d1 = {'name': 'Ivan', 33: 3244, 'surname': 'Pupkin', 5: {1: 'jhlkkk'}}
 import random
 
 
-# city = ['Kyiv', 'Poltava', 'Dnipro', 'Lviv']
-# population = [4000, 700, 1000, 850]
-# # dict_ua = {x: y for x in city for y in population}  #  ???????????
-# # dict_ua = {city[i]: population[i] for i in range(4)}
+city = ['Kyiv', 'Poltava', 'Dnipro', 'Lviv']
+population = [4000, 700, 1000, 850]
+# dict_ua = {x: y for x in city for y in population}  #  ???????????
+# dict_ua = {city[i]: population[i] for i in range(4)}
 # dict_ua = {x: y for x, y in zip(city, population)}
-# dict_ua = dict(zip(city, population))
+dict_ua = dict(zip(city, population))
 
-# print('dict_ua :', dict_ua)
-#
+print('dict_ua :', dict_ua)
+
 # print('list(dict_ua.values()) :', list(dict_ua.values()))
 # print('list(dict_ua.keys()) :', list(dict_ua.keys()))
 # print('list(dict_ua) :', list(dict_ua))
 # print('list(dict_ua.items()) :', list(dict_ua.items()))
-
-# # ........................
+#
+# # # ........................
 # key = random.choice(list(dict_ua))
 # print('key =', key)
 # print(key, dict_ua[key])
@@ -392,25 +438,19 @@ import random
 #
 # for i in l1:
 #     print(*i, sep='\t')
+#
+# dict_ua = dict(l1)
+# print('dict_ua :', dict_ua)
 
 #################################
-# def foo(x):
-#     return x**2
-#
-# print(foo(5))
-#
-#
-# print((lambda x: x**2)(5))
-#
-# foo1 = lambda x: x**2
-#
-# print(foo1(5))
 
 # ############################################
 # ........... QUIZ
 # key = random.choice(list(dict_ua.keys()))
 #
 # question, answer = key, dict_ua[key]
+# # question = key
+# # answer = dict_ua[key]
 #
 # print("What's population in", question, '?')
 # a = int(input('population?  = '))
@@ -426,7 +466,7 @@ import random
 
 #######################################################
 #******* Сортировка букв любого введенного текста
-# symbols = set(['ON ', 'THE', 'TO ', 'AND'])
+# symbols = list(set(['ON ', 'THE', 'TO ', 'AND']))
 # print('Перелік символів:\n', *symbols)
 #
 # # text = input('Input any text : ').upper()
@@ -440,7 +480,7 @@ import random
 # '''.upper()
 # print('Введений текст:\n', text)
 #
-# set_count = dict(zip(list(symbols), list(map(text.count, symbols))))
+# set_count = dict(zip(symbols, list(map(text.count, symbols))))
 # print('\nОбчислений текст множиною:\n', set_count)
 #
 # list_count = list(set_count.items())
@@ -457,33 +497,65 @@ import random
 #******* Сортировка букв любого введенного текста
 
 
-# text = input('Input any text : ').upper()
-# text = '''
-# Bring on advanced features like asset
-# and configuration management to support ITSM practices.
-# Minimize distractions with expanded, personalized support,
-# and empower your admins with added controls and security
-# safeguards. See value quickly with faster deployments
-# compared to legacy tools.
-# '''.upper()
+# # text = input('Input any text : ').upper()
+# text = """
+# The US and Venezuela have agreed to re-establish diplomatic and consular relations.
+# The agency said in a statement that the two sides would make joint efforts to promote stability, support economic recovery and advance political reconciliation.
+# While their diplomatic relations have been improving since the US military captured Venezuelan President Nicolás Maduro in January in a surprise raid, the announcement of formal bilateral ties marks a hugely symbolic step.
+# President Donald Trump ordered troops to seize Maduro and his wife, bringing them to a Manhattan court to face allegations of weapon and drug offences, which they deny.
+# The US embassy in Caracas, which closed in 2019, has already reopened, and Washington has appointed a new diplomat in Venezuela.
+# The Venezuelan government said on Thursday it was willing to advance a "new stage of constructive dialogue, based on mutual respect".
+# It said the relationship must result in the "social and economic happiness of the Venezuelan people".
+# But the statement from Caracas made no reference to a transition or future elections, unlike the US state department's.
+# The US has accused Maduro - who is due to stand trial this month in the US - and other members of his government of leading a criminal organisation involved in activities such as illegal mining and drug trafficking.
+# Sources told the BBC that more diplomatic staff from the US embassy in Bogotá, Colombia, are expected to be transferred to Caracas soon. The move will make it much easier for officials to negotiate face-to-face and provide consular services.
+# The US state department said its engagement was focused on helping Venezuelan people move forward through a "phased process that creates the conditions for a peaceful transition to a democratically elected government".
+# After a visit to Venezuela, US Secretary of the Interior Doug Burgum told reporters on the runway in Caracas on Thursday on his way back to the US that it was a "brilliant strategic move" to intervene in Venezuela before Iran.
+# The US and Israel launched military action on Iran on 28 February. Iran's Supreme Leader Ayatollah Ali Khamenei was killed during the first wave of strikes.
+# Burgum, who leads President Trump's National Energy Dominance Council, added on Thursday that the intervention would help ensure that "oil will flow to America".
+# Since the US military strikes on Venezuela and seizure of Maduro, the US has struck new oil deals with Venezuela.
+# Washington has allowed the country to sell sanctioned oil with US oversight, and Venezuela has changed its law to allow more foreign investment in the oil sector.
+# On Wednesday, Venezuela's interim president Delcy Rodríguez and Burgum said the two countries would work together to develop mining in the country.
+# Along with having the largest proven oil reserves in the world, Venezuela is rich in gold, diamonds, critical minerals and rare earth minerals - including some of those used in mobile phones.
+# """.upper()
 # print('Введений текст:\n', text)
+# list_of_symbols= ['.', ',', '!', '$', '+', '\n', '"']
 #
 # t = []
 # for i in text:
-#     if i != ',' and i != '.':
+#     if i not in list_of_symbols:
 #         t.append(i)
 #
+# print(t)
+#
 # text = ''.join(t)
+# print(text)
 #
+# words = list(set(text.split()))
+# print('Перелік символів:\n', words)
 #
-# symbols = set(text.split())
-# print('Перелік символів:\n', *symbols)
+# # list_of_w = []
+# list_of_w = ['ON', 'THE', 'A', 'AN', 'TO', 'WITH', 'AND',
+#              'IN', 'AS', 'IT', 'OR', 'OF', 'IS', 'FOR', 'HAS',
+#              'THAT', 'WAS']
 #
-# set_count = dict(zip(list(symbols), list(map(text.count, symbols))))
+# words_clear = []
+# for i in words:
+#     if i not in list_of_w:
+#         words_clear.append(i)
+#
+# set_count = dict(zip(list(words_clear), list(map(text.count, words_clear))))
 # print('\nОбчислений текст множиною:\n', set_count)
 #
 # list_count = list(set_count.items())
 # print('\nОбчислений текст списком:\n', list_count)
+#
+# list_res = []
+# for i in list_count:
+#     if i[1] > 3:
+#         list_res.append(i)
+#
+# list_count = list_res
 #
 # list_count.sort(key=lambda x: x[1], reverse=True)
 # print('\nВідсортирований список:\n', list_count)
@@ -497,18 +569,11 @@ import random
 
 
 
-# text = 'Hello, world!'
-#
-# a = dict(enumerate(text))
-# # a = dict(zip(range(len(text)), text))
-# print(a)
-# # del a[5]
-# # a[5.55] = 'W'
-# for key, val in a.items():
-#     print(key, '-', val, sep='', end='  ')
-# print()
-
 # !!!!!!!!!!!!!!!!!!!!!!!!! END
+
+
+
+
 
 
 

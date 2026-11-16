@@ -1,6 +1,10 @@
 # class Vector:
 #     """
 #     Класс Вектор!
+#     Класс Вектор!
+#     Класс Вектор!
+#     Класс Вектор!
+#     Класс Вектор!
 #     """
 #
 #     def __init__(self, x=0, y=0):
@@ -65,7 +69,7 @@
 # print(v1)
 # print(f"vector v1 = {v1}")
 #
-# v2 = Vector(3, 5)
+# v2 = Vector(3, 7)
 # # v2 = v1
 # print(f"vector v2 = {v2}")
 # print([v1, v2])
@@ -85,7 +89,6 @@
 #
 # print(f"|v1| = {v1.len()}")
 #
-# # print(*dir(v1), sep='\n')
 # print(type(v1))
 # print(v1.__class__)
 # print(v1.__str__())
@@ -96,7 +99,7 @@
 #
 # print(v1.the_same(v2))
 # print(v1 == v2)
-
+#
 
 # '''
 # __eq__  ->  ==
@@ -121,7 +124,8 @@
 #             self.u_level = "Guest"
 #
 #     def diff(self, level1, level2):
-#         return self.us_dict[level1] - self.us_dict[level2]
+#         # return self.us_dict[level1] - self.us_dict[level2]
+#         return self.us_dict.get(level1) - self.us_dict.get(level2)
 #
 #
 #
@@ -148,8 +152,8 @@
 #
 #     def __sub__(self, other):  # -
 #         return self.diff(self.u_level, other.u_level)
-#
-#
+
+
 # a1 = UserLevel('Operator')
 # a2 = UserLevel('User')
 # a3 = UserLevel('Admin')
@@ -179,7 +183,7 @@
 #
 # print('*'*80)
 # # # # .....................................................
-#
+
 # if __name__ == "__main__":
 #
 #     need = "Operator"
@@ -195,8 +199,9 @@
 #     user_level = UserLevel(user)
 #     print(f"user level: {user_level.us_dict.get(user)}  {user}")
 #
+#     # if user >= need:
 #     if user_level.us_dict.get(user) >= need_level.us_dict.get(need):
-#     # if user_level.us_dict.[user] >= need_level.us_dict[need]:
+#     # if user_level.us_dict[user] >= need_level.us_dict[need]:
 #         print("Access enabled!")
 #     else:
 #         print("Access denied!")

@@ -68,7 +68,7 @@
 #     print(cart.items)
 #
 #     # Оплата кредитною карткою
-#     credit_card = CreditCardPayment('1234-5678-9876-5432', '12/25')
+#     credit_card = CreditCardPayment('1234-5678-9876-5432', '12/26')
 #     cart.checkout(credit_card)
 #
 #     # Оплата через PayPal
@@ -113,85 +113,85 @@
 що робить програму більш гнучкою та розширюваною.
 """
 
-# =============================================
-# Приклад калькулятора
-# =============================================
+# # =============================================
+# # Приклад калькулятора
+# # =============================================
+# #
+# # Абстрактний клас або інтерфейс стратегії операцій
+# class OperationStrategy:
+#     def execute(self, a, b):
+#         pass
 #
-# Абстрактний клас або інтерфейс стратегії операцій
-class OperationStrategy:
-    def execute(self, a, b):
-        pass
-
-
-# Конкретні реалізації стратегій операцій
-class AdditionOperation(OperationStrategy):
-    def execute(self, a, b):
-        return a + b
-
-
-class SubtractionOperation(OperationStrategy):
-    def execute(self, a, b):
-        return a - b
-
-
-class MultiplicationOperation(OperationStrategy):
-    def execute(self, a, b):
-        return a * b
-
-class DivisionOperation(OperationStrategy):
-    def execute(self, a, b):
-        if b == 0:
-            return 'Division is impossible! b = 0!'
-        return a / b
-
-
-# Клас контексту для виконання операцій
-class Calculator:
-    def __init__(self, operation_strategy):
-        self.operation_strategy = operation_strategy
-
-    def perform_operation(self, a, b):
-        return self.operation_strategy.execute(a, b)
-
-
-# Приклад використання
-if __name__ == "__main__":
-    # Створюємо калькулятор та обираємо стратегію додавання
-    addition_strategy = AdditionOperation()
-    calculator = Calculator(addition_strategy)
-
-
-    result = calculator.perform_operation(10, 4)
-    print("Addition Result:", result)
-
-
-    # Змінюємо стратегію на віднімання
-    subtraction_strategy = SubtractionOperation()
-    calculator = Calculator(subtraction_strategy)
-
-    result = calculator.perform_operation(10, 4)
-    print("Subtraction Result:", result)
-
-    # Обираємо стратегію (все інше незмінне)
-    # a, b = 10, 4
-    a = int(input('Input first element :'))
-    b = int(input('Input second element :'))
-
-    print(f'For <{a}> and <{b}> choose action:')
-    action = int(input('Add - <1>, Sub - <2>, Div - <3>, Mult - <4>   Input action : '))
-
-    match action:
-        case 1:
-            strategy = AdditionOperation()
-        case 2:
-            strategy = SubtractionOperation()
-        case 3:
-            strategy = DivisionOperation()
-        case _:
-            strategy = MultiplicationOperation()
-
-
-    calculator.operation_strategy = strategy
-
-    result = calculator.perform_operation(a, b)
-    print('Result ->', result)
+#
+# # Конкретні реалізації стратегій операцій
+# class AdditionOperation(OperationStrategy):
+#     def execute(self, a, b):
+#         return a + b
+#
+#
+# class SubtractionOperation(OperationStrategy):
+#     def execute(self, a, b):
+#         return a - b
+#
+#
+# class MultiplicationOperation(OperationStrategy):
+#     def execute(self, a, b):
+#         return a * b
+#
+# class DivisionOperation(OperationStrategy):
+#     def execute(self, a, b):
+#         if b == 0:
+#             return 'Division is impossible! b = 0!'
+#         return a / b
+#
+#
+# # Клас контексту для виконання операцій
+# class Calculator:
+#     def __init__(self, operation_strategy):
+#         self.operation_strategy = operation_strategy
+#
+#     def perform_operation(self, a, b):
+#         return self.operation_strategy.execute(a, b)
+#
+#
+# # Приклад використання
+# if __name__ == "__main__":
+#     # Створюємо калькулятор та обираємо стратегію додавання
+#     addition_strategy = AdditionOperation()
+#     calculator = Calculator(addition_strategy)
+#
+#
+#     result = calculator.perform_operation(10, 4)
+#     print("Addition Result:", result)
+#
+#
+#     # Змінюємо стратегію на віднімання
+#     subtraction_strategy = SubtractionOperation()
+#     calculator = Calculator(subtraction_strategy)
+#
+#     result = calculator.perform_operation(10, 4)
+#     print("Subtraction Result:", result)
+#
+#     # Обираємо стратегію (все інше незмінне)
+#     # a, b = 10, 4
+#     a = int(input('Input first element :'))
+#     b = int(input('Input second element :'))
+#
+#     print(f'For <{a}> and <{b}> choose action:')
+#     action = int(input('Add - <1>, Sub - <2>, Div - <3>, Mult - <4>   Input action : '))
+#
+#     match action:
+#         case 1:
+#             strategy = AdditionOperation()
+#         case 2:
+#             strategy = SubtractionOperation()
+#         case 3:
+#             strategy = DivisionOperation()
+#         case _:
+#             strategy = MultiplicationOperation()
+#
+#
+#     calculator.operation_strategy = strategy
+#
+#     result = calculator.perform_operation(a, b)
+#     print('Result ->', result)

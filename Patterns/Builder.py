@@ -78,7 +78,7 @@
 #
 #     print("Product1 parts:", product1.list_parts())
 #     print("Product2 parts:", product2.list_parts())
-
+#
 
 """
 Патерн Будівельник використовується для створення складних об'єктів крок за кроком. 
@@ -177,14 +177,17 @@ ConcreteBuilder є конкретною реалізацією будівель�
 #
 #     director1.construct_house1()
 #     director2.construct_house2()
+#     director3.construct_house3()
 #
 #     house1 = concrete_builder1.get_house()
 #     house2 = concrete_builder2.get_house()
+#     house3 = concrete_builder3.get_house()
 #
 #
 #     print('.'*80)
 #     print('1)', house1)
 #     print('2)', house2)
+#     print('3)', house3)
 #     print('.'*80)
 #
 #
@@ -193,13 +196,15 @@ ConcreteBuilder є конкретною реалізацією будівель�
 #
 #     if constr == '1':
 #         director3.construct_house1()
+#         house3 = concrete_builder1.get_house()
 #     elif constr == '2':
 #         director3.construct_house2()
+#         house3 = concrete_builder2.get_house()
 #     else:
 #         director3.construct_house3()
+#         house3 = concrete_builder3.get_house()
 #
 #
-#     house3 = concrete_builder3.get_house()
 #     print('.'*80)
 #     print(constr+') ', end='')
 #     print(house3)

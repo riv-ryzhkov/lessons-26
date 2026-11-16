@@ -3,7 +3,7 @@
 #
 # print(ma_fonction(5, 5))
 ###########################################
-# print([ i for i in range(10) if i % 2 == 0 ])
+# print([ i**2 for i in range(6) if i % 2 == 0 ])
 ###########################################
 # lst1 = [1, 3, 2]
 # lst1.sort(reverse=True)

@@ -13,6 +13,13 @@
 #
 # print('===== Sum =', sum_, 'Finish!!!!')
 
+# sum_ = 0
+# n = int(input("n="))
+# while n != 0:
+#     sum_ += n
+#     n = int(input("n="))
+# print("sum = ", sum_)
+
 
 
 
@@ -21,15 +28,15 @@
 
 # sum_ = 0
 # step = 0
-# num = 'gfjhgkjh'
-# while True:                          # 0  0.0    False  ''  []  ()
+# num = "ghj"
+# # while True:                          # 0  0.0    False  ''  []  ()
 # # while num:                          # 0  0.0    False  ''  []  ()
-# # while step < 10:                          # 0  0.0    False  ''  []  ()
+# while step < 10 and num:                          # 0  0.0    False  ''  []  ()
 #     num = int(input('input number : '))
-#     if not num:
+#     # if not num:
 #     # if num == 0:
-#         print('Finish!!!!!!!!!!!!!!!')
-#         break
+#     #     print('Finish!!!!!!!!!!!!!!!')
+#     #     break
 #     sum_ += num
 #     step += 1
 #     print('step =', step, 'number =', num, 'summa =', sum_)
@@ -59,7 +66,7 @@ text = 'Hello, world!'
 #         print(i, end=' -> ')
 #
 # print()
-
+#
 # for i in range(len(text)):
 #     if i % 3 == 0:
 #         print(i, '->', text[i])
@@ -72,7 +79,8 @@ text = 'Hello, world!'
 
 # step = 0
 # while step < len(text):
-#     print(step, '->', text[step])
+#     if text[step] != 'l':
+#         print(step, '->', text[step])
 #     step += 1
 #
 # print('\nFINISH!!!!!!!!!!!!!!')
@@ -103,7 +111,6 @@ text = 'Hello, world!'
 
 # import time
 #
-#
 # password = "123"
 # attempts_limit = 3 # кількість спроб до паузи
 # pause = 7 # пауза в секундах
@@ -128,22 +135,24 @@ text = 'Hello, world!'
 # n = int(input('Введіть будь-яке число : '))
 # i = 2
 # mark = True
-# while n % i != 0 and i < n//2 + 1:
-#     i += 1
+# # while n % i != 0 and i < (n//2 + 1):
+# #     i += 1
+# #
+# # if i != n//2 + 1:
+# #     mark = False
 #
-# # for i in range(2, n//2 + 1):
-# #     # print(i)
-# #     if n % i == 0:
-# #         mark = False
-# #         break
+#
+# for i in range(2, n//2 + 1):
+#     # print(i)
+#     if n % i == 0:
+#         mark = False
+#         break
 #
 # if mark:
 #     print(f'{n} - просте число!', i)
 # else:
 #     print(f'{n} - НЕ просте число!', i)
-
-
-    # print(f'{n} - НЕ просте число!, ділеться на {i}')
+#
 # print(f'Найменший ділільник для {n} дорівнює {i}.')
 
 
@@ -159,14 +168,14 @@ text = 'Hello, world!'
 # while n > 0:
 #     b = n % d
 #     binary = str(b) + binary
-#     n //= d
-#     print(binary)
+#     n = n // d
+#     # print(binary)
 # print(binary)
 
 
 
 ########### Перетворення у шістнадцятирічний код ##############
-#
+
 # n = int(input('Введіть будь-яке ціле число : '))
 # binary = ''
 # d = 16
@@ -216,42 +225,43 @@ text = 'Hello, world!'
 #     print("Sorry, You don't have any attempt...")
 #     print('=' * n)
 
-
+############################################ KH-26!!!!!!!!!!!!!!!!!!!!!
 
 
 #########################################################
 ################# random ################################
-
-
-import random
-
-
-# print(*dir(random), sep='\n')
-
-# for i in range(20):
-#     # print(random.randint(0, 10), end=' ')
-#     print(int(random.random() * 100) - 50, end=' ')
-
-
-# text = 'abcdefg'   #
-# # text = '0123456789'
-# for i in range(30):
-    # print(text[random.randint(0, len(text))-1], end=' ')
-    # print(random.choice(text), end=' ')
-    # print(int(random.random()*11), end=' ')
-    # print(random.random(), end=' ')
-    # print(random.randint(0, 10), end=' ')
-
-# l = ['dog', 'cat', 'Ukraine', 'University']
+# import random
+#
+# # print(dir(random))
+# # print(*dir(random), sep='\n')
 #
 # for i in range(10):
-#     word = random.choice(l)
-#     print(word, end=' ')
+#     # print(random.random())
+#     print(random.randint(0, 10), end=' ')
+#     # print(int(random.random() * 100) - 50, end=' ')
+#
+#
+# # text = 'abcdefg'   #
+# # # text = '0123456789'
+# # for i in range(30):
+#     # print(text[random.randint(0, len(text))-1], end=' ')
+#     # print(random.choice(text), end=' ')
+#     # print(int(random.random()*11), end=' ')
+#     # print(random.random(), end=' ')
+#     # print(random.randint(0, 10), end=' ')
+#
+# # l = ['dog', 'cat', 'Ukraine', 'University']
+# #
+# # for i in range(10):
+# #     word = random.choice(l)
+# #     print(word, end=' ')
 
 
 ##################################################
 ################### Вгадай число #######################
-
+# import random
+#
+#
 # number = random.randint(0, 9)
 # attempts = 0
 # guess = -5
@@ -273,19 +283,21 @@ import random
 #
 # print('FINISH!!!!!!!!!!!!!!!!')
 # print(f"Вітаю! Ви вгадали число {guess}. Кількість Ваших спроб {attempts}.")
-
+#
 
 #####################################################
 ##################### 21 ############################
 #####################################################
-
+# import random
+#
+#
 # total = 0
 # total_fr = 0
 # cont = 'y'
 # # a = random.randint(1, 11)
 # screen = 20
 #
-# while cont == 'y':
+# while cont.lower() == 'y':
 #     a = random.randint(1, 11)
 #     total += a
 #     print('cart =', a, 'Total =', total)

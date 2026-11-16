@@ -27,71 +27,70 @@
 
 
 
-# # Клас, який дотримується SRP
-# class Employee:
-#     def __init__(self, name='Mikle'):
-#         self.name = name
-#
-#     def __repr__(self):
-#         return self.name
-#
-#     def __str__(self):
-#         return f'Employee {self.name}'
-#
-#
-# # Клас для розрахунку зарплати
-# class SalaryCalculator(Employee):
-#     def __init__(self, name):
-#         Employee.__init__(self, name)
-#
-#     def calculate_salary(self, employee):
-#         print(f'{self.name} calculates the salary for {employee}')
-#         # Логіка для розрахунку зарплати
-#         pass
-#
-# # Клас для генерації звіту
-# class ReportGenerator(Employee):
-#     def __init__(self, name):
-#         Employee.__init__(self, name)
-#
-#     def generate_report(self, employee):
-#         print(f'{self.name} generates the report for {employee}.')
-#         # Логіка для створення звіту
-#         pass
-#
-# # Клас для збереження в базу даних
-# class DatabaseSaver(Employee):
-#     def __init__(self, name):
-#         Employee.__init__(self, name)
-#
-#     def save_to_database(self, employee):
-#         print(f'{self.name} saves the data about {employee}.')
-#         # Логіка для збереження даних в базу даних
-#         pass
-#
-#
-#
-# user1 = Employee()
-# user2 = Employee('Jon')
-#
-# buhgalter1 = SalaryCalculator('Bob')
-# buhgalter2 = SalaryCalculator('Andrey')
-#
-# saver1 = DatabaseSaver('Ann')
-# saver2 = DatabaseSaver('Frank')
-#
-# reporter1 = ReportGenerator('Daniel')
-# reporter2 = ReportGenerator('Elizabet')
-#
-#
-# buhgalter1.calculate_salary(user1)
-# buhgalter1.calculate_salary(user2)
-# buhgalter2.calculate_salary(user1)
-#
-# saver1.save_to_database(user2)
-# saver2.save_to_database(user1)
-#
-# reporter1.generate_report(user1)
+# Клас, який дотримується SRP
+class Employee:
+    def __init__(self, name='Mikle'):
+        self.name = name
+
+    def __repr__(self):
+        return self.name
+
+    def __str__(self):
+        return f'Employee {self.name}'
+
+
+# Клас для розрахунку зарплати
+class SalaryCalculator(Employee):
+    def __init__(self, name):
+        Employee.__init__(self, name)
+
+    def calculate_salary(self, employee):
+        print(f'{self.name} calculates the salary for {employee}')
+        # Логіка для розрахунку зарплати
+        pass
+
+# Клас для генерації звіту
+class ReportGenerator(Employee):
+    def __init__(self, name):
+        Employee.__init__(self, name)
+
+    def generate_report(self, employee):
+        print(f'{self.name} generates the report for {employee}.')
+        # Логіка для створення звіту
+        pass
+
+# Клас для збереження в базу даних
+class DatabaseSaver(Employee):
+    def __init__(self, name):
+        Employee.__init__(self, name)
+
+    def save_to_database(self, employee):
+        print(f'{self.name} saves the data about {employee}.')
+        # Логіка для збереження даних в базу даних
+        pass
+
+
+
+user1 = Employee()
+user2 = Employee('Jon')
+
+buhgalter1 = SalaryCalculator('Bob')
+buhgalter2 = SalaryCalculator('Andrey')
+
+saver1 = DatabaseSaver('Ann')
+saver2 = DatabaseSaver('Frank')
+
+reporter1 = ReportGenerator('Daniel')
+reporter2 = ReportGenerator('Elizabet')
+
+buhgalter1.calculate_salary(user1)
+buhgalter1.calculate_salary(user2)
+buhgalter2.calculate_salary(user1)
+
+saver1.save_to_database(user2)
+saver2.save_to_database(user1)
+
+reporter1.generate_report(user1)
 
 
 #

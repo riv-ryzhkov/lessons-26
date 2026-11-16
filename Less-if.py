@@ -10,22 +10,34 @@
 # print(2 <= 4)
 # print(2 >= 4)
 
-# print(bool(0))
+# print(bool("[0]"))
+
+
 # print(int(2>0))
 # print(int(2>4))
 
-# a = 21
+
+
+# a = 4
 # print((a>3) * 2 + (a<5) * 5)
+
+
+
 ##############################################
 
 # print('A' == 'a')
 # print('Hello' == 'hello')
 
 ########################################################
-
-# if 2 * 3 == 4:
+# a = ""
+# if a:
+#     print('True')
+#     print('True')
+#     print('True')
 #     print('True')
 # else:
+#     print('False')
+#     print('False')
 #     print('False')
 
 
@@ -46,7 +58,7 @@
 #  ---------------0-----------4---------->
 
 # x = int(input('x = '))
-
+#
 # if x > 4:
 #     print(x, '->   x > 4')
 # else:
@@ -109,7 +121,7 @@
 #################################################
 #############################################
 
-a = 0
+# a = 0
 
 # print(a, type(a))
 # print(bool(a))
@@ -146,15 +158,16 @@ a = 0
 # ????????????????????????????
 # a = 1
 # b = True # --->  1    False ---> 0
-
+# c = 2 - 1
 # print(id(a))
+# print(id(c))
 # print(id(int(b)))
 
 
 
 
-# a = 'Hello'
-# b = 'Hello'
+# a = 3
+# b = 3.
 #
 # print(id(a))
 # print(id(b))
@@ -175,26 +188,26 @@ a = 0
 # print(id(b))
 # print(a == b)
 # print(a is b)
-
+#
 # print(bool(1))
 # print(int(True))
 # print(int(22>3))
-
+#
 #
 # print(3 * True)
-
+#
 # a = -3
 # print(3 * (a>2) + 2 * (a<5) - 4 * (-a == 3))
 
 
 #########################################
 # x = int(input('x = '))
-
-# y = 'Hello!' if x<10 else 'Bye!'
 #
-# print(y)
-
-
+# # y = 'Hello!' if x<10 else 'Bye!'
+# #
+# # print(y)
+#
+#
 # y = (x<10) * 'Hello' + (x>=10) * 'Bye'
 #
 # print(y)
@@ -236,14 +249,14 @@ a = 0
 
 
 # a = 45
-# b = 13
-
+# b = 138
+#
 # if a > b:
 #     a, b = b, a
 #
 # print('max = ', b)
-
-
+#
+#
 # print('max = ', a if a>b  else b)
 
 
@@ -263,12 +276,16 @@ a = 0
 # print('=' * 20)
 #
 #
+
+# print(1 or 1 and 0)
+
+
 # print(True)
 # print(not True)
 
 
-# print(1 and 1 and 1 and 1 and (not 0) and 1 and 1)
-# print(not 0 or not 0 or 0 or 0 or not 0)
+# print(1 and not 0 and 1 and 1 and 1 and not 0 and 1)  # -> 1
+# print(0 or 0 or 0 or not 0 or 0)
 
 
 # 1 * 1 * 1 = 1
@@ -318,12 +335,12 @@ a = 0
 ##########################################
 
 # --------- sensors ------------
-a = 1
-b = 1
-c = 1
-d = 1
-e = 0
-
+# a = 1
+# b = 1
+# c = 1
+# d = 1
+# e = 0
+#
 # print(a and not b and not c and d and e) ##########
 # print(not a or (b or c or not d) or not e)
 # print(a or not b or not c or d or e)

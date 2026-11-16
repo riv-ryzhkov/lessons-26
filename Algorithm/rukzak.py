@@ -13,8 +13,8 @@ def knapsack(weights, values, capacity):
 
 
 # Пример использования
-weights = [2, 3, 4, 5, 6, 7, 8]
-values = [3, 4, 5, 6, 8, 7, 10]
+weights = [2, 3, 4, 5, 6, 7, 8, 9]
+values = [3, 4, 5, 6, 8, 7, 14, 12]
 capacity = 15
 
 print("Максимальна цінність рюкзака:", knapsack(weights, values, capacity))

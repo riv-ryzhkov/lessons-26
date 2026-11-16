@@ -1,45 +1,50 @@
-# # ########### ГЕНЕРАТОРИ: LIST-TUPLE-SET-DICT #############
-#
-# # Вивід символів ASCII від 0 до 255
+# ########### ГЕНЕРАТОРИ: LIST-TUPLE-SET-DICT #############
+
+# Вивід символів ASCII від 0 до 255
 # for i in range(256):
 #     print(i, '->', chr(i))
-#
-# # Порівняння рядків у Python
+
+# Порівняння рядків у Python
 # print('a'>'A')
-#
+
 # # --------------------------------------
-# # Генерація списку символів від 'a' до 'm'
-# list1 = [chr(i) for i in range(97, 110)]
+# Генерація списку символів від 'a' до 'm'
+list1 = [chr(i) for i in range(97, 110)]
 # print(type(list1), list1)
 #
-# # --------------------------------------
-# # Генерація кортежу чисел від 15 до 1
-# tuple1 = tuple(i for i in range(15, 0, -1))
+# # # --------------------------------------
+# # # Генерація кортежу чисел від 15 до 1
+tuple1 = tuple(i for i in range(15, 0, -1))
 # print(type(tuple1), tuple1)
-#
-# # --------------------------------------
-# # Генерація множини символів
-# set1 = {chr(i) for i in range(97, 110)}
+# #
+# # # --------------------------------------
+# # # Генерація множини символів
+set1 = {chr(i) for i in range(97, 110)}
 # print(type(set1), set1)
-#
-# # --------------------------------------
-# # Генерація словника шляхом об'єднання списку та кортежу
-# dict1 = {x: y for x, y in zip(list1, tuple1)}
+# #
+# # # --------------------------------------
+# # # Генерація словника шляхом об'єднання списку та кортежу
+dict1 = {x: y for x, y in zip(list1, tuple1)}
 # print(type(dict1), dict1)
 #
 # # --------------------------------------
 # # Генератор символів від 'a' до 'm'
-# gn = (chr(i) for i in range(97, 110))
+gn = (chr(i) for i in range(97, 110))
 # print(type(gn), gn)
-#
-# # Використання next() для отримання елементів генератора
+# #########################################
+# # # Використання next() для отримання елементів генератора
 # print(next(gn))
 # print(next(gn))
 # print(next(gn))
 # print(list(gn))
+# print(list(gn))
+# # print(next(gn))
 # gn = (chr(i) for i in range(97, 110))
 # print(list(gn))
 # gn = (chr(i) for i in range(97, 110))
+# print(next(gn))
+# print(next(gn))
+# print(next(gn))
 # print(next(gn))
 #
 # # --------------------------------------
@@ -56,13 +61,13 @@
 # print(list(gn))
 #
 # # --------------------------------------
-# gn = (i for i in range(97, 110))
+gn = (i for i in range(97, 110))
 # print(sum(gn))
 # print(sum(gn))
 # print(sum(i for i in range(97, 110)))
 # print(sum(i for i in range(97, 110)))
 # print(sum(i for i in range(97, 110)))
-#
+
 # # --------------------------------------
 # l = []
 # gen = (i for i in range(15, 0, -1))
@@ -77,9 +82,9 @@
 # print(l)
 # gen = (i for i in range(15, 0, -1))
 # print(list(gen))
-#
+
 # # --------------------------------------
-# # Приклади генераторних функцій
+# Приклади генераторних функцій
 # def even_numbers(n):
 #     for i in range(2, n):
 #         print('yield:')
@@ -90,6 +95,7 @@
 #         print('**********', i)
 #         print(':-)', 'i >>>', i)
 #
+#
 # gen1 = even_numbers(7)
 # print('1 step =', next(gen1))
 # print('2 step =', next(gen1))
@@ -97,18 +103,20 @@
 # print('4 step =', next(gen1))
 # print('last number :', next(gen1))
 # print(next(gen1))
-#
+# print(list(gen1))
+
 # # --------------------------------------
-# # Генератор чисел Фібоначчі
-# def fibonacci(n):
-#     a, b = 0, 1
-#     for i in range(n):
-#         yield a
-#         a, b = b, a + b
-#
-# n = 10
-# fib = fibonacci(n)
-# numbers = fibonacci(n)
+# Генератор чисел Фібоначчі
+def fibonacci(n):
+    a, b = 0, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+
+n = 10
+fib = fibonacci(n)
+numbers = fibonacci(n)
+# # numbers = fib
 # print(fib)
 # print(numbers)
 # print(next(fib))
@@ -116,29 +124,37 @@
 # print(next(fib))
 # print(next(fib))
 # print(next(fib))
-# # print(list(fib))
-# print('fib:', next(fib))
-# print('fib:', next(fib))
-# print('fib:', next(fib))
-# print('fib:', next(fib))
+# print(list(fib))
+# # print('fib:', next(fib))
 # print('numbers:', next(numbers))
 # print('numbers:', next(numbers))
 # print('numbers:', next(numbers))
 # print('numbers:', next(numbers))
 # print('numbers:', next(numbers))
-# print('fib:', next(fib))
+# # print('fib:', next(fib))
+# # print('fib:', next(fib))
 # print('numbers:', next(numbers))
-# print('fib:', next(fib))
 # print('numbers:', next(numbers))
+# # print('fib:', next(fib))
+# # print('fib:', next(fib))
+# # print('fib:', next(fib))
+# # print('fib:', next(fib))
+# print('numbers:', next(numbers))
+# print('numbers:', next(numbers))
+# print('*'*40)
 #
-# for num in numbers:
+# for num in fib:   # !!!!!!!!!!!!!!!!
 #     print(num)
+# print('='*40)
+# # print(next(fib))
 #
 # for i in range(n):
-#     print(i, '->', 'numbers =', next(numbers), 'fib =', next(fib))
-#
+#     print(i, '->', 'numbers =', next(numbers))
+
+# print(*list(numbers))
+
 # # --------------------------------------
-# # Генератор чисел, кратних певному числу
+# Генератор чисел, кратних певному числу
 # def divisible_by(divisor, n):
 #     for i in range(1, n+1):
 #         if i % divisor == 0:
@@ -147,6 +163,8 @@
 # m, n = 5, 50
 # numbers = divisible_by(m, n)
 # print(numbers)
+# print(list(numbers))
+
 # while True:
 #     try:
 #         print(next(numbers))
@@ -154,17 +172,17 @@
 #     except StopIteration:
 #         print('The Generation is over!')
 #         break
-#
+
 # # --------------------------------------
-# # Генератор факторіала
-# def factorial(n: int):
-#     res = i = 1
-#     while i <= n:
-#         res *= i
-#         i += 1
-#         yield res
-#     return res
-#
+# Генератор факторіала
+def factorial(n: int):
+    res = i = 1
+    while i <= n:
+        res *= i
+        i += 1
+        yield res
+    # return res
+
 # print(factorial(5))
 # print(factorial)
 #
@@ -178,7 +196,7 @@
 # print(next(fact))
 # print(next(fact))
 # print(list(fact))
-#
+# #
 # fact = factorial(9)
 # print(list(fact))
 # print(next(fact))
@@ -195,15 +213,22 @@
 # fact5 = tuple(factorial(8))
 # fact2 = list(fact)
 # print('fact = ', fact, type(fact))
-# print('fact2 = ', fact2, type(fact2))
 # print('fact5 = ', fact5, type(fact5))
-#
+# print('fact2 = ', fact2, type(fact2))
+# #
 # # Вивід факторіалів через цикл
-# n = 7
-# fact = factorial(n)
+n = 7
+fact = factorial(n)
+# print(next(fact))
 # for i in range(1, n+1):
 #     print(i, '! =', next(fact))
-#
+
+# print(next(fact))
+# print(next(fact))
+# print(next(fact))
+# for i in fact:
+#     print(i, '! =', i)
+
 # # --------------------------------------
 # n = 5
 # fact = factorial(n)
@@ -211,59 +236,71 @@
 # print(id(fact), list(fact))
 # print(id(f), list(f))
 # f = factorial(n)
+# # f = fact
 # print(id(f), list(f))
-#
+
 # # --------------------------------------
 # ############################################################
 # # Генератори: MAP-ZIP-ENUMERATE-RANGE-ITEMS
 #
-# l1 = [str(i) for i in range(10)]
-# gen = (i for i in range(10))
+
+
+l1 = [str(i) for i in range(10)]
+gen = (i for i in range(10))
 # print(l1)
-#
-# m = map(int, l1)
+
+
+
+
+m = map(int, l1)
 # print(m, type(m))
 # print(next(m))
 # print(next(m))
 # print(next(m))
 # print(next(m))
 # print(tuple(m))
-# print(next(m))
+# # print(next(m))
 # print(list(m))
-#
-# en = range(100)
-# z = zip(en, l1)
+# #
+
+
+en = range(100)
+z = zip(en, l1)
 # print(z, type(z))
 # print(next(z))
 # print(next(z))
 # print(next(z))
 # print(next(z))
 # print(list(z))
-# print(next(z))
+# # print(next(z))
 # print(list(z))
 #
-# e = enumerate(l1)
+
+
+e = enumerate(l1)
 # print(e, type(e))
 # print(next(e))
 # print(next(e))
 # print(next(e))
 # print(next(e))
 # print(list(e))
-# print(next(e))
+# # print(next(e))
 # print(list(e))
 #
-# r = range(10)
+
+
+r = range(10)
 # print(r, type(r))
 # print(next(r))
-# print(next(r))
-# print(next(r))
+# # print(next(r))
+# # print(next(r))
 # print(list(r))
 # print(list(r))
 # print(list(r))
 # print(tuple(r))
 # print(set(r))
 #
-# r = range(10)
+r = range(10)
 # for i in r:
 #     print(i, end=' ')
 # print(list(r))
@@ -276,30 +313,37 @@
 # d = (i for i in dict1.items())
 # d = dict1.items()
 # print(type(d), d)
+#
 # print(isinstance(d, list))
-# # print(d[2])  # не працює, items() не підтримує індексування
+
+# print(*dir(d), sep='\n')
+
+# print(d[2])  # не працює, items() не підтримує індексування
 # d = dict1.keys()
+# print(type(d), d)
 # d = dict1.values()
+# print(type(d), d)
 # print(next(d))
 # print(next(d))
 # print(list(d))
+# print(next(d))
 # print(list(d))
 #
-# # --------------------------------------
-# import sys
-#
+# #
+import sys
+
 # print('map : ', sys.getsizeof(m), m)
 # print('zip : ', sys.getsizeof(z), z)
 # print('enumerate : ', sys.getsizeof(e), e)
 # print('range : ', sys.getsizeof(r), r)
 # print('gen : ', sys.getsizeof(gen), gen)
-#
+
 # # --------------------------------------
 # ###################################################################
 # # Порівняння генераторів і списків за пам’яттю та швидкістю
 # import time
 #
-# n = 10000000
+# n = 100_000_000
 #
 # start = time.time()
 # g = (i * 2 for i in range(n))
@@ -319,6 +363,7 @@
 # h = l[0]
 # print('time of "List[0]" = ', time.time() - start)
 #
+#
 # start = time.time()
 # for i in g:
 #     h = i
@@ -333,3 +378,41 @@
 # for i in range(len(l)):
 #     h = l[i]
 # print('time of "RANGE(LEN(List))" = ', time.time() - start)
+#
+
+
+##############################################
+# import os
+# import psutil
+# import gc
+#
+# # Отримуємо об'єкт поточного процесу
+# process = psutil.Process(os.getpid())
+#
+# def show_memory(stage):
+#     """Функція для виведення використання пам'яті"""
+#     mem = process.memory_info().rss / (10 ** 6)
+#     print(stage, ":", round(mem, 2), "MB")
+#
+# # Пам'ять на початку програми
+# show_memory("Початкова пам'ять")
+#
+# # Створюємо великий список (виділяємо багато пам'яті)
+# list1 = [i for i in range(15_000_000)]
+#
+# show_memory("Після створення великого списку")
+#
+#
+# # Видаляємо список
+# del list1
+#
+# show_memory("Після видалення списку")
+#
+# gen = (i for i in range(15_000_000))
+#
+# show_memory("Після створення генератора")
+# # Примусовий запуск збирача сміття
+# gc.collect()
+#
+# show_memory("Після виклику garbage collector")
+#

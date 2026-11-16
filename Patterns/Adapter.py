@@ -54,8 +54,8 @@ Adapter - це клас адаптера, який реалізує інтерф
 """
 
 
-# #  =============== DIC -> JSON ===================
-#
+#  =============== DIC -> JSON ===================
+
 # import json
 #
 #
@@ -82,7 +82,7 @@ Adapter - це клас адаптера, який реалізує інтерф
 #
 # print("Original Data:", data, type(data))
 # print("JSON Data:", json_data, type(json_data))
-
+#
 
 
 
@@ -122,19 +122,25 @@ Adapter - це клас адаптера, який реалізує інтерф
 #
 #     # Застосовуємо адаптер для перетворення словника в JSON
 #     adapter = DictionaryAdapter(original_dict)
+#     print('adp=', adapter._dictionary)
 #
 #     json_data = adapter.dict_to_json()
 #     print("Dictionary to JSON:", json_data, type(json_data))
+#     print('adp=', adapter._dictionary)
 #
 #     json_data = adapter.dict_to_json()
 #     print("Dictionary to JSON:", json_data, type(json_data))
+#     print('adp=', adapter._dictionary)
+#
+#     dict_data = adapter.json_to_dict()
+#     print("Dictionary to DICT:", dict_data, type(dict_data))
+#     print('adp=', adapter._dictionary)
 #
 #     dict_data = adapter.json_to_dict()
 #     print("Dictionary to DICT:", dict_data, type(dict_data))
 #
-#     dict_data = adapter.json_to_dict()
-#     print("Dictionary to DICT:", dict_data, type(dict_data))
-#
+#     print('adp=', adapter._dictionary)
+
 
 """
 У цьому прикладі маємо клас DictionaryAdapter, 

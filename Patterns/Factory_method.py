@@ -62,92 +62,72 @@
 
 # # ============= Фабричний метод створення Автомобіля, Вантажівки та Велосипеду ====
 
-# Абстрактний клас для транспортного засобу
-class Transport:
-    def deliver(self):
-        pass
-
-
-# Класи конкретних транспортних засобів
-class Car(Transport):
-    def deliver(self):
-        return "Delivering by car"
-
-
-class Truck(Transport):
-    def deliver(self):
-        return "Delivering by truck"
-
-
-class Bicycle(Transport):
-    def deliver(self):
-        return "Delivering by bicycle"
-
-class Boat(Transport):
-    def deliver(self):
-        return "Delivering by boat"
-
-
-
-
-
-# Абстрактний клас фабрики
-class TransportFactory:
-    def create_transport(self):
-        pass
-
-
-# Класи конкретних фабрик
-class CarFactory(TransportFactory):
-    def create_transport(self):
-        return Car()
-
-
-class TruckFactory(TransportFactory):
-    def create_transport(self):
-        return Truck()
-
-
-
-class BicycleFactory(TransportFactory):
-    def create_transport(self):
-        return Bicycle()
-
-class BoatFactory(TransportFactory):
-    def create_transport(self):
-        return Boat()
-
-
-
-
-# Приклад використання
-if __name__ == "__main__":
-
-    car_factory = CarFactory()
-    car = car_factory.create_transport()
-    print(car.deliver())
-
-    truck_factory = TruckFactory()
-    truck = truck_factory.create_transport()
-    print(truck.deliver())
-
-    bicycle_factory = BicycleFactory()
-    bicycle = bicycle_factory.create_transport()
-    print(bicycle.deliver())
-
-    boat_factory = BoatFactory()
-    boat = boat_factory.create_transport()
-    print(boat.deliver())
-
-
-
-
-
-    print('='*80)
-    transports = [car, bicycle, car, bicycle, truck, boat]
-
-    for tr in transports:
-        print(tr.deliver())
+# # Абстрактний клас для транспортного засобу
+# class Transport:
+#     def deliver(self):
+#         pass
+#
+#
+# # Класи конкретних транспортних засобів
+# class Car(Transport):
+#     def deliver(self):
+#         return "Delivering by car"
+#
+#
+# class Truck(Transport):
+#     def deliver(self):
+#         return "Delivering by truck"
+#
+#
+# class Bicycle(Transport):
+#     def deliver(self):
+#         return "Delivering by bicycle"
+#
+#
+#
+# # Абстрактний клас фабрики
+# class TransportFactory:
+#     def create_transport(self):
+#         pass
+#
+#
+# # Класи конкретних фабрик
+# class CarFactory(TransportFactory):
+#     def create_transport(self):
+#         return Car()
+#
+# class TruckFactory(TransportFactory):
+#     def create_transport(self):
+#         return Truck()
+#
+# class BicycleFactory(TransportFactory):
+#     def create_transport(self):
+#         return Bicycle()
+#
+#
+#
+# # Приклад використання
+# if __name__ == "__main__":
+#
+#     car_factory = CarFactory()
+#     car = car_factory.create_transport()
+#     print(car.deliver())
+#
+#     truck_factory = TruckFactory()
+#     truck = truck_factory.create_transport()
+#     print(truck.deliver())
+#
+#     bicycle_factory = BicycleFactory()
+#     bicycle = bicycle_factory.create_transport()
+#     print(bicycle.deliver())
+#
+#
+#
+#     print('='*80)
+#     transports = [car, bicycle, car, car, bicycle, truck]
+#
+#     for tr in transports:
+#         print(tr.deliver())
 
 # """
 # У цьому прикладі маємо абстрактний клас Transport,
@@ -172,7 +152,14 @@ if __name__ == "__main__":
 
 
 
-########################################################
+######################### END ###############################
+
+
+
+
+
+
+
 
 # class Boat(Transport):
 #     def deliver(self):

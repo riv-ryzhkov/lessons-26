@@ -26,18 +26,12 @@ if __name__ == "__main__":
 
     orders = [
         ("Cappuccino", 101),
+        ("Cappuccino", 101),
         ("Espresso", 102),
-        ('Glace', 113),
-        ('Glace', 115),
+        ("Espresso", 102),
         ('Americano', 128),
         ('Americano', 109),
         ('Milk', 202),
-        ('Milk', 202),
-        ('Milk', 202),
-        ('Milk', 202),
-        ('Milk', 202),
-        ("Espresso", 101),
-        ("Espresso", 108),
     ]
 
     for order in orders:

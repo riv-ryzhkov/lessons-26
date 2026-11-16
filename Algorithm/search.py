@@ -1,16 +1,17 @@
 ##############################################################
 ############ Лінійний пошук ##################################
-from requests.packages import target
-
+import random
 
 # Часова складність: O(n),
 # де n - кількість елементів у списку.
 
 # def linear_search1(arr, target):
+#     counter = 1
 #     for i in range(len(arr)):
 #         if arr[i] == target:
-#             return i
-#     return -1
+#             return i, counter
+#         counter += 1
+#     return -1, counter
 #
 #
 # def linear_search2(arr, target):
@@ -23,9 +24,11 @@ from requests.packages import target
 #
 #
 #
+# n = 1000
 # arr = [i for i in range(1000)]
-# target = 523
+# target = random.randint(1, 1000)
 # print(linear_search1(arr, target))
+# print(linear_search2(arr, target))
 
 
 ##############################################################
@@ -53,23 +56,15 @@ from requests.packages import target
 #     return -1, count
 #
 #
-#
-# arr = [i for i in range(300)]
-# target = 53
+# n = 1_000
+# arr = [i for i in range(n)]
+# target = random.randint(1, n)
 # print(binary_search(arr, target))
-#
 
 
-#
-# import random
-#
-#
-# l1 = [i for i in range(800000, 2)]
-#
-# # print(l1)
-# print(binary_search(l1, 399999))
-#
-#
+
+
+
 
 ##########################################################
 ##########################################################

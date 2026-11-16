@@ -11,53 +11,57 @@
 
 
 
-# # Абстрактний клас для фігур
-# class Shape:
-#     def area(self):
-#         # Обчислення площини
-#         pass
-#
-#
-# # Клас круга
-# class Circle(Shape):
-#     def __init__(self, radius):
-#         self.radius = radius
-#
-#     def area(self):
-#         return 3.14159 * self.radius * self.radius
-#
-#
-# # Клас прямокутника
-# class Rectangle(Shape):
-#     def __init__(self, width: float, height: float):
-#         self.width = width
-#         self.height = height
-#
-#     def area(self):
-#         return self.width * self.height
-#
-#
-# # Клас для обчислення загальної площі фігур
-# class AreaCalculator:
-#     @staticmethod
-#     def calculate_area(shapes: list):
-#         total_area = 0
-#         for shape in shapes:
-#             total_area += shape.area()
-#         return total_area
-#
-#
-# if __name__ == "__main__":
-#     shapes = [
-#         Circle(2),
-#         Rectangle(4, 1),
-#         Circle(6),
-#         Rectangle(3, 7)
-#     ]
-#
-#     total_area = AreaCalculator.calculate_area(shapes)
-#     print(f"Total area: {total_area}")
-#
+# Абстрактний клас для фігур
+class Shape:
+    def area(self):
+        # Обчислення площини
+        pass
+
+
+# Клас круга
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14159 * self.radius * self.radius
+
+
+# Клас прямокутника
+class Rectangle(Shape):
+    def __init__(self, width: float, height: float):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+
+
+
+# Клас для обчислення загальної площі фігур
+class AreaCalculator:
+    @staticmethod
+    def calculate_area(shapes: list):
+        total_area = 0
+        for shape in shapes:
+            total_area += shape.area()
+        return total_area
+
+
+if __name__ == "__main__":
+
+    shapes = [
+        Circle(2),
+        Rectangle(4, 1),
+        Circle(6),
+        Rectangle(3, 7),
+    ]
+
+
+    total_area = AreaCalculator.calculate_area(shapes)
+    print(f"Total area: {total_area}")
+
 
 """
 В цьому прикладі ми маємо абстрактний клас Shape, 
@@ -80,7 +84,8 @@
 
 ################################################################
 
- # Клас трикутник
+
+# # Клас трикутник
 # class Triangle(Shape):
 #     def __init__(self, base, height):
 #         self.base = base
@@ -88,5 +93,15 @@
 #
 #     def area(self):
 #         return self.base * self.height / 2
-
-
+#
+# # Квадрат
+# class Qutro(Shape):
+#     def __init__(self, base):
+#         # self.base = base
+#         self.width = base
+#         self.height = base
+#
+#     # def area(self):
+#     #     return self.base * self.base
+#     def area(self):
+#         return Rectangle.area(self)

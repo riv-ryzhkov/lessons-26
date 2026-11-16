@@ -8,16 +8,33 @@ import plotly
 import plotly.graph_objs as go
 import plotly.express as px
 import matplotlib.pyplot as plt
+
 from plotly.subplots import make_subplots
 
 import numpy as np
 import pandas as pd
 import json
 
+# x = np.arange(-10, 10, 0.2)
+# # print(x)
+# # print(type(x))
+# # print(type(x[0]))
+#
+# y = x**2
+# # print(y)
+# # print(type(y))
+# # print(type(y[0]))
+# # print(len(x))
+# # print(len(y))
+#
+# plt.plot(x, y)
+# plt.show()
 
 
-x = np.arange(-1, 1, 0.2)  #  [-1; 1)
-print(x, type(x))
+
+
+x = np.arange(-1, 1.2, 0.2)  #  [-1; 1)
+# print(x, type(x))
 
 # print(*dir(x), sep='\n')
 # x1 = list(x)
@@ -27,14 +44,11 @@ print(x, type(x))
 def f(x):
     return x**2
 
-
 def h(x):
     return np.sin(x)
 
-
 def k(x):
     return np.cos(x)
-
 
 def m(x):
     return np.tan(x)
@@ -42,29 +56,30 @@ def m(x):
 
 
 
-#========================================== Простой график 1 и 2 функций
+#========================================== Простий графік 1 та 2 функцій
 # fig = go.Figure()
 #
 # # print(*dir(fig), sep='\n')
 # # print(fig.to_dict())
 #
 #
+# #
 # # print(json.dumps(fig.to_dict(), indent=4))
 # # print('='*80)
-# #
-# # print(fig.to_dict()['data'])
-# # print('='*80)
-# #
+#
+# print(fig.to_dict()['data'])
+# print('='*80)
+#
 # fig.add_trace(go.Scatter(x=x, y=f(x)))
 # fig.add_trace(go.Scatter(x=x, y=5*x))
 # fig.add_trace(go.Scatter(x=x, y=-4*x))
 # fig.add_trace(go.Scatter(x=x, y=-x**2))
-# # # # #
-# # print(fig.to_dict()['data'])
-# # # # #
+#
+# print(fig.to_dict()['data'])
+# # #
 # fig.show()
 
-#==================================== Легенда и подписи осей
+#==================================== Легенда та підписи осей
 # fig = go.Figure()
 #
 # fig.add_trace(go.Scatter(x=x, y=f(x), name='<b>f(x)=x<sup>2</sup></b>'))
@@ -79,40 +94,40 @@ def m(x):
 #                   yaxis_title="<b><i>y Axis Title</i></b>",
 #                   margin=dict(l=100, r=100, t=100, b=100))
 # fig.show()
-#============================ Маркеры и подписи к данным
-#
+# ============================ Маркери та підписи даних
+
 # fig = go.Figure()
 #
 # fig.add_trace(go.Scatter(x=x, y=f(x), mode='lines+markers',  name='f(x)=x<sup>2</sup>'))
 # fig.add_trace(go.Scatter(x=x, y=x, mode='markers', name='g(x)=x'))
 # fig.update_layout(legend_orientation="h",
-#                   hovermode="x",
-#                   # hovermode="x unified",
+#                   # hovermode="x",
+#                   hovermode="x unified",
 #                   legend=dict(x=.5, xanchor="center"),
 #                   margin=dict(l=50, r=50, t=50, b=50))
 #
 # # fig.update_traces(hoverinfo="x+y")
-# fig.update_traces(hoverinfo="all", hovertemplate="Аргумент: %{x}<br>Функция: %{y}")
+# fig.update_traces(hoverinfo="all", hovertemplate="Аргумент: %{x}<br>Функція: %{y}")
 #
 # fig.show()
 
-#============== Управление маркерами, масштаб фрагмента, добавление графиков
-
+# ============== Управліня маркерами, масштаб фрагменту, додавання графіків
+#
 # fig = go.Figure()
 #
-# # # Масштабирование
+# # Масштабування
 # # fig.update_yaxes(range=[-0.5, 1.5])
 # # fig.update_xaxes(range=[-0.5, 1.5])
 #
 # fig.update_yaxes(range=[-2.5, 2.5], zeroline=True, zerolinewidth=3, zerolinecolor='Red')
 # fig.update_xaxes(range=[-1.5, 1.5], zeroline=True, zerolinewidth=3, zerolinecolor='#0000ff') # RGB
-# #
-# # # Добавление графиков (нужно включить)
+#
+# # # Додавання графіків (потрібно включити)
 # fig.add_trace(go.Scatter(visible='legendonly', x=x, y=h(x),  name='h(x)=sin(x)'))
-# fig.add_trace(go.Scatter(visible='legendonly', x=x, y=k(x),  name='k(x)=cos(x)'))
+# fig.add_trace(go.Scatter(x=x, y=k(x),  name='k(x)=cos(x)'))
 # fig.add_trace(go.Scatter(visible='legendonly', x=x, y=m(x),  name='m(x)=tg(x)'))
-# # #
-# # #
+# #
+# #
 # fig.add_trace(go.Scatter(x=x, y=f(x), mode='lines+markers',  name='f(x)=x<sup>2</sup>'))
 # fig.add_trace(go.Scatter(x=x, y=x, mode='markers', name='g(x)=x',
 #                          marker=dict(color='Red', size=20, line=dict(color='MediumPurple', width=3))))
@@ -120,10 +135,10 @@ def m(x):
 # fig.update_traces(hoverinfo="all", hovertemplate="Аргумент: %{x}<br>Функция: %{y}")
 # fig.show()
 
-#============== Несколько графиков
-
+#============== Декілько графіків
+#
 # fig = make_subplots(rows=1, cols=2, subplot_titles=("Plot 1", "Plot 2"))
-# # fig = make_subplots(rows=1, cols=2, subplot_titles=("Plot 1", "Plot 2"), column_widths=[1, 4])
+# # fig = make_subplots(rows=1, cols=2, subplot_titles=("Plot 1", "Plot 2"), column_widths=[5, 2])
 # # #
 # fig.update_yaxes(range=[-0.5, 1.5], zeroline=True, zerolinewidth=2, zerolinecolor='LightPink', col=2)
 # fig.update_xaxes(range=[-0.5, 1.5], zeroline=True, zerolinewidth=2, zerolinecolor='#2980B9', col=2)
@@ -147,19 +162,19 @@ def m(x):
 #
 # fig.update_layout(title="Plot Title")
 #
-# fig.update_xaxes(title='Ось X графика 1', row=1, col=1)
-# fig.update_xaxes(row=1, title='Ось X графика 2', col=2)
+# fig.update_xaxes(title='Вісь X графіку 1', row=1, col=1)
+# fig.update_xaxes(row=1, title='Вісь X графіку 2', col=2)
 #
-# fig.update_yaxes(title='Ось Y графика 1', col=1, row=1)
-# fig.update_yaxes(title='Ось Y графика 2', row=1, col=2)
+# fig.update_yaxes(title='Вісь Y графіку 1', col=1, row=1)
+# fig.update_yaxes(title='Вісь Y графіку 2', row=1, col=2)
 #
-# fig.update_traces(hoverinfo="all", hovertemplate="Аргумент: %{x}<br>Функция: %{y}")
+# fig.update_traces(hoverinfo="all", hovertemplate="Аргумент: %{x}<br>Функція: %{y}")
 # fig.show()
 
-#========== Разные размеры графиков и функций (столбец)
+#========== Різні розміри графіків та функцій (стовбець)
 # fig = make_subplots(rows=3, cols=2,
 #                     specs=[[{"rowspan": 3}, {}], [None, {}], [None, {}]])
-# # # # Объединяет "секции" матрицы графиков и "подавляет" графики
+# # # # Об'єднує "секції" матриці графіків та "подавляє" графіки
 # # #
 # fig.update_yaxes(range=[-1.5, 1.5], zeroline=True, zerolinewidth=2, zerolinecolor='LightPink', col=2)
 # fig.update_xaxes(range=[-2, 2], zeroline=True, zerolinewidth=2, zerolinecolor='#008000', col=2)
@@ -180,10 +195,10 @@ def m(x):
 #
 # fig.update_traces(hoverinfo="all", hovertemplate="Аргумент: %{x}<br>Функция: %{y}")
 # fig.show()
-#
 
 
-#========== Разные размеры графиков и функций (строка)
+
+#========== Різні розміри графіків та функцій (рядок)
 # x = np.arange(-5, 10, 0.2)
 #
 # fig = make_subplots(rows=2, cols=3,
@@ -212,8 +227,8 @@ def m(x):
 # fig.update_traces(hoverinfo="all", hovertemplate="Аргумент: %{x}<br>Функция: %{y}")
 # fig.show()
 
-
-#========Тепловая карта
+#######################################################
+#========Теплова карта
 # aggrnyl     agsunset    blackbody   bluered     blues       blugrn      bluyl       brwnyl
 # bugn        bupu        burg        burgyl      cividis     darkmint    electric    emrld
 # gnbu        greens      greys       hot         inferno     jet         magenta     magma
@@ -235,9 +250,9 @@ def m(x):
 # fig.add_trace(go.Scatter(x=x, y=f(x), mode='lines+markers',  name='f(x)=x<sup>2</sup>',
 #                          marker=dict(color=h(x), colorbar=dict(title="h(x)=sin(x)"),
 #                                      # colorscale='Inferno',
-#                                      colorscale='purples',
+#                                      colorscale='icefire',
 #                                      # colorscale='earth',
-#                                      size=150 * abs(k(x))
+#                                      size=100 * abs(k(x))
 #                                      )
 #                         ))
 # fig.add_trace(go.Scatter(visible='legendonly', x=x, y=10*h(x),  name='h(x)=10*sin(x)'))
@@ -250,9 +265,13 @@ def m(x):
 # fig.show()
 
 
-#========= Анимация 1 ===================================================
+#========= Анімація 1 ===================================================
 # x = np.arange(-7, 15, 0.2)
 # fig = go.Figure()
+#
+# fig.update_yaxes(range=[-25, 250])
+# fig.update_xaxes(range=[-8, 16])
+#
 # fig.add_trace(go.Scatter(x=[x[0]], y=[f(x)[0]], mode='lines+markers',  name='f(x)=x<sup>2</sup>',
 #                          marker=dict(color=h(x[0]), colorbar=dict(title="h(x)=sin(x)"), colorscale='Inferno', size=50*abs(h(x[0])))
 #                         ))
@@ -272,20 +291,25 @@ def m(x):
 #                   margin=dict(l=0, r=0, t=0, b=0))
 # fig.update_traces(hoverinfo="all", hovertemplate="Аргумент: %{x}<br>Функция: %{y}")
 # fig.show()
-#
 
 
 
 
 
-#========= Анимация 2 ==================================================
+
+#========= Анімація 2 ==================================================
 # x = np.arange(-7, 15, 0.2)
 # num_steps = len(x)
+#
+#
+#
 #
 # fig = go.Figure(data=[go.Scatter(x=[x[0]], y=[h(x)[0]], mode='lines+markers', name='h(x)=sin(x)',
 #                                  marker=dict(color=[f(x[0])], colorbar=dict(yanchor='top', y=0.8, title="f(x)=x<sup>2</sup>"), colorscale='Inferno', size=[50*abs(h(x[0]))])),
 #                       go.Scatter(x=[x[0]], y=[k(x)[0]], mode='lines+markers', name='k(x)=cos(x)',
-#                                  marker=dict(color=[f(x[0])], colorscale='Inferno', size=[50*abs(k(x[0]))]))])
+#                                  marker=dict(color=[m(x[0])], colorscale='Inferno', size=[50*abs(k(x[0]))]))])
+# fig.update_yaxes(range=[-2, 2])
+# fig.update_xaxes(range=[-8, 16])
 #
 # frames = []
 # for i in range(0, len(x)):
@@ -326,18 +350,18 @@ def m(x):
 #
 # fig.show()
 
-
-#================ Диаграммы (круговая)
-# dices = pd.DataFrame(np.random.randint(low=1, high=7, size=(10000, 2)), columns=('Кость 1', 'Кость 2'))
+#
+# #================ Діаграми (кругова)
+# dices = pd.DataFrame(np.random.randint(low=1, high=7, size=(10000, 2)), columns=('Кість 1', 'Кість 2'))
 # #
-# dices['Сумма'] = dices['Кость 1'] + dices['Кость 2']
-# # # Первые 5 бросков игральных костей
+# dices['Сумма'] = dices['Кість 1'] + dices['Кість 2']
+# # # Перші 5 кидків гральних костей
 # # # display(dices.head())
 # # print(dices.head())
 # # print('====== Статистика ===========')
 # #
 # sum_counts = dices['Сумма'].value_counts().sort_index()
-# # # количество выпавших сумм
+# # # кількість випавших сум
 # # # display(sum_counts)
 # # print(sum_counts)
 # #
@@ -347,41 +371,41 @@ def m(x):
 #
 # # fig.add_trace(go.Pie(values=sum_counts, labels=sum_counts.index, sort=False))
 #
-# pull[sum_counts.tolist().index(sum_counts.max())] = 0.2 # Сдвиг
+# pull[sum_counts.tolist().index(sum_counts.max())] = 0.1 # Сдвиг
 # # fig.add_trace(go.Pie(values=sum_counts, labels=sum_counts.index, sort=False, pull=pull))
 # fig.add_trace(go.Pie(values=sum_counts, labels=sum_counts.index, sort=False, pull=pull, hole=0.5))
 # fig.update_layout(
-#     title="Пример кольцевой/круговой диаграммы",
+#     title="Приклад кільцевої/кругової діаграми",
 #     title_x=0.5,
 #     margin=dict(l=0, r=0, t=30, b=0),
 #     legend_orientation="h",
-#     annotations=[dict(text='Суммы очков<br>при броске<br>2 игральных костей', x=0.5, y=0.5, font_size=20, showarrow=False)])
+#     annotations=[dict(text='Суми очков<br>при киданні<br>2 гральних костей', x=0.5, y=0.5, font_size=20, showarrow=False)])
 # fig.show()
 
-#========= Диаграмма "Солнечные лучи"
+#========= Діаграма "Сонячні промені"
 
-# dices = pd.DataFrame(np.random.randint(low=1, high=7, size=(100000, 2)), columns=('Кость 1', 'Кость 2'))
-# dices['Сумма'] = dices['Кость 1'] + dices['Кость 2']
-# sum_counts = dices['Сумма'].value_counts().sort_index()
+# dices = pd.DataFrame(np.random.randint(low=1, high=7, size=(100000, 2)), columns=('Кість 1', 'Кість 2'))
+# dices['Сума'] = dices['Кість 1'] + dices['Кість 2']
+# sum_counts = dices['Сума'].value_counts().sort_index()
 #
-# # 1-й уровень, центр диаграммы
-# labels = ["Всего событий: " + str(sum(sum_counts))]
+# # 1-й рівень, центр діаграми
+# labels = ["Всього подій: " + str(sum(sum_counts))]
 # parents = [""]
 # values = [sum(sum_counts)]
 #
-# # 2-й уровень, "промежуточный"
-# second_level_dict = {x:'Событий: ' + str(sum_counts[x]) + '<br>Σ = ' + str(x) for x in sum_counts.index}
+# # 2-й рівень, "проміжний"
+# second_level_dict = {x:'Подій: ' + str(sum_counts[x]) + '<br>Σ = ' + str(x) for x in sum_counts.index}
 # labels += map(lambda x: second_level_dict[x], sum_counts.index)
 # parents += [labels[0]]*len(sum_counts)
 # values += sum_counts.tolist()
 #
-# # Готовим DataFrame для 3 уровня (группируем )
-# third_level = dices.groupby(['Кость 1', 'Кость 2']).count().reset_index()
-# third_level.rename(columns={'Сумма':'Value'}, inplace=True)
-# third_level['Сумма'] = third_level['Кость 1'] + third_level['Кость 2']
-# third_level['Label'] = third_level['Кость 1'].map(str) + ' + ' + third_level['Кость 2'].map(str)
-# third_level['Parent'] = third_level['Сумма'].map(lambda x: second_level_dict[x])
-# # 3-й уровень, "лепестки" диаграммы
+# # Готовимо DataFrame для 3 рівня (групуємо )
+# third_level = dices.groupby(['Кість 1', 'Кість 2']).count().reset_index()
+# third_level.rename(columns={'Сума':'Value'}, inplace=True)
+# third_level['Сума'] = third_level['Кість 1'] + third_level['Кість 2']
+# third_level['Label'] = third_level['Кість 1'].map(str) + ' + ' + third_level['Кість 2'].map(str)
+# third_level['Parent'] = third_level['Сума'].map(lambda x: second_level_dict[x])
+# # 3-й рівень, "пелюстки" діаграми
 # values += third_level['Value'].tolist()
 # parents += third_level['Parent'].tolist()
 # labels += third_level['Label'].tolist()
@@ -396,38 +420,38 @@ def m(x):
 #
 # fig.show()
 
-#============== Диаграмма "Гистограмма"
+#============== Діаграма "Гістограма"
 #
-# dices = pd.DataFrame(np.random.randint(low=1, high=7, size=(100, 2)), columns=('Кость 1', 'Кость 2'))
-# dices['Сумма'] = dices['Кость 1'] + dices['Кость 2']
+# dices = pd.DataFrame(np.random.randint(low=1, high=7, size=(100, 2)), columns=('Кість 1', 'Кість 2'))
+# dices['Сума'] = dices['Кість 1'] + dices['Кість 2']
 #
-# dices2 = pd.DataFrame(np.random.randint(low=1, high=7, size=(100, 2)), columns=('Кость 1', 'Кость 2'))
-# dices2['Сумма'] = dices2['Кость 1'] + dices2['Кость 2']
+# dices2 = pd.DataFrame(np.random.randint(low=1, high=7, size=(100, 2)), columns=('Кість 1', 'Кість 2'))
+# dices2['Сума'] = dices2['Кість 1'] + dices2['Кість 2']
 #
-# dices3 = pd.DataFrame(np.random.randint(low=1, high=7, size=(1000, 2)), columns=('Кость 1', 'Кость 2'))
-# dices3['Сумма'] = dices3['Кость 1'] + dices3['Кость 2']
+# dices3 = pd.DataFrame(np.random.randint(low=1, high=7, size=(10000, 2)), columns=('Кість 1', 'Кість 2'))
+# dices3['Сума'] = dices3['Кість 1'] + dices3['Кість 2']
 #
 #
 # fig = go.Figure()
 #
-# fig.add_trace(go.Histogram(x=dices['Сумма'], histnorm='probability density', name='100 бросков v.1'))
-# fig.add_trace(go.Histogram(x=dices2['Сумма'], histnorm='probability density', name='100 бросков v.2'))
-# fig.add_trace(go.Histogram(x=dices3['Сумма'], histnorm='probability density', name='1000 бросков'))
+# fig.add_trace(go.Histogram(x=dices['Сума'], histnorm='probability density', name='100 кидків v.1'))
+# fig.add_trace(go.Histogram(x=dices2['Сума'], histnorm='probability density', name='100 кидків v.2'))
+# fig.add_trace(go.Histogram(x=dices3['Сума'], histnorm='probability density', name='1000 кидків'))
 #
 # fig.update_layout(
-#     title="Пример гистограммы на основе бросков пары игральных костей",
+#     title="Приклад гістограми на основі кидків пари гральних костей",
 #     title_x=0.5,
-#     xaxis_title="<b>сумма очков</b>",
-#     yaxis_title="<b>Плотность вероятности</b>",
+#     xaxis_title="<b>сума очков</b>",
+#     yaxis_title="<b>Плотність верогідності</b>",
 #     legend=dict(x=.5, xanchor="center", orientation="h"),
 #     margin=dict(l=30, r=30, t=30, b=30))
 #
 # fig.show()
+#
 
 
 
-
-#  END !!!!!
+#####################################  END !!!!!
 
 
 
@@ -493,10 +517,9 @@ def m(x):
 
 
 #========= Animation
-
+#
 # cities = pd.read_csv('https://raw.githubusercontent.com/hflabs/city/master/city.csv')
 # train_russia = pd.read_csv('https://gist.githubusercontent.com/lexnekr/2da07b5fc12b5be24068e4d68ed47ca5/raw/d6256765a3223282fbfec7e0b040cbfb21593fff/train_russia.scv')
-# #
 #
 # data = [go.Scattermapbox(legendgroup="group",
 #                          name='Города России',

@@ -7,9 +7,8 @@
 що високорівневі модулі не повинні залежати від низькорівневих модулів,
 а обидва рівні повинні залежати від абстракцій.
 """
-from pyexpat.errors import messages
 
-#
+
 # # Абстракція (абстрактний клас або інтерфейс)
 # class NotificationService:
 #     def send_notification(self, message):
@@ -46,6 +45,10 @@ from pyexpat.errors import messages
 #         return 'Telegram'
 #
 #
+#     def __repr__(self):
+#         return 'Viber'
+#
+#
 # # Високорівневий модуль, який залежить від абстракції (NotificationService)
 # class NotificationManager:
 #     def __init__(self, notification_service):
@@ -70,17 +73,16 @@ from pyexpat.errors import messages
 #
 #     # Високорівневий модуль взаємодіє з низькорівневими модулями через абстракцію
 #     manager1 = NotificationManager(email_notification)
-#     manager1.send_notification("Hello, this is an email!")
+#     # manager1.send_notification("Hello, this is an email!")
 #
 #     manager2 = NotificationManager(sms_notification)
-#     manager2.send_notification("Hi, this is a SMS!")
+#     # manager2.send_notification("Hi, this is a SMS!")
 #
 #     manager3 = NotificationManager(empty_notification)
-#     manager3.send_notification("Hello, world!")
+#     # manager3.send_notification("Hello, world!")
 #
 #     manager4 = NotificationManager(telegram_notification)
-#     manager4.send_notification("Hi, this is a Telegram!")
-#
+#     # manager4.send_notification("Hi, this is a Telegram!")
 #
 #
 #     all_managers = [manager1, manager2, manager3, manager4]
@@ -117,6 +119,6 @@ from pyexpat.errors import messages
 #
 #     def __repr__(self):
 #         return 'Telegram'
-
+#
 # manager4 = NotificationManager(telegram_notification)
 # manager4.send_notification("Hi, this is a Telegram!")

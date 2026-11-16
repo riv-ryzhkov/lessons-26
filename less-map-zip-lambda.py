@@ -4,7 +4,7 @@
 def my_func(x):
     return abs(int(x))
 
-
+#
 # print(my_func(-465.9008))
 #
 # l1 = [2.324, '-3', -45, '67', '-99']
@@ -23,12 +23,11 @@ def my_func(x):
 l1 = [2.234, '-3', -45, '67', '-99']
 
 # l2 = map(int, l1)
-# l2 = tuple(map(int, l1))
-# l2 = list(range(10))
+# l2 = list(map(int, l1))
 # l2 = list(map(my_func, range(-5, 10, 2)))
 # l2 = list(map(my_func, l1))
-
-
+#
+#
 # print(l1, id(l1))
 # print(l2, id(l2))
 
@@ -40,7 +39,6 @@ l1 = [2.234, '-3', -45, '67', '-99']
 def pwd(num):
     return num ** 2
 
-
 # l = list(range(-5, 5))
 # print(l)
 #
@@ -49,7 +47,7 @@ def pwd(num):
 
 
 
-
+#
 # l2 = list(map(lambda x: x ** 2, range(-5, 5)))
 # print(l2, id(l2))
 
@@ -65,30 +63,23 @@ def pwd(num):
 
 ############################################## filter
 
-# l1 = [2.244, '-3', -45, '67', '-99', 1, 0, True]
+l1 = [2.244, '-3', -45, '67', '-99', 1, 0, True]
 # print(l1)
-#
-# print(list(filter(lambda x: int(x) >= 0, l1)))
-#
+
+# print(list(filter(lambda x: int(x) > 0, l1)))
+
 # def foo(num):
 #     return int(num) > 0   # 0 -> False  "" -> False
 #
 # print(list(filter(foo, l1)))
 #
 # l2 = list(filter(lambda x: int(x) < 0, l1))
-#
 # l3 = list(filter(lambda x: type(x) == str, l1))
-#
 # l4 = list(filter(lambda x: type(x) == int, l1))
-#
 # l5 = list(filter(lambda x: type(x) == str and int(x) < 0, l1))
-#
 # l6 = list(filter(lambda x: x, l1))
-#
 # l6a = list(filter(lambda x: x == True, l1))
-#
 # l7 = set(filter(lambda x: x % 2, range(10)))
-#
 # print('l1=', l1, id(l1))
 # print('l2=', l2, id(l2))
 # print('l3=', l3, id(l3))
@@ -97,9 +88,17 @@ def pwd(num):
 # print('l6=', l6, id(l6))
 # print('l6a=', l6a, id(l6a))
 # print('l7=', l7, id(l7))
-
-
-
+#
+# print(1 == True)
+# print(1 == 1.0)
+# print(True == 1.0)
+#
+# print(0 == False)
+# print(0 == 0.0)
+# print(False == 0.0)
+#
+# print((2<3) * 5)
+# print((2>3) * 5)
 
 # ................................
 
@@ -117,17 +116,16 @@ def pwd(num):
 #     'mail.ru',
 #     'yandex.ru'
 # ]
-
+#
 # print(webs)
 # symbols = '.ru'
-# my_webs = list(filter(lambda x: not x.endswith(symbols), webs))
-# my_webs = list(filter(lambda x: x.endswith('.ua') or x.endswith('.com'), webs))
+# # my_webs = list(filter(lambda x: not x.endswith(symbols), webs))
+# # my_webs = list(filter(lambda x: x.endswith('.ua') or x.endswith('.com'), webs))
 # my_webs = list(filter(lambda x: not (x in stop), webs))
-
+#
 # print(my_webs)
 
 ####################################### ZIP
-
 
 # text = 'Hello'
 #
@@ -144,16 +142,16 @@ def pwd(num):
 
 ############################################ reduce ##################
 
-# from functools import reduce
-#
+from functools import reduce
+
 # def foo(x, y):
 #     print('x=', x, '* y=', y)
 #     return x*y
-#
-#
-# l1 = [1, 2, 3, 4]
+
+
+# l1 = [2, 3, 4, 5]
 # print('reduce =', reduce(foo, l1))
-#
+
 # print('\nreduce =', reduce(lambda x, y: x * y, l1))
 
 ################################################
@@ -161,17 +159,18 @@ def pwd(num):
 
 # ................................................ sort
 
-#
+
 # l3 = [422, '373', 195, '867', '18899']
 # print('l3 ->', l3, id(l3))
-#
-# # l3 = list(map(int, l3))
-# # l3 = list(map(str, l3))
-# # print('map ->', l3)
-#
-# l3.sort(key=lambda x: str(x), reverse=True)
-# # l3.sort(reverse=True)
-# # print(l1)
+
+# l3 = list(map(int, l3))
+# l3 = list(map(str, l3))
+# print('map ->', l3)
+
+# l3.sort()
+# l3.sort(key=lambda x: int(x), reverse=True)
+# l3.sort(reverse=True)
+# print(l1)
 # print('sort ->', l3, id(l3))
 
 ############################ sorted()
@@ -193,7 +192,7 @@ def pwd(num):
 
 # .........................................
 
-
+#
 # city = ['Dnipro', 'Kiev', 'Lviv', 'Odessa', 'Rivno']
 # population = [1000000, '4500000', 900000, '850000', 200000]
 #
@@ -221,14 +220,50 @@ def pwd(num):
 #     print(*i, sep='\t')
 
 
-############################################################# str(2) = '2'  ''
+################### НАГАДУЮ!!!! ##################################
+# a = ' '   # False - 0 0.0 '' [] () {} False      True -
+# if a:
+#     print(a, 'YES!!!')
+# else:
+#     print('NNNNNNNOOOOO!')
+
+####################################################
+
+# dict1 = {
+#     'Lviv': 900,
+#     'Dnipro': 1000,
+#     'Kyiv': 4500,
+#     'Rivno': 250
+# }
+#
+# # res = sorted(dict1.items(), key=lambda x: x[1], reverse=True)
+# res = sorted(dict1.items())
+# print(*res, sep='\n')
+
+#####################################################
+
+############################################## Напоминание! #### END ##############
+
+
+# l1 = range(97, 108)
+# l2 = [chr(i) for i in range(97, 108)]
+# print(l1)
+# print(l2)
+# l3 = list(zip(l1, l2))
+# print(*l3, sep='\n')
+#
+# for key, vol in l3:
+#     print(key, vol, sep=' ->\t')
+
+# .................................
+
 
 # l1 = [2, '-3', -45, '67', '-99']   #  ''
-# l2 = list(filter(str, l1))
+# # l2 = list(filter(str, l1))
 # l2 = list(filter(lambda x: type(x) == str, l1))
 # print('l2 =', l2)
-
-
+#
+#
 # l2 = list(filter(lambda x: type(x) == str, l1))
 # l3 = list(map(lambda x: (int(x)+2) ** 2, l1))
 # l4 = list(map(int, l1))
@@ -236,16 +271,10 @@ def pwd(num):
 # print('l2 =', l2)
 # print('l3 =', l3)
 # print('l4 =', l4)
-# print('max =', sum(l4))
-
-# a = []
-# if a:
-#     print(a)
-# else:
-#     print('NNNNNNNOOOOO!')
-
-#####################################################
-
+# print('max =', max(l4))
+#
+#
+#
 # l1 = list(range(7))   # 0, 1, 2, 3, 4, 5, 6
 # l2 = list(range(5, 20)) # 5,6,7,8,9,10,11,12,13,14,15,16....
 # l3 = list(range(15, 100)) # 15,16, 17,,,....
@@ -257,107 +286,13 @@ def pwd(num):
 # print(l4)
 # print(len(l4))
 
-############################################## Напоминание! #### END ##############
 
 
-# l1 = range(97, 108)
-# l2 = [chr(i) for i in range(97, 108)]
+# l1 = 'Hello, world!'
 # print(l1)
-# print(l2)
-# l3 = list(zip(l1, l2))
-# print(*l3, sep='\n')
-
-# .................................
-
-
-
-
-# l1 = 'Hello'
 # l2 = list(zip(range(len(l1)), l1))
 # print(l2)
-
+#
 # print(list(enumerate(l1)))
 
 #############################################
-
-
-# def pwr(x):
-#     return int(x) ** 2
-#
-#
-# l1 = [2, '3', 45, '67', '99']
-# print(l1)
-#
-# l2 = list(map(lambda x: int(x) ** 2, l1))
-# print(l2)
-# print(list(map(pwr, l1)))
-#
-# l3 = list(filter(lambda x: int(x) > 40, l1))
-# print(l3)
-#
-# l4 = list(map(pwr, l1))
-# print(l4)
-
-#############################################
-
-# print(pow(3, 3))
-# print(pow(2, 3))
-# print(3**3)
-#
-#
-#
-# #.............................
-# base_numbers = [2, 3, -4, -5, 0, 8, 10, 12, 14, 16]
-# print('filter ->', list(filter(lambda x: x % 2 == 0, base_numbers)))
-# #
-# print('filter None ->', list(filter(None, base_numbers)))
-#
-#
-# powers = [1, 2, 3, 4, 5]
-
-# numbers_powers = list(map(pow, base_numbers, powers))
-# #
-# print('pow=', numbers_powers)
-
-
-# z = list(zip(base_numbers, powers))
-# print('z1 =', z)
-#
-# z = zip(base_numbers, powers)
-# print('z2 =', z)
-
-
-###################
-
-# for k, n in zip(base_numbers, powers):
-#     print(k, '**', n, '=', k**n)
-
-
-########################################
-# a = [1, 3, 5, 7]
-# print(a)
-# b = list(map(lambda x: x**2, a))
-# print(b)
-# c = list(zip(a, b))
-# print(c)
-# for k, l in c:
-#     print(k, '*', k, '=', l)
-##########################################
-
-# dict1 = {
-#     'Lviv': 900,
-#     'Dnipro': 1000,
-#     'Kyiv': 4500,
-#     'Rivno': 250
-# }
-
-# res = sorted(dict1.items(), key=lambda x: x[1], reverse=True)
-# print(*res, sep='\n')
-
-# ..................
-# res = sorted(dict1, key=lambda x: x[1], reverse=True)
-# print(res)
-# for x in res:
-#     print(x, dict1[x])
-
-

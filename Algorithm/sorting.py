@@ -30,7 +30,7 @@
 #
 #
 # # Приклад використання:
-# arr = [64, 0, 25, 2, 12, -14, 22, 11]
+# arr = [64, 0, 25, 2, 12, -14, 22, -5, 11]
 # print("НЕвідсортований масив:", arr)
 # bubble_sort(arr)
 # print("Відсортований масив:", arr)
@@ -61,7 +61,7 @@
 Процес повторюється для всього масиву, поки весь масив не буде впорядкований.
 """
 
-#
+
 # def selection_sort(arr):
 #     n = len(arr)
 #
@@ -111,7 +111,7 @@ Insertion Sort - це простий алгоритм сортування,
 і розміщувати його на відповідному місці, зберігаючи відсортовану послідовність.
 """
 
-
+#
 # def insertion_sort(arr):
 #     for i in range(1, len(arr)):
 #         key = arr[i]  # Поточний елемент для порівняння та вставки
@@ -169,7 +169,7 @@ Insertion Sort - це простий алгоритм сортування,
 #
 #         i = j = k = 0
 #
-#         print('Відсортовані масиви', left_half, right_half)
+#         print('Відсортовані масиви', right_half, left_half)
 #         print()
 #
 #         # Злити дві відсортовані половини
@@ -198,7 +198,7 @@ Insertion Sort - це простий алгоритм сортування,
 # merge_sort(arr)
 # print('.' * 80)
 # print("Відсортований масив:", arr)
-
+#
 
 """
 Програма розбиває вхідний масив на половини, 
@@ -301,10 +301,12 @@ Quick Sort - це швидкий та ефективний алгоритм со
 #     return sorted_arr
 #
 # # Приклад використання:
-# arr = [64, 0, 25, 2, 12, -14, 22, 11]
+# arr = [64, 0, 25, -5, 2, 12, -14, 22, 11]
 # sorted_arr = tree_sort(arr)
 # print("Відсортований масив "
 #       "за допомогою удосконаленого сортування деревом:", sorted_arr)
+#
+
 
 # У цьому прикладі ми спочатку створюємо клас TreeNode,
 # який визначає вузол дерева.
@@ -346,14 +348,14 @@ Quick Sort - це швидкий та ефективний алгоритм со
 #         gap //= 2  # Зменшуємо шаг
 #
 #     return arr
-#
-#
-# # Приклад використання:
-# arr = [64, 0, 25, 2, 12, -14, 22, 11]
-# print('Початковий масив:', arr)
-# sorted_arr = shell_sort(arr)
-# print("Відсортований масив:", sorted_arr)
-#
+
+
+# Приклад використання:
+arr = [64, 0, 25, 2, -5, 12, -14, 22, 11]
+print('Початковий масив:', arr)
+sorted_arr = shell_sort(arr)
+print("Відсортований масив:", sorted_arr)
+
 
 ################################# END
 
@@ -442,12 +444,12 @@ Quick Sort - це швидкий та ефективний алгоритм со
 
 # linear_search
 
-def my_func(arr, target):
-    counter = 1
-    for i, num in enumerate(arr):
-        if num == target:
-            return i, counter
-        counter += 1
-    return -1, counter
+# def my_func(arr, target):
+#     counter = 1
+#     for i, num in enumerate(arr):
+#         if num == target:
+#             return i, counter
+#         counter += 1
+#     return -1, counter
 
 

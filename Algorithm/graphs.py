@@ -6,16 +6,16 @@
 
 from collections import deque
 
-#
-# def bfs(graph, start):
-#     visited = set()
-#     queue = deque([start])
-#     while queue:
-#         vertex = queue.popleft()
-#         if vertex not in visited:
-#             visited.add(vertex)
-#             print(vertex)
-#             queue.extend(graph[vertex] - visited)
+
+def bfs(graph, start):
+    visited = set()
+    queue = deque([start])
+    while queue:
+        vertex = queue.popleft()
+        if vertex not in visited:
+            visited.add(vertex)
+            print(vertex)
+            queue.extend(graph[vertex] - visited)
 
 # Часова складність: O(V + E),
 # де V - кількість вершин, E - кількість ребер у графі.

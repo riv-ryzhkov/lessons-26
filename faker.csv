@@ -1,101 +1,51 @@
-Name;Surname;job;address;phone;email;credit_card_number;credit_card_expire;credit_card_security_code
-Carrie;Potter;Sports administrator;"65817 Jasmine Drives
-Port Destiny, TX 19815";+29(820)558-53-48;ktownsend@example.net;9345 6689 2790 8821;01/33;036
-Joshua;Townsend;Communications engineer;"120 Kevin Lock
-Robertland, FM 14921";+27(916)666-93-22;simmonsedward@example.net;8348 8886 2151 6536;12/29;014
-Mrs.;Danielle;Air traffic controller;"833 Fleming Garden
-West Joannafurt, MN 67598";+80(946)867-04-48;christopher18@example.net;4374 1203 8767 5998;02/27;263
-Christopher;Hamilton;Charity fundraiser;"031 James Plains
-Flynnmouth, MT 42203";+23(647)814-93-17;pgross@example.net;5599 4360 6587 6171;04/35;1289
-Peter;Weiss;Careers information officer;"59147 Duran Loop
-West Angela, WV 28089";+56(111)796-64-45;ronald26@example.org;7583 9085 6382 8856;10/28;442
-Mike;Payne;Environmental consultant;"560 Quinn Locks
-Espinozaburgh, MT 75106";+48(991)237-74-71;stephenwiggins@example.net;1128 0490 2581 7582;10/34;490
-Sabrina;Mcmahon;Phytotherapist;"Unit 3707 Box 9930
-DPO AP 19628";+19(749)667-31-31;wendy09@example.org;2352 8334 0505 4679;09/31;803
-Nancy;Miller;Clinical biochemist;"747 Diaz Junctions
-Antoniofort, PR 10809";+18(746)518-67-60;scottwhite@example.net;9989 3068 0048 7298;12/30;981
-Michelle;Cherry;Information officer;"87565 Yvonne Way Suite 741
-Lake Nicoleview, CT 67394";+11(297)187-46-50;jenniferking@example.com;5589 1408 9964 9315;01/31;577
-Karen;Sharp;Advertising account executive;"70563 Rice Drives Suite 138
-Miguelland, GA 21125";+79(493)423-29-40;sandraholt@example.com;7561 5338 0818 4719;08/29;014
-Kathryn;Zamora;Buyer, retail;"343 Cook Views Apt. 911
-North Tracyhaven, SC 99511";+50(243)592-51-19;lisabell@example.com;4681 6316 9122 1759;10/29;344
-Michael;Vazquez;Psychologist, counselling;"006 Brian Forges Apt. 028
-South Elizabethbury, NC 08924";+68(471)306-59-27;umiller@example.net;5729 4988 1845 2513;04/32;159
-Amanda;Maddox;Nature conservation officer;"85455 Donna Keys
-Codyborough, SC 41836";+59(223)430-81-74;samanthadecker@example.org;5499 5792 9332 6375;10/31;458
-Ronald;Meadows;Data processing manager;"5418 Reese Island Suite 787
-East Patrickberg, UT 60786";+40(691)070-79-62;robin42@example.org;5424 7361 4868 2500;07/29;072
-Rebecca;Romero;Firefighter;"033 Barrett Cliff
-Lake Marissa, GU 09207";+04(567)054-35-81;thompsonrichard@example.net;2291 1979 9266 8830;11/35;2140
-Charles;Cooley;Solicitor, Scotland;"452 Carmen Tunnel Apt. 819
-Roseville, AL 48559";+41(927)334-85-85;xbaker@example.net;8295 6053 7769 6089;03/32;577
-Raymond;Wise;Scientific laboratory technician;"6992 Townsend Pass
-Davidshire, FL 46488";+05(548)217-48-01;bradleyhampton@example.org;8758 5881 3946 3686;11/32;395
-Charles;Robinson;Product designer;"8850 Brittany Plaza Apt. 955
-Bradleymouth, MA 40625";+88(723)426-49-43;msalazar@example.org;7931 5021 1441 1743;09/34;702
-Michele;Murphy;Scientist, research (physical sciences);"894 Lindsey Stravenue Suite 141
-East Kimberlyview, IL 16779";+00(186)541-48-17;summerslaura@example.org;7126 4839 0752 4367;04/28;117
-Robert;Garcia;Buyer, industrial;"779 Dennis Square
-South Brianville, DE 10675";+88(646)628-83-54;ewright@example.com;7444 6865 6229 4100;09/34;965
-Tracy;Thompson;Designer, interior/spatial;"USCGC Miller
-FPO AA 83822";+00(499)794-90-00;bwarren@example.com;3563 0870 4089 4071;06/29;857
-Angela;Johnson;Psychologist, counselling;"71530 Gardner Trail Apt. 284
-Jeffreymouth, MP 84204";+26(557)358-62-69;hatfieldthomas@example.com;3336 6691 7292 2353;06/33;136
-Allison;Jones;Management consultant;"7469 Carroll Lights Apt. 552
-Robinton, OK 47558";+62(317)333-47-07;tayloramanda@example.org;4172 6653 2686 2377;10/29;554
-Debbie;Gonzales;Materials engineer;"305 Albert Lights Suite 679
-South Lynn, AR 46425";+77(309)437-25-39;jacksonlaurie@example.org;2751 3824 9788 6742;12/26;067
-Mr.;Kenneth;Therapist, art;"375 Yvette Junctions Apt. 802
-Lorihaven, PW 36263";+10(254)724-74-86;brenda45@example.org;4788 8746 2581 9988;09/35;582
-Gary;Newman;Naval architect;"710 Williams View Suite 032
-Port Sarahton, IL 36490";+24(616)686-93-64;jill67@example.com;7352 1564 8743 9698;02/30;0699
-Ann;Nunez;Hydrologist;"Unit 6347 Box 6994
-DPO AA 84370";+60(047)995-70-63;kponce@example.org;1483 6380 4954 1218;08/26;713
-Chelsea;Mendez;Development worker, international aid;"610 Russell Dale
-West Deborah, IL 19355";+70(690)592-16-60;hunderwood@example.org;8254 9787 0452 4490;12/32;886
-Elizabeth;Banks;Broadcast presenter;"PSC 7308, Box 6758
-APO AE 65669";+33(753)249-48-82;brian03@example.org;8771 3898 1477 5833;10/35;154
-Nicholas;Young;Museum/gallery exhibitions officer;"6651 Linda Ford
-Lake Sydney, FM 61206";+33(104)035-00-11;gsoto@example.com;2482 5494 9486 0929;05/28;956
-Jeffery;Hinton;Media planner;"769 Dominguez Fall
-Virginiaport, SD 18503";+57(080)023-89-68;wilsonronald@example.com;8562 8094 4171 8638;05/27;949
-Dr.;Miranda;Archaeologist;"PSC 2374, Box 8389
-APO AE 93249";+70(824)403-41-90;sandraalvarado@example.com;1625 0984 9341 7363;04/26;410
-Brandon;Porter;Editorial assistant;"5634 Mary Squares Suite 600
-East Stephanie, FL 88008";+20(985)327-82-12;masondavid@example.org;5495 7853 5243 4718;09/35;502
-Kathy;Reed;Legal secretary;"1639 Keller Way Suite 519
-Port Amberchester, PW 36397";+95(594)429-65-46;donnaclark@example.net;9475 0655 0228 0618;12/29;040
-Dwayne;Brown;Press sub;"4651 Lucas Street
-Eduardoview, ME 52830";+80(583)422-28-55;deanna39@example.org;2664 3258 8256 2492;11/30;709
-Nathan;Martinez;Designer, blown glass/stained glass;"371 James Coves Suite 259
-West Keith, IA 98028";+22(313)179-07-68;jeremy08@example.net;3692 1228 0687 1913;02/36;416
-Eric;Alvarez;Make;"68875 Jesus Brooks
-South Thomas, AZ 18982";+89(602)969-62-22;chess@example.com;9588 6515 7912 6458;08/31;636
-Sheila;Jordan;Scientist, biomedical;"9530 Baird Motorway
-New Michellemouth, KY 50980";+89(474)874-66-85;andrebennett@example.org;5558 5623 7672 6738;03/30;400
-Jason;Jackson;Pension scheme manager;"6050 Jason Prairie Suite 007
-West Davidfort, GU 96018";+77(099)193-30-06;johnmcintosh@example.org;7848 6229 1389 9706;07/33;888
-Jillian;Ramirez;Mudlogger;"8972 Daniel Junctions
-Jonesstad, DE 15564";+85(231)469-01-13;imathews@example.org;9225 9009 0075 2777;10/34;098
-Samuel;Taylor;Communications engineer;"94568 Herring Trail Suite 355
-Johnland, MA 80223";+82(571)710-47-35;michaeltrevino@example.net;6191 6002 1396 2956;04/27;577
-Gary;Shepherd;Dancer;"2408 Wayne Cove
-Houstonstad, GU 32560";+93(078)389-08-36;poolestephanie@example.org;5893 4779 8162 9537;10/30;068
-Brandon;Fritz;Occupational therapist;"1641 Thompson Spurs Suite 275
-Justinhaven, WA 81933";+38(803)446-89-16;nmitchell@example.net;7859 0593 8508 5411;07/34;349
-Cory;Kim;Transport planner;"784 Jennifer Land
-Douglasside, AR 49819";+97(874)214-76-07;garzabryan@example.org;4285 3318 4615 4231;09/33;204
-William;Brown;Financial planner;"903 Charles Corner
-Nicholasstad, NV 11389";+37(503)077-94-64;aberry@example.org;1934 2843 1253 6586;01/34;698
-Joshua;Orr;Education officer, community;"53776 King Oval Suite 985
-North Daniellehaven, NE 53301";+90(634)790-25-20;omathews@example.com;8269 6849 2944 3289;09/33;5517
-Walter;Richardson;Advertising account planner;"270 Charles Isle Suite 726
-East Stephenberg, UT 59269";+90(306)007-28-73;stacey69@example.com;6377 5513 2369 0352;02/36;557
-Robert;Osborn;Proofreader;"87225 Davis Bridge
-North Tyler, WI 33163";+27(326)514-66-45;fthompson@example.org;6636 8870 1637 6926;01/32;046
-Jack;Small;Systems analyst;"563 Jennifer Common
-Patrickshire, MT 92657";+65(102)150-51-75;fbailey@example.net;8478 7575 4399 6302;03/26;926
-David;Alvarez;Archaeologist;"22457 Walters Brooks
-Michaelburgh, MI 67647";+30(951)504-18-01;mitchellmegan@example.org;3173 5857 4438 0746;04/31;343
+﻿Name;Surname;job;address;phone;email;credit_card_number;credit_card_expire;credit_card_security_code
+Георгій;Вишняк;Патологоанатом;сквер Бузкова, буд. 950, Сквира, 08031;+87(287)564-07-70;borysdanko@example.com;3311 5793 0575 8875;08/31;477
+пан;Семен;Художник;набережна Мацієвської, буд. 885 кв. 57, Українськ, 20974;+89(358)539-43-90;ievtushokhanna@example.com;7812 5164 9907 5544;07/29;147
+Захар;Базавлученко;Парфюмер;набережна Гастелло, буд. 7 кв. 463, Олевськ, 55032;+67(041)108-65-22;akhorishko@example.org;1553 7103 8864 5058;09/32;234
+Валентина;Колесниченко;Інженер;парк Гагаріна, буд. 219 кв. 6, Броди, 75972;+11(807)547-88-71;lytvynkhoma@example.net;6199 7597 1407 0637;01/27;055
+Ватаманюк;Наталія;Бізнесмен;проспект Юннатів 2-й, буд. 302 кв. 0, Костянтинівка, 45712;+93(290)625-14-44;chuikoanita@example.org;8617 9541 9839 8235;12/31;535
+Станіслав;Тихий;Гицель;провулок Флотський 4-й, буд. 03 кв. 051, Первомайськ, 10388;+17(874)891-02-85;stefan87@example.com;4285 7960 0689 2115;10/29;209
+Богданна;Шаблій;Геофізик;проспект Водопровідна, буд. 7, Іловайськ, 74056;+40(398)641-40-39;gteslenko@example.org;4244 0643 2491 1399;04/31;561
+Демʼян;Атаманюк;Редактор;провулок Локальна, буд. 7 кв. 84, Київ, 40439;+50(840)396-06-36;nehodaomelian@example.com;8273 3668 7631 0394;10/32;182
+Тетяна;Даниленко;Каскадер;парк Соляний 4-й, буд. 0 кв. 38, Феодосія, 96438;+90(028)399-80-03;chmilalevtyn@example.com;2468 5935 1422 1583;08/28;416
+Мілена;Алексійчук;Кухар;узвіз Маланова, буд. 33, Тернівка , 59335;+15(378)673-55-61;bakumenkovolodymyra@example.org;3962 5396 5972 4732;03/30;697
+Нестор;Чайка;Мистецтвознавець;сквер Лінія 37-ма, буд. 8 кв. 752, Лебедин, 70251;+08(705)342-65-66;lartiushenko@example.com;7496 9608 3416 8293;01/27;005
+Дараган;Володимира;Дипломат;узвіз Прибережний, буд. 357, Бердичів, 31035;+36(250)905-13-95;kvdovychenko@example.org;2194 4058 5846 9849;10/33;993
+Оксенія;Авдєєнко;Мінералог;вулиця Маланова, буд. 80, Первомайський , 98112;+97(092)731-49-47;vashchenko-zakharchenkoamvrosii@example.net;7353 7250 5556 0996;10/28;200
+Емілія;Гук;Перекладач;площа Патріотична, буд. 7, Новоград-Волинський, 56465;+44(011)569-19-32;obarabash@example.org;8269 5171 3793 9288;12/34;486
+Августин;Рубан;Інженер;сквер Виноградна 1-ша, буд. 40 кв. 9, Ланівці, 58601;+95(757)383-91-09;pavlo25@example.org;8464 7254 1902 3040;12/29;350
+Височан;Віктор;Кінокритик;шосе Поштова, буд. 28 кв. 43, Географія Вільнянська, 34399;+49(897)846-18-30;stetsokhrim@example.com;5441 0935 5638 0920;04/29;527
+Охрім;Ващук;Історик;набережна Фонтанська дорога, буд. 32, Глиняни, 29825;+07(922)798-57-98;irena35@example.net;9484 3633 8832 2995;09/32;706
+Віолетта;Негода;Графік;узвіз Нафтовиків, буд. 338 кв. 5, Костопіль, 21980;+06(631)972-79-71;panas08@example.org;9431 6557 3544 3072;05/27;774
+Гаврило;Забашта;Диригент;сквер 17-та Лінія 6-й ст. Люстдорфської дороги, буд. 158, Сарни, 55652;+17(404)549-15-34;milenasachenko@example.net;9315 8195 0664 4742;04/35;467
+Вишняк;Людмила;Режисер;шосе Академіка Глушка, буд. 225 кв. 64, Вільногірськ, 28546;+94(093)706-52-11;eduard84@example.net;2281 0908 6127 4572;10/30;276
+Розалія;Лесик;Музикант;проспект Курганська, буд. 566 кв. 31, Оріхів, 97546;+71(731)684-70-37;kamillaolifirenko@example.com;3267 6712 6628 0605;10/32;439
+Камілла;Батіг;Драматург;узвіз Херсонський сквер, буд. 060 кв. 3, Коростень, 40590;+91(299)510-17-14;iukhymenkoemiliia@example.com;5791 5953 4519 1952;10/28;520
+Гайдабура;Григорій;Гірничий інженер;узвіз Магнітогорський 2-й, буд. 745 кв. 7, Мена , 63051;+48(294)902-74-74;ulysenko@example.net;9172 3094 6760 7391;04/32;918
+Червоненко;Алевтин;Біолог;проспект Михайла Божія, буд. 41, Кам'янець-Подільський, 11530;+60(666)521-78-24;ypryimak@example.com;2492 3224 5161 9152;09/29;890
+пан;Зиновій;Лікар;набережна Десятого квітня, буд. 27 кв. 095, Чуднів, 49418;+34(359)298-05-18;iaremkivvioletta@example.org;4424 3716 4017 9076;08/32;885
+Аркадій;Твердохліб;Швачка;сквер Академіка Воробйова, буд. 62, Енергодар, 06229;+63(092)643-41-61;adam70@example.com;9571 0430 9712 2541;11/33;484
+Марко;Демʼянюк;Гицель;узвіз Зарічна, буд. 97, Ужгород, 11132;+99(391)788-13-30;chumakleon@example.org;2835 5321 7154 5716;04/32;014
+Оксенія;Зінчук;Ді-джей;набережна Достоєвського, буд. 9, Ічня, 82448;+78(511)989-94-44;kovalenkoalla@example.com;9447 4410 9563 1401;01/35;249
+Єфрем;Колодуб;Історик;узвіз Обільний 1-й, буд. 189, Старий Самбір, 89321;+20(744)337-95-34;vitalii06@example.net;1468 2586 0403 6107;02/36;620
+Олег;Тимчук;Конструктор;площа Сабанський, буд. 40 кв. 7, Новодністровськ, 94355;+90(562)734-49-17;ustymshutko@example.net;4875 1454 3369 9133;09/27;547
+Ярема;Приймак;Публіцист;вулиця Овідіопольський, буд. 86, Борщів, 03385;+48(028)399-77-32;prymachenkoamvrosii@example.org;8524 7931 7897 6226;06/32;049
+Захар;Павленко;Педагог;парк Дмитрія Донського, буд. 72 кв. 07, Перемишляни, 33454;+82(674)803-07-92;cvakhnii@example.net;2712 8373 5529 8024;05/27;665
+Пріска;Дараган;Фармацевт;сквер Смоленська, буд. 58 кв. 210, Тараща, 17206;+40(010)760-15-41;vladyslav41@example.org;7825 0095 2258 4831;01/34;580
+Віктор;Хорішко;Локсмайстер;проспект Набережна, буд. 779 кв. 7, Мерефа, 65906;+68(567)419-06-63;maksym77@example.org;9869 7570 8129 9115;09/29;939
+Лесь;Черінько;Фрілансер;вулиця Ракетна, буд. 862 кв. 107, Старокостянтинів, 32984;+48(634)023-67-83;pverhun@example.com;2227 3894 5470 0538;10/29;694
+Любов;Забіла;Режисер;проспект Південно-Санаторний, буд. 1, Коростишів, 48916;+56(814)656-91-28;lmykhaliuk@example.net;5672 8990 1395 2003;09/26;695
+Адамчук;Орися;Єгер;узвіз Леонтовича, буд. 7 кв. 700, Кам'янець-Подільський, 18112;+54(223)744-67-36;martagerega@example.com;8179 5158 6596 9497;05/34;291
+Степан;Рудик;Астроном;парк Тупиковий 2-й, буд. 6 кв. 35, Бучач, 14397;+36(335)204-81-48;iarema04@example.org;6478 2040 9768 0548;12/28;084
+Аліна;Свистун;Філолог;вулиця Іспанський, буд. 39, Докучаєвськ, 05616;+15(799)197-73-66;aarondarahan@example.com;8453 5484 8494 1746;12/29;716
+Єлисавета;Габелко;Драматург;вулиця Сонячна, буд. 5 кв. 289, Підгайці, 63946;+31(752)010-78-54;liza87@example.org;7319 6757 4448 9751;08/33;080
+Пилип;Дахно;Бізнесмен;узвіз Просвіти, буд. 53, Севастополь, 78370;+57(633)800-63-59;zdanylchuk@example.org;1376 8573 4778 7774;12/29;896
+Лілія;Рубець;Гицель;провулок Сміливий, буд. 644 кв. 2, Кам'янське, 47246;+78(202)345-77-82;taranklyment@example.net;3138 1279 0156 5585;07/32;436
+Святослава;Панчук;Гірник;вулиця Левкоєва, буд. 719, Авдіївка, 43261;+65(073)436-04-15;kamillakalchenko@example.net;2919 5770 2158 2810;04/27;167
+Дарина;Гаврилишина;Льотчик;площа Марії Демченко 2-й, буд. 114 кв. 92, Гадяч, 21958;+31(029)109-22-46;suprunenkoiarema@example.org;3117 0142 6399 0844;10/26;307
+пан;Павло;Гірничий інженер;площа Сонячна, буд. 67, Кривий Ріг, 36230;+41(216)327-90-32;marianazatovkaniuk@example.com;3213 2137 3320 0245;09/32;284
+Василь;Гук;Випробувач;набережна Гранатний, буд. 90, Мала Виска, 81852;+21(709)177-52-49;kvatamaniuk@example.net;6941 0211 3831 0217;06/26;665
+Галина;Бараник;Гінеколог;узвіз Академіка Філатова, буд. 441, Звенигородка, 67781;+91(942)316-38-22;akyrylenko@example.net;1783 6452 2581 9771;10/26;833
+Георгій;Палій;Ветеринар;набережна 1-ша Лінія 4-ї ст. Люстдорфської дороги, буд. 15 кв. 73, Ямпіль, 24352;+03(829)773-71-22;oiemets@example.com;7998 7070 4139 3788;07/28;995
+Василина;Рябець;Візажист;провулок Осипова, буд. 39, Апостолове, 86343;+35(492)611-85-69;havryletsorkhyp@example.net;1381 4995 4855 8592;03/29;743
+Давид;Атаманюк;Фрілансер;набережна Китобійна, буд. 6, Трускавець, 93635;+61(864)407-53-27;vladyslav96@example.net;7414 0157 7478 7433;11/33;771

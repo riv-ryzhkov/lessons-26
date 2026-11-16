@@ -41,8 +41,8 @@
 #     print(abstraction_b.operation())
 
 
-# # ============ Квадрат та трикутник (зелені або сині) ==========
-# #
+# ============ Квадрат та трикутник (зелені або сині) ==========
+#
 # # Абстрактна Реалізація - колір
 # class Color:
 #     def fill_color(self):
@@ -54,15 +54,11 @@
 #     def fill_color(self):
 #         return "Green"
 #
-#
 # class BlueColor(Color):
 #     def fill_color(self):
 #         return "Blue"
 #
 #
-# class RedColor(Color):
-#     def fill_color(self):
-#         return "Red"
 #
 #
 # # Абстракція - фігура
@@ -84,22 +80,16 @@
 #     def draw(self):
 #         return f"Drawing a {self._color.fill_color()} triangle"
 #
-# class Circle(Shape):
-#     def draw(self):
-#         return f"Drawing a {self._color.fill_color()} circle"
 #
 # # Приклад використання
 # if __name__ == "__main__":
 #     green_color = GreenColor()
 #     blue_color = BlueColor()
-#     red_color = RedColor()
 #
 #     green_square = Square(green_color)
 #     blue_triangle = Triangle(blue_color)
 #     blue_square = Square(blue_color)
 #     green_triangle = Triangle(green_color)
-#     red_circle = Circle(red_color)
-#     red_square = Square(red_color)
 #
 #
 #
@@ -113,8 +103,6 @@
 #         blue_square,
 #         green_square,
 #         green_triangle,
-#         red_square,
-#         red_circle
 #     ]
 #
 #     for sh in shapes:
@@ -142,3 +130,24 @@ Square та Triangle - це конкретні абстракції,
 для відокремлення абстракції фігур від реалізації кольорів.
 """
 
+
+
+
+######################### END
+
+
+
+
+
+
+
+
+
+# class Circle(Shape):
+#     def draw(self):
+#         return f"Drawing a {self._color.fill_color()} circle"
+
+
+# class RedColor(Color):
+#     def fill_color(self):
+#         return "Red"

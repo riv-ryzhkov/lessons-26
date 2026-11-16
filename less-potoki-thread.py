@@ -2,11 +2,10 @@
 
 
 
-# pip install threading                                  # поток
+##############################################
+# from threading import Thread
+# from time import sleep, monotonic
 #
-from threading import Thread
-from time import sleep, monotonic
-
 #
 # def func1():
 #     for i in range(5):
@@ -26,21 +25,21 @@ from time import sleep, monotonic
 #
 # start_pr = monotonic()
 #
-#
-# # func1()
-# # func2()
+# #
+# func1()
+# func2()
 # # breakpoint()
 #
-# th1 = Thread(target=func1)
-# th2 = Thread(target=func2)
+# # th1 = Thread(target=func1)
+# # th2 = Thread(target=func2)
 # # th2 = Thread(target=func2, daemon=True) # Прервати при закінченні програми
 # # th1 = Thread(target=func1, daemon=True) # Прервати при закінченні програми
-# th1.start()
+# # th1.start()
 # # th1.join()   # Приєднання до пріоритетного процесу!
-# # # #                 # Очікування поки не завершиться !
-# th2.start()
-# th1.join() # Приєднання до пріоритетного процесу!
-# th2.join() # Приєднання до пріоритетного процесу!
+# # #                 # Очікування поки не завершиться !
+# # th2.start()
+# # th1.join() # Приєднання до пріоритетного процесу!
+# # th2.join() # Приєднання до пріоритетного процесу!
 # # # # # # print("-----------------> stop")
 # print("< main thread STARTS >\n")
 # for i in range(5):
@@ -54,7 +53,7 @@ from time import sleep, monotonic
 # print('!!!!!!!! ALL Finish !!!!!!!!!!')
 #
 # print('End of Program!!!!!!!  ', monotonic() - start_pr)
-
+#
 
 
 ##############################################################################
@@ -66,7 +65,7 @@ from time import sleep, monotonic
 # from time import sleep, time
 #
 #
-# ticket_office = 5
+# ticket_office = 4
 # clients = 11
 #
 #
@@ -103,8 +102,8 @@ from time import sleep, monotonic
 #     print("Придумав! Зараз у нас на годиннику", ctime()[10:19], time())
 #
 #
-# # timer = Timer(interval=5.5, function=lambda: print("Message from Timer! >>>", ctime()[10:19]))
-# timer = Timer(interval=1.5, function=foo)
+# timer = Timer(interval=5.5, function=lambda: print("Message from Timer! >>>", ctime()[10:19]))
+# # timer = Timer(interval=1.5, function=foo)
 # # print('Start', ctime()[10:19])
 # print('Start', ctime(), time())
 # timer.start()
@@ -117,8 +116,8 @@ from time import sleep, monotonic
 #      Barrier
 # ======================================================
 
-# Потрібно порахувати наступний вираз   3 * x**2 + 2*x =
-
+# # Потрібно порахувати наступний вираз   3 * x**2 + 2*x =
+#
 # from threading import Barrier, Thread
 # import threading
 # from time import sleep, time
@@ -155,10 +154,98 @@ from time import sleep, monotonic
 #
 # br.wait()  # Очікує на сигнали з обоїх потоків від їх br.wait()
 #
-# # sleep(2.004)
+# # sleep(3)
 # print(result)
 # print("=====   Result:  3 * ", x, '^2 + 2 * ', x, ' = ', sum(result), '    ======', sep='')
 # print(time() - start_time)
-
-# print(*dir(br), sep='\n')
+#
+# # print(*dir(br), sep='\n')
 # print(*dir(threading), sep='\n')
+
+
+############################### END ######################################
+
+
+
+
+
+
+
+
+
+
+
+
+############################ threading / multiprocessing / asyncio
+
+
+
+# import threading
+# import time
+#
+# def task():
+#     print("Start")
+#     # time.sleep(2)
+#     sum(i * i for i in range(10 ** 7))
+#     print("End")
+#
+# threads = []
+#
+# start = time.time()
+#
+# for i in range(5):
+#     t = threading.Thread(target=task)
+#     t.start()
+#     threads.append(t)
+#
+# for t in threads:
+#     t.join()
+#
+# print("Threading Time:", time.time() - start)
+
+####################################################################
+
+# from multiprocessing import Process
+# import time
+#
+# def task():
+#     print("Start")
+#     # time.sleep(2)
+#     sum(i * i for i in range(10 ** 7))
+#     print("End")
+#
+# if __name__ == "__main__":
+#     start = time.time()
+#     processes = []
+#
+#     for i in range(5):
+#         p = Process(target=task)
+#         p.start()
+#         processes.append(p)
+#
+#     for p in processes:
+#         p.join()
+#     print("Multiprocessing Time:", time.time() - start)
+
+
+###########################################################
+
+# import asyncio
+# import time
+#
+# async def task():
+#     print("Start")
+#     # await asyncio.sleep(2)
+#     sum(i * i for i in range(10 ** 7))
+#     print("End")
+#
+# async def main():
+#     tasks = [task() for _ in range(5)]
+#     await asyncio.gather(*tasks)
+#
+# start = time.time()
+#
+# asyncio.run(main())
+#
+# print("Asyncio Time:", time.time() - start)
+

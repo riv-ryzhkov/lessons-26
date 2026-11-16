@@ -6,61 +6,62 @@
 без зміни бажаної коректної роботи програми.
 """
 
-#
-# class Bird:
-#     name = 'Bird'
-#
-#     def carry_eggs(self):
-#         print(f'{self.name} carry eggs')
-#
-#     def fly(self):
-#         print('      Error!!!!!! Bird is a parent class!')
-#         pass
-#
-#
-# class Ostrich(Bird):
-#     name = 'Ostrich'
-#
-#     def fly(self):
-#         # Острич(Страус) не летять, тому ми перевизначаємо метод
-#         print(f', but CAN NOT fly!')
-#         pass
-#
-#
-#
-# class Eagle(Bird):
-#     name = 'Eagle'
-#
-#     def fly(self):
-#         print(f' and CAN fly!')
-#         pass
-#
-#
-# class Make_Fly:
-#
-#     @staticmethod
-#     def make_bird_fly(bird):
-#         bird.fly()
-#
-#
-# # Приклади використання
-# eagle = Eagle()
-# ostrich = Ostrich()
-# bird = Bird()
-#
-#
-# bird.carry_eggs()
-# eagle.carry_eggs()  # eagle легко замінює bird в батьківському класі.
-# ostrich.carry_eggs()  # ostrich легко замінює bird в батьківському класі.
-#
-# animals = [eagle, ostrich, bird]  # eagle та ostrich спрацьовує
-# # а bird не може замінити інстанс дочірнього класу
-#
-#
-# for animal in animals:
-#     print(animal.name, end=' is a bird')
-#     Make_Fly.make_bird_fly(animal)
-#
+
+class Bird:
+    name = 'Bird'
+
+    def carry_eggs(self):
+        print(f'{self.name} carry eggs')
+
+    def fly(self):
+        print('      Error!!!!!! Bird is a parent class!')
+        pass
+
+
+class Ostrich(Bird):
+    name = 'Ostrich'
+
+    def fly(self):
+        # Острич(Страус) не летять, тому ми перевизначаємо метод
+        print(f', but CAN NOT fly!')
+        pass
+
+
+
+class Eagle(Bird):
+    name = 'Eagle'
+
+    def fly(self):
+        print(f' and CAN fly!')
+        pass
+
+
+class Make_Fly:
+
+    @staticmethod
+    def make_bird_fly(bird):
+        bird.fly()
+
+
+# Приклади використання
+eagle = Eagle()
+ostrich = Ostrich()
+bird = Bird()
+
+
+bird.carry_eggs()
+eagle.carry_eggs()  # eagle легко замінює bird в батьківському класі.
+ostrich.carry_eggs()  # ostrich легко замінює bird в батьківському класі.
+
+
+animals = [eagle, ostrich, bird]  # eagle та ostrich спрацьовує
+# а bird не може замінити інстанс дочірнього класу
+
+
+for animal in animals:
+    print(animal.name, end=' is a bird')
+    Make_Fly.make_bird_fly(animal)
+
 
 
 

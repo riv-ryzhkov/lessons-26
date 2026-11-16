@@ -1,4 +1,4 @@
-# #========================================
+#========================================
 # import copy
 #
 #
@@ -38,46 +38,47 @@
 # ==============================================
 #  Приклад з адресами (1 version)
 # ==============================================
-import copy
-
-
-class Address:
-    def __init__(self, build=0, street='NoStreet', city='NoCity', country='NoCountry'):
-        self.build = build
-        self.street = street
-        self.city = city
-        self.country = country
-
-
-    def __str__(self):
-        return f'{self.build}, {self.street}, {self.city}, {self.country}'
-
-
-class Person:
-    def __init__(self, address='NoAddress', name='NoName'):
-        self.name = name
-        self.address = address
-
-    def clone(self, obj1):
-        self.name = copy.copy(obj1.name)
-        self.address = copy.deepcopy(obj1.address)
-
-    def __str__(self):
-        return f"{self.name}'s address is {self.address} "
-
-    def __repr__(self):
-        return
-
-
-
-address = Address('28', 'Shevchenko street', 'Dnipro', 'Ukraine')
-
-Mark = Person(address, 'Mark')
-print('->', Mark)
+# import copy
+#
+#
+# class Address:
+#     def __init__(self, build=0, street='NoStreet', city='NoCity', country='NoCountry'):
+#         self.build = build
+#         self.street = street
+#         self.city = city
+#         self.country = country
+#
+#
+#     def __str__(self):
+#         return f'{self.build}, {self.street}, {self.city}, {self.country}'
+#
+#
+# class Person:
+#     def __init__(self, address='NoAddress', name='NoName'):
+#         self.name = name
+#         self.address = address
+#
+#     def clone(self, obj1):
+#         self.name = copy.copy(obj1.name)
+#         self.address = copy.copy(obj1.address)
+#
+#     def __str__(self):
+#         return f"{self.name}'s address is {self.address} "
+#
+#     def __repr__(self):
+#         return
+#
+#
+#
+# address = Address('28', 'Shevchenko street', 'Dnipro', 'Ukraine')
+#
+# Mark = Person(address, 'Mark')
+# print('->', Mark)
 
 
 
 # 1й варіант ---!
+
 # Anna = Mark
 # Anna.name = 'Anna'
 # print(id(Mark))
@@ -93,6 +94,8 @@ print('->', Mark)
 # Anna = copy.deepcopy(Mark)
 # print(id(Mark))
 # print(id(Anna))
+# print(id(Mark.address))
+# print(id(Anna.address))
 # Anna.name = 'Anna'
 # Anna.address.build = 88
 # Anna.address.street = "Koganovs'kogo street"
@@ -109,7 +112,10 @@ print('->', Mark)
 #
 # print(Mark)
 # print(Anna)
-
+# print(id(Mark))
+# print(id(Anna))
+# print(id(Mark.address))
+# print(id(Anna.address))
 #
 #
 # # Варіант клонування +++++++++++++++!!!!!!!!!!!!!!
@@ -122,7 +128,10 @@ print('->', Mark)
 #
 # print(Mark)
 # print(Anna)
-
+# print(id(Mark))
+# print(id(Anna))
+# print(id(Mark.address))
+# print(id(Anna.address))
 
 # ===================================================
 # 2nd version
@@ -166,7 +175,11 @@ print('->', Mark)
 # print(id(Mark), Mark)
 #
 # Anna = Mark.clone()
+# # Anna = copy.deepcopy(Mark)
 # print(id(Anna), Anna)
+#
+# print('Mark.address :', id(Mark.address))
+# print('Anna.address :', id(Anna.address))
 #
 # Anna.name = 'Anna'
 # Anna.address.build = 77
@@ -174,6 +187,7 @@ print('->', Mark)
 #
 # print(Mark)
 # print(Anna)
+
 
 
 

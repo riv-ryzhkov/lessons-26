@@ -1,5 +1,5 @@
 # # ЄДИНЕ ВІКНО!!!!!!!!!!!!!!!
-#
+
 # # Підсистема 1
 # class SubsystemA:
 #     def operation_a(self):
@@ -37,7 +37,7 @@
 # if __name__ == "__main__":
 #     facade = Facade()
 #     print(facade.operate())
-
+#
 
 # # ======= Приклад використання для розсилки повідомлення =======
 
@@ -74,11 +74,14 @@
 #         self._telegram_api = TelegramAPI()
 #
 #
-#     def post(self, message, photo=None):
+#     def post(self, message=None, photo=None):
 #         results = []
-#         results.append(self._facebook_api.post_message(message))
-#         results.append(self._twitter_api.tweet(message))
-#         results.append(self._telegram_api.send(message))
+#         if message:
+#             results.append(self._facebook_api.post_message(message))
+#         if message:
+#             results.append(self._twitter_api.tweet(message))
+#         if message:
+#             results.append(self._telegram_api.send(message))
 #         if photo:
 #             results.append(self._instagram_api.share_photo(photo))
 #         return "\n".join(results)
@@ -90,9 +93,11 @@
 #     message = "Hello, world!"
 #     photo = "beautiful_sunrise.jpg"
 #
-#     print(facade.post(message))
+#     print(facade.post(message="Hello, world!"))
 #     print('.' * 80)
-#     print(facade.post(message, photo))
+#     print(facade.post(message="Ukraine", photo="beautiful_sunrise.jpg"))
+#     print('.' * 80)
+#     print(facade.post(photo="beautiful_girl.jpg"))
 
 
 

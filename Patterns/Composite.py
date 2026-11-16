@@ -45,9 +45,9 @@
 #     print("Leaf 2:", leaf2.operation())
 #     print("Composite:", composite.operation())
 #     print("Composite of Composites:", composite_of_composites.operation())
+#
 
-
-# # ===== Приклад з коробками та фруктами в них для 3 рівней. Обчислення ваги. ====
+# ===== Приклад з коробками та фруктами в них для 3 рівней. Обчислення ваги. ====
 #
 # # Компонент - базовий клас
 # class Component:
@@ -86,10 +86,12 @@
 #     apple = Product("Apple", 0.1)
 #     orange = Product("Orange", 0.15)
 #     banana = Product("Banana", 0.2)
+#     pamela = Product("Pamela", 0.35)
 #
 #     small_box1 = Box("Small Box1")
 #     small_box1.add(apple)
 #     small_box1.add(orange)
+#     small_box1.add(pamela)
 #
 #     small_box2 = Box("Small Box2")
 #     small_box2.add(apple)
@@ -111,6 +113,13 @@
 #     big_box2.add(apple)
 #     big_box2.add(banana)
 #
+#     big_box3 = Box("Big Box3")
+#     big_box3.add(small_box1)
+#     big_box3.add(small_box1)
+#     big_box3.add(small_box2)
+#     big_box3.add(big_box2)
+#     big_box3.add(big_box1)
+#
 #
 #
 #     # print("Apple weight:", apple.get_weight())
@@ -120,8 +129,8 @@
 #     # print("Big Box1 weight: {:7.2f}".format(big_box1.get_weight()))
 #     # print("Big Box2 weight: {:7.2f}".format(big_box2.get_weight()))
 #
-#
-#
+# #
+# #
 #     boxes = [
 #         apple,
 #         orange,
@@ -130,11 +139,12 @@
 #         small_box2,
 #         big_box1,
 #         big_box2,
+#         big_box3,
 #     ]
 #
 #     for obj in boxes:
 #         print(obj._name, "{:7.2f}".format(obj.get_weight()))
-#
+# #
 
 
 """

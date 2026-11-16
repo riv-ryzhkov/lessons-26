@@ -152,14 +152,14 @@
 #         coffee,
 #         coffee,
 #         tea,
-#         tea
+#         tea,
 #     ]
 #
 #     for drink in drinks:
 #         print(f'Preparing {drink.name}:')
 #         drink.prepare_beverage()
 #         print('.' * 80)
-#
+
 
 
 """

@@ -8,7 +8,7 @@
 
 
 # try:
-#     for i in range(5):
+#     for i in range(1, 5):
 #         print(10*'2'/i)
 # except (ZeroDivisionError, KeyError):
 #     print('Zero!!')
@@ -27,9 +27,9 @@
 # print('Hello!')
 # print('Hello!')
 # print('Hello!')
-
-
-
+#
+#
+#
 
 
 #################
@@ -66,7 +66,7 @@
 
 ####################
 ######################
-# raise KeyError
+# raise KeyError("My error message")
 
 
 
@@ -133,10 +133,10 @@
 
 # ######################
 # try:
-    # print(10/0)
-    # print('1' + 1)
-    # print(a)
-# except:
+#     print(10/0)
+#     print('1' + 1)
+#     print(a)
+# except :
 #     raise KeyError('Ha-Ha-Ha!!!!')
 
 
@@ -148,12 +148,17 @@
 
 
 ################################################## ##############
-
-
+# def func(a, b):
+#     return a * b
+#
 # assert 1 + 2 == 3, "You're making a mistake in the algorithm!"
 # assert 2 + 2 == 4, "You're making a mistake in the algorithm!"
 # assert 3 + 2 == 5, "You're making a mistake in the algorithm!"
 # assert 4 + 2 == 6, "You're making a mistake in the algorithm!"
+# assert func(2, 2) == 4, "You're making a mistake in the algorithm!"
+# assert func(3, 2) == 6, "You're making a mistake in the algorithm!"
+# assert func(2, -2) == -4, "You're making a mistake in the algorithm!"
+# assert func(2, 22) == 44, "You're making a mistake in the algorithm!"
 
 
 ################################################## ##############
@@ -172,6 +177,31 @@
 #         '\nGood! Your card number :',
 #         number[:4], number[4:8], number[8:12],number[12:]
 #             )
+##############################################################
+
+# def validation(symbol):
+#     try:
+#         assert symbol.isdigit(), "You've got your money's worth! The culprit is deprived of the NUMBER!"
+#         assert len(symbol) > 15, "You've been spoiled for money! Too SHORT number!"
+#         assert len(symbol) < 17, "You've got your money's worth! The numbers are more than 16!"
+#         assert symbol.startswith('53'), "You've got your money's worth! It's not PrivatBank!"
+#         return True
+#     except AssertionError as err:
+#         print(err)
+#         return False
+#
+#
+# number = input('Enter your card number without spaces: ')
+# while not validation(number):
+#     number = input('Enter your card number without spaces: ')
+
+#
+# print(
+#     '\nGood! Your card number :',
+#     number[:4], number[4:8], number[8:12],number[12:]
+#             )
+
+
 
 
 ######################## KH-25-1 13/02/2026 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -68,6 +68,9 @@
 #     def visit_quatro(self, quatro):
 #         pass
 #
+#     def get_result(self):
+#         pass
+#
 #
 #
 # # Конкретний відвідувач для обчислення площі
@@ -87,6 +90,7 @@
 #         area = quatro.side_1 * quatro.side_2
 #         self.total_area += area
 #
+#
 #     def get_result(self):
 #         return self.total_area
 #
@@ -104,8 +108,9 @@
 #         self.total_area += area
 #
 #     def visit_quatro(self, quatro):
-#         area = quatro.side_1 * 2 + quatro.side_2 * 2
+#         area = quatro.side_1 * quatro.side_2
 #         self.total_area += area
+#
 #
 #     def get_result(self):
 #         return self.total_area
@@ -119,7 +124,7 @@
 #         Circle(6.56),
 #         Square(100),
 #         Quatro(2, 3),
-#         Quatro(20, 7)
+#         Quatro(20, 7),
 #     ]
 #
 #     calculator = AreaCalculator()

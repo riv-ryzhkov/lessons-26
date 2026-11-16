@@ -2,10 +2,18 @@
 # b = 2
 # print(a*b)
 # print(a/b)  # 4.5
-# print(9//2)  # 4
-# print(a % b)  # 1
+# print(9//2)  # 4  div
+# print(a % b)  # 1  mod
 
 
+# a = 4
+# b = 2
+# c = a + b
+# print(a, type(a))
+# print(b, type(b))
+# print(c, type(c))
+
+# print(type(4**(1/2)))
 
 
 # ()
@@ -13,7 +21,7 @@
 # * / //  %
 # + -
 
-# print(7 - 4 / 2 * (7 - 5) * 3 / 2)
+# print((7 - 4 )/ (2 * (7 - 5) * 3 / 2))
 # print(7 - 4 / 2 * 2 * 3 / 2)
 # print(7 - 2 * 2 * 3 / 2)
 # print(7 - 4 * 3 / 2)
@@ -24,7 +32,7 @@
 
 
 # a = 2
-# b = 2
+# b = 2.0
 # print(id(a))
 # print(id(b))
 # print(id(a) == id(b))
@@ -39,14 +47,14 @@
 # print(9//2, 9 % 2)  #  a*b+c ->
 # print(-9//2, -9 % 2)  # -5 1
 # print(-9//2)  # -5 1
-# a = -9 #             -----(-5)-------(-4.5)----------(-4)------------------->
+# a = 9 #             -----(-5)-------(-4.5)----------(-4)------------------->
 # b = 2
 # a1 = a//b # 4   -5
 # a2 = a%b # 1     1
-# print(a1)
-# print(a2)
+# # print(a1)
+# # print(a2)
 # c = a1*b + a2
-
+#
 # print(a, c)
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -77,29 +85,37 @@
 import math
 
 
+# print(dir(math))
 # print(*dir(math), sep='\n')
 
-
-
-# print(*dir(math), sep='\n')
 
 # a = 2
 # print(math.sqrt(a))
 # print(a ** (1/2))
 # print(math.e)
 # print(math.pi)
-# print(math.e**3)
+# print(math.e ** 3)
 # print(math.exp(3))
 
 ######################################
-import math
+# import math
 # from math import *
 # from math import sin, pi, e, cos
-# from math import sin as sinus
-# from numpy import sin as numsin
+# from math import sin as math_sin
+# from numpy import sin as num_sin
 #
-# print(sinus(4.565))
-# print(numsin(4.565))
+#
+
+# import numpy
+#
+# print(*dir(numpy), sep='\n')
+
+# print(math_sin(3))
+# print(num_sin(3))
+
+
+
+
 
 
 # print(*dir(math))
@@ -154,11 +170,14 @@ import math
 # print(cos(546))
 # print(tan(546))
 
-
-# print(*dir(math), sep='\n')
+# import math
 #
-# print(math.floor(32.9999975869879))
-# print(math.ceil(32.0000009999975869879))
+# # print(*dir(math), sep='\n')
+# #
+#
+# print(math.floor(-32.9999975869879))
+# print(math.ceil(-32.00000000000079))
+
 # # -----------------------32---*--------------------------------->
 #
 # print(math.floor(-32.9999975869879))
@@ -180,17 +199,17 @@ from math import *
 # print(radians(45)*4)
 # print(degrees(2*pi))
 # print(sin(radians(degrees(pi/4))))
-# print(log(100, 10))
+# print(log(100, 2))
 # print(pi)
 # print(e)
 
 # for i in range(256):
 #     print(i, '=>', chr(i))
-
+##############################################################
 # 11111111 0...127 LAT   128...255 NAT  1010 1101
 
-# 1 2 4 8 16 32 64 128 256 512  1024
-# a = 200 #  10010111  01101011  1101 0110 = 13:06 1011010101101101111101011110101101110  13:04
+# 1 2 4 8 16 32 64 128 256 512  1024  10000000000
+# a = 201 #  10010111  01101011  1101 0110 = 13:06 1011010101101101111101011110101101110  13:04
 # b = bin(a) # 2**8 = 256  0...255
 # c = oct(a) # 1101 1011 = DB   AE = 10 14 = 1010 1110  c8 -> 12 8 -> 1100 1000
 # d = hex(a)  #  1011 0101 = 11 05  10->A  11->B  12->C  13->D  14->E  15->F   = B5   11:05
@@ -223,15 +242,15 @@ from math import *
 #     print('Парне!')
 
 
-# a = 123456789
-
-# res = a // 1000 % 10
+a = 123456789
+# n =int(input('n='))
+# res = a // 10**(n) % 100
 # print(res)
 
 
 
 
-# n = int(input('Номер цифри сзаду(починаючи з 0) = '))
+#
 # for n in range(9):
 #     print(a % 10, end='->')
 #     a = a // 10
@@ -271,13 +290,13 @@ from math import *
 
 
 # print(round((0.1 + 0.2)*10)/10)
-
-# print(round((0.1 + 0.2), 16))
+#
+# print(round((0.1 + 0.2), 17))
 
 
 # print(0.1 + 0.2)
 # print((0.1 + 0.2) == 0.3)
-#
+# #
 # print(0.1 + 0.2 == 0.3)
 # print(0.1 + 0.2 - 0.3)
 # res = 0.1 + 0.2

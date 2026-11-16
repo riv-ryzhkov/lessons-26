@@ -53,6 +53,9 @@
 #     milk_sugar_coffee = MilkDecorator(sugar_coffee)
 #     print("Milk coffee with sugar cost:", milk_sugar_coffee.cost())
 #
+#     duble_milk_sugar_coffee = MilkDecorator(milk_sugar_coffee)
+#     print("Milk coffee with sugar cost:", duble_milk_sugar_coffee.cost())
+#
 #     print('='*80)
 #
 #
@@ -66,6 +69,7 @@
 #         sugar_milk_coffee,
 #         sugar_milk_coffee,
 #         milk_coffee,
+#         duble_milk_sugar_coffee
 #     ]
 #
 #     summa = 0
@@ -74,7 +78,7 @@
 #         print('The price:', drink.name(), drink.cost())
 #     print('.'*80)
 #     print('Total price :', summa)
-
+#
 
 """
 Патерн Decorator дозволяє динамічно додавати нову функціональність до об'єкту, 

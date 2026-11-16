@@ -22,29 +22,42 @@
 # text = list(set(text.upper().split()))
 # print(text)
 # print('='*80)
-
-
-
-
-
-
-
+#
+#
+#
+#
+#
+#
+#
 import random
+# from faker import Faker
+#
+# f = Faker(locale="uk_UA")
+# print(f.word().upper())
+#
+#
 # from list_of_words import word
 
 
 
+
 def inp_secret_word():
-    text = ['СОБАКА', 'КІШКА', 'УКРАЇНА', 'УНІВЕРСИТЕТ', 'ДНІПРО', 'ПЕРЕМОГА']
+    # text = ['СОБАКА', 'КІШКА', 'УКРАЇНА', 'УНІВЕРСИТЕТ', 'ДНІПРО', 'ПЕРЕМОГА']
     # text = [
     #         'ВІЙНА',
     #         'ВІДБОР',
     #         'ТИСК',
     #         'ОСОБА',
     #         'У', 'ФУТБОЛУ', 'ВАРТО', 'ЗАЯВИВ', 'ЦЕ', 'ОРГАНІЗАЦІЇ', 'ПОВІДОМЛЯЛОСЯ', 'АЛЕКСАНДЕР', 'ЗБІРНІ', 'УЄФА', 'ПОВЕРНЕННЯ', 'ЧЕКАТИ', 'ПРЕЗИДЕНТ', 'ПОКИ', 'МАТИМУТЬ', 'ТАКУ', 'ПЕРЕОБРАННЯ', 'КОНФЕДЕРАЦІЮ', 'ПЕРЕЙТИ', 'ЗАВЕРШИТЬСЯ', 'ОФІЦІЙНИХ', 'АЗІАТСЬКУ', 'ФУТБОЛЧЕФЕРІН', 'ЧАСОМ', 'САНКЦІЯХ', 'ДУЖЕ', 'НАЙБЛИЖЧИМ', 'БРАТИ', 'ЩОСЬ', 'В', 'ДУМКА', 'ПРЕЗИДЕНТА', 'СКЛАДНО', 'ЩО', 'УЧАСТЬ', 'БОЖЕВІЛЛЯ', 'РОСІЯ', 'ЧС', 'ФОРМУ', 'ЗАРАЗ', 'НА', 'СВОГО', 'ПІСЛЯ', 'ПОСТ', 'МАТЧАХМОЯ', 'КЛУБИ', 'ЧЕФЕРІНРАНІШЕ', 'НЕ', 'ТРЕБА', 'ГОТОВА', 'ЧЕФЕРІН', 'РОСІЙСЬКІ', 'ЗМОГУ', 'СУМНІВАЄТЬСЯ', 'ЗБЕРІГАТИ', 'СКАЗАВ', 'ВЕЛИКИЙ', 'ТРИВАЄ', 'БУДЕ']
-    secret_word = random.choice(text)
+    # secret_word = random.choice(text)
     # Validation or choose from list
     # secret_word = input('Введіть таємне слово : ').upper()
+
+    # ........................................
+    # fake = Faker(locale="uk_UA")
+    # secret_word = fake.word()
+    # print(secret_word)
+
     return secret_word
 
 
@@ -52,8 +65,7 @@ def inp_secret_word():
 
 
 def calc_attempts(secret_word):
-    attempts = len(secret_word)
-    return attempts
+    return len(secret_word)
 
 
 
@@ -78,7 +90,10 @@ def screen(word, lst_letters, attempts):
 
 
 def inp_symbol():
-    symbol = input('Введіть одну букву : ')
+    symbol = input('Введіть одну літеру : ')
+    # Validation
+    # Validation
+    # Validation
     # Validation
 
     return symbol

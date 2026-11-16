@@ -1,10 +1,10 @@
-# """
-# Патерн Observer (спостерігач) - це патерн проектування,
-# який використовується для встановлення залежностей між об'єктами так,
-# що коли один об'єкт змінює свій стан,
-# всі його залежні об'єкти автоматично сповіщаються і оновлюються.
-# Цей патерн використовується для реалізації подійної моделі в програмуванні.
-# """
+"""
+Патерн Observer (спостерігач) - це патерн проектування,
+який використовується для встановлення залежностей між об'єктами так,
+що коли один об'єкт змінює свій стан,
+всі його залежні об'єкти автоматично сповіщаються і оновлюються.
+Цей патерн використовується для реалізації подійної моделі в програмуванні.
+"""
 
 # # Клас Суб'єкту (Спостерігаємого об'єкта)
 # class Subject:
@@ -87,72 +87,72 @@
 # Приклад спостерігання за Фондовим ринком
 # =========================================================
 
-# Клас Спостерігаємого об'єкта - Фондового ринку
-class StockMarket:
-    def __init__(self):
-        self._observers = []
-        self._stock_price = None
+# # Клас Спостерігаємого об'єкта - Фондового ринку
+# class StockMarket:
+#     def __init__(self):
+#         self._observers = []
+#         self._stock_price = None
+#
+#     def add_observer(self, observer):
+#         print(observer.name, 'is added!')
+#         self._observers.append(observer)
+#
+#     def remove_observer(self, observer):
+#         print(observer.name, 'is removed!')
+#         self._observers.remove(observer)
+#
+#     def set_stock_price(self, price):
+#         self._stock_price = price
+#         self.notify_observers()
+#
+#     def notify_observers(self):
+#         for observer in self._observers:
+#             observer.update(self._stock_price)
+#
+#
+# # Клас Спостерігача - Інвестора
+# class Investor:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def update(self, stock_price):
+#         print(f"Investor {self.name} received stock price update: ${stock_price}")
+#
+#
+# class InvestorNext:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def update(self, stock_price):
+#         if stock_price < 120:
+#             print(f'{self.name} Buy 1000 l of oil!')
+#         else:
+#             print(f'{self.name} Sale all my oil!')
+#         print(f"Investor {self.name} received stock price update: ${stock_price}")
+#
 
-    def add_observer(self, observer):
-        print(observer.name, 'is added!')
-        self._observers.append(observer)
-
-    def remove_observer(self, observer):
-        print(observer.name, 'is removed!')
-        self._observers.remove(observer)
-
-    def set_stock_price(self, price):
-        self._stock_price = price
-        self.notify_observers()
-
-    def notify_observers(self):
-        for observer in self._observers:
-            observer.update(self._stock_price)
 
 
-# Клас Спостерігача - Інвестора
-class Investor:
-    def __init__(self, name):
-        self.name = name
-
-    def update(self, stock_price):
-        print(f"Investor {self.name} received stock price update: ${stock_price}")
-
-
-class InvestorNext:
-    def __init__(self, name):
-        self.name = name
-
-    def update(self, stock_price):
-        if stock_price < 120:
-            print(f'{self.name} Buy 1000 l of oil!')
-        else:
-            print(f'{self.name} Sale all my oil!')
-        print(f"Investor {self.name} received stock price update: ${stock_price}")
-
-
-
-
-# Приклад використання
-if __name__ == "__main__":
-    stock_market1 = StockMarket()
-
-    investor1 = Investor("John")
-    investor2 = InvestorNext("Alice")
-    investor3 = Investor("Bob")
-
-    stock_market1.add_observer(investor1)
-    stock_market1.add_observer(investor2)
-    stock_market1.add_observer(investor3)
-
-    stock_market1.set_stock_price(100)
-    print('.' * 80)
-
-    stock_market1.set_stock_price(105)
-    print('.' * 80)
-
-    stock_market1.remove_observer(investor3)
-    # stock_market1.notify_observers()
-    print('.' * 80)
-
-    stock_market1.set_stock_price(150)
+# # Приклад використання
+# if __name__ == "__main__":
+#     stock_market1 = StockMarket()
+#
+#     investor1 = Investor("John")
+#     investor2 = InvestorNext("Alice")
+#     investor3 = Investor("Bob")
+#
+#     stock_market1.add_observer(investor1)
+#     stock_market1.add_observer(investor2)
+#     stock_market1.add_observer(investor3)
+#
+#     stock_market1.set_stock_price(100)
+#     print('.' * 80)
+#
+#     stock_market1.set_stock_price(105)
+#     print('.' * 80)
+#
+#     stock_market1.remove_observer(investor3)
+#     stock_market1.notify_observers()
+#     print('.' * 80)
+#
+#     stock_market1.set_stock_price(150)

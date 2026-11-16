@@ -14,22 +14,22 @@ import time
 
 ################################################
 
-# import requests
-# from bs4 import BeautifulSoup
-#
-#
-# url = 'https://scrapingclub.com/exercise/list_basic/?page=1'
-# response = requests.get(url)
+import requests
+from bs4 import BeautifulSoup
 
-# # print(response.text)
-# # print(type(response.text))
-#
-# soup = BS(response.text, 'html.parser')
-# print(type(soup))
-# print(soup)
-#
-#
-# # print(*dir(soup), sep='\n')
+
+url = 'https://scrapingclub.com/exercise/list_basic/?page=1'
+response = requests.get(url)
+
+# print(response.text)
+# print(type(response.text))
+
+soup = BS(response.text, 'html.parser')
+print(type(soup))
+print(soup)
+
+
+# print(*dir(soup), sep='\n')
 
 
 

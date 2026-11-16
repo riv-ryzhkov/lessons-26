@@ -1,19 +1,20 @@
 
 # for i in 0, 1.2314, 'Hello', 3+5, True:
-# for i in range(5):  # 0, 1, 2, 3, 4   [0; 5)
-#     print(i, type(i))
-# print('END of cycle')
+# for i in range(10, 20, 3):
+#     print(i, end=" " )
+#
+# print('\nEND of cycle')
 
 
 
 # for i in 2, 5, 78, 'Hello', 89-3:
-#     # print(i, i*2)
-#     # print(i, i*2, sep=' ', end='\n')
+#     print(i, i*2)
+#     print(i, i*2, sep=' ', end='\n')
 #     print(i, i*2, sep='->', end=' === ')
 
 
 
-# for i in range(22, 15, -2):   #  [30:45)
+# for i in range(8, 15, 2):   #  [30:45)
 #     print(i, end='\t\t')
 #     print(i*2, end='\t')
 #     print(i*3, end='\t\t')
@@ -31,14 +32,31 @@
 
 
 
+# a = 5
+# b = 7
+# print(a, b)
+# a, b = b, a
+# # temp = a
+# # a = b
+# # b = temp
+# print(a, b)
+
+
+
+
+
 # a, b, c, d = 2, 7.68, 'Hello', 4
+# print(a, b, c, d)
+
+
 # a = 2
 # b = 7.68
 # c = 'Hello'
 # d = 4
-#
-# a, b = b, a
 # print(a, b, c, d)
+
+# a, b = b, a
+
 
 
 
@@ -51,11 +69,14 @@
 # a, b, c, d = range(-4, -8, -1)
 # print(a, b, c, d)
 
+# a1, a2, a3, a4 = range(30, 34)
+# print(a1, a2, a3, a4)
+
+
 
 # 5! = 1 * 2 * 3 * 4 * 5
 
 # a = int(input('a = '))
-#
 # result = 1
 # for i in range(1, a+1):
 #     # result = result * i
@@ -75,7 +96,7 @@
 # print(sum(range(num+1)))
 
 
-
+#
 # for _ in range(3):
 #     print('****************')
 #     print('................')
@@ -96,6 +117,9 @@
 #         if j % 2:  # j%2=0    j%2=1
 #             print(i, '->', j, end='\t')  # 6 * 5 = 30
 #     print('\t\t', i)
+
+
+
 
 
 # for i in range(5):
@@ -125,7 +149,7 @@
 
 # n = int(input('n = '))
 # count = 0
-# for i in range(2, n//2):
+# for i in range(2, n//2+1):
 #     count += 1
 #     if n % i == 0:
 #         print(n, ' НЕ просте! Бо ділеться на', i)
@@ -153,6 +177,10 @@
 # else:
 #     print('\nNo symbol y!!!')
 
+
+
+# for i in "Hello World":
+#     print(i)
 
 
 # a = [i for i in 'Hello']

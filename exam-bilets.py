@@ -1,7 +1,7 @@
 import random
 
 
-n = 9  # Кількість білетів
+n = 38  # Кількість білетів
 used = []
 lst = [i for i in range(n+1)]
 for i in range(n):

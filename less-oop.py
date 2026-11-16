@@ -9,29 +9,30 @@
 # pr1('Hello, world!')
 # pr2('Hello, world!')
 # pr3('Hello, world!')
-from lxml.html.builder import OBJECT
-
 
 # f1('Hello!')
 
-
 # print('run :', __name__)
-
 
 # import math
 # from math import sin, cos
 # from math import sin as my_sin
-
 
 # print(*dir(math), sep='\n')
 # print(my_sin(3.14))
 # print(cos(3.14))
 
 
+# print(isinstance(True, int))
+# print(type(True))
+# print(True + True)
+# print(True*5)
 
 
-##################################################################
-############ Атрибуты и методы Class ##################################
+
+
+#################################################################
+############ Атрибуты и методы Class ############################
 #################################################################
 ################# Методы __init__, __str__, __repr__ ############
 #################################################################
@@ -41,12 +42,11 @@ from lxml.html.builder import OBJECT
 #     foots = 2
 #     head = 1
 #
-#     def __init__(self,  surname='NoSurname', age=18, sex='man', name='NoName'):
+#     def __init__(self, name='NoName',  surname='NoSurname', age=18, sex='man'):
 #         self.sex = sex
 #         self.age = age
 #         self.name = name
 #         self.surname = surname
-#
 #
 #     def __str__(self):  # print()
 #         # return f'Hello, {self.name}!'
@@ -54,26 +54,53 @@ from lxml.html.builder import OBJECT
 #         return f'Human: {self.sex} {self.name} {self.surname} is {str(self.age)} years old.'
 #         # return f'{self.name} {self.surname} {self.age}'
 #
-#
 #     def __repr__(self):
 #         return 'Human(' + self.name + ' ' + self.surname + ')'
 #         # return 'Human(' + self.sex + ',' + self.name + ',' + self.surname + ',' + str(self.age) + ')'
 #
 #
+# hum1 = Human(name='Max', surname='Pupkin')
+# hum2 = Human(name='Olga', surname='Koval', sex='girl')
+# print(hum1)
+# print(hum2)
+# hum2.surname = 'Тополя'
+# print(hum2)
+# # print(*dir(hum1), sep='\n')
+# list1 = [hum1, hum2]
+# print(list1)
+# print(type(list1))
+#
+
+
+
+# Vasya = Human(name='Vasya', surname='Petrov', age=23, sex='boy')
+# Olya = Human(name='Olya', surname='Koval', age=18, sex='girl')
+# print(Vasya)
+# print(Olya)
+# print(type(Vasya))
+#
+#
+# l1 = [Olya, Vasya]
+# print(l1)
+# print(l1[0])
+
+
+
 # adam = Human(name = 'Adam', surname='Pupkin')
 # print(adam)
 # eva = Human(name = 'Eva', age=20, sex='girl', surname='Koval')
 # print(eva)
 # l1 = [adam, eva]
 # print(l1)
-#
-#
-#
+
+
+
 # hum1 = Human(name='Olena', surname='Koval', age=25, sex='girl')
 # hum2 = Human()
 # hum3 = Human(name='Vasya')
-# # print(*dir(hum1), sep='\n')
-#
+
+# print(*dir(hum1), sep='\n')
+
 # print(hum1.name)
 # hum1.name = 'Olga'
 # print(hum1.name, hum1.surname, hum1.age, hum1.sex)
@@ -86,12 +113,18 @@ from lxml.html.builder import OBJECT
 # print(type(hum1.age))
 # print(type(hum1.name))
 # print(hum2.age + hum1.age)
+# print(hum2.name + hum1.name)
 # print(hum1.name[1:3])
 
 
 # ######################################################################
 # #   ПРИКЛАД  (з поліморфізмом та успадкуванням)   ####################
 # # ####################################################################
+
+# print(2 + 3)
+# print('Hello' + ', Vasya!')
+
+
 
 
 #
@@ -112,7 +145,9 @@ from lxml.html.builder import OBJECT
 #         self.status = 'closed'
 #
 #     def colouring(self):
-#         self.colour = input('input new colour = ')
+#         colour = input('input new colour = ')
+#         if colour.isalpha():
+#             self.colour = colour
 #
 #     def numbering(self):
 #         num = int(input('input new number = '))
@@ -122,53 +157,58 @@ from lxml.html.builder import OBJECT
 #         print(f'Nock-Nock-Nock!!! in {self.number} door.')
 #
 #     def __add__(self, other):  # +
-#         # return self.number + other.number
-#         return str(self.number) + '+' + str(other.number) + '=' + str(self.number + other.number)
+#         return self.number + other.number
+#         # return str(self.number) + ' + ' + str(other.number) + ' = ' + str(self.number + other.number)
 #
 #     def __len__(self):
 #         return len(str(self.number))
+
+
+# print('='*60)
+# d1 = Door(status='closed', number=24)
+# d2 = Door(1234)
+# print(d1)
+# print(d2)
+# # d1.status = 'open'
+# # d2.status = 'closed'
+# d1.open()
+# d2.close()
+# # d1.colouring()
+# # d1.numbering()
+# print(d1)
+# print(d2)
+# d2.nock()
+# print(d1 + d2)
+# print(len('Hello'))
+# print(len(d2))
 #
 #
-# door1 = Door(40)
-# door2 = Door(123, 'closed')
-# print(door1)
-# print(door2)
-#
-# # door2.status = 'open'
-# # print(door1)
-# # print(door2)
-#
-# door2.open()
-# print(door2)
-#
-# door2.close()
-# print(door2)
-#
-# door1.nock()
-# # door2.colouring()
-# # door1.numbering()
-# print(door1)
-# print(door2)
-# #
-# # print(door1 + door2)
-# #
-# # # print(*dir(door2), sep='\n')
-# #
-# # print(len(door2))
-# # door2.open()
-# # print(door1)
-# # print(door2)
-# # door1.close()
-# # door2.colouring()
-# # door1.numbering()
-# # print(door1)
-# # print(door2)
-# # # print(*dir(door1), sep='\n')
-# # door2.nock()
-# # print(len(door1))
-# # print(door1 + door2)
+# # print(*dir(d1), sep='\n')
 #
 #
+#
+# d1 = Door(236)
+# door2 = Door(223)
+# d3 = Door(224)
+# d3.status = 'closed'
+# d2.colour = 'red'
+# d1.close()
+# d3.open()
+# # d2.numbering()
+# # d3.colouring()
+# print(d1)
+# print(d2)
+# print(d3)
+# d2.nock()
+# print(*dir(d1), sep='\n')
+# print(d1 + d2)
+# print(d1.__add__(d2))
+# print(len(d1))
+# print(d1.__len__())
+
+
+############################################
+
 #
 # class SecurityDoor(Door):
 #     colour = 'grey'
@@ -181,7 +221,6 @@ from lxml.html.builder import OBJECT
 #         # return Door.__str__(self)
 #         lock = 'locked' if self.locked else 'unlocked'
 #         return f'The door {str(self.number)} is {self.colour}, {self.status} and {lock}'
-#         # return f'the door {str(self.number)} is {self.colour}, {self.status} and {self.locked}'
 #
 #     def open(self):
 #         if self.locked == False:
@@ -207,14 +246,19 @@ from lxml.html.builder import OBJECT
 # door5.open()
 # print(door5)
 # door5.lock()
-# door5.colouring()
+# # door5.colouring()
 # print(door5)
 # print(door5 + door2)
-
-
-
-
-
+# print(type(door5))
+# print(type(door2))
+# door5.numbering()
+# print(len(door5))
+# print(door5)
+#
+#
+#
+#
+#
 #
 #
 #
@@ -222,8 +266,8 @@ from lxml.html.builder import OBJECT
 # d1 = SecurityDoor()
 # d2 = Door()
 #
-# print(*dir(d2), sep='\n')
-
+# print(*dir(d1), sep='\n')
+#
 # print(type(d1), d1)
 # print(type(d2), d2)
 #
@@ -242,7 +286,7 @@ from lxml.html.builder import OBJECT
 # print(d2)
 #
 # print(d1 + d2)
-
+#
 # d1.locked = False
 # d1.open()
 # d2.open()
@@ -256,14 +300,49 @@ from lxml.html.builder import OBJECT
 # print(d2)
 # print(len(d1))
 # print(d1 + d2)
-
+#
 # print(*dir(d1), sep='\n')
+#
+#
+# # !!!!!!!!!!!!!!!!!!
+# print(SecurityDoor.__mro__)
+#
+# class Figure:
+#     pass
+#
+# class Figure1(Figure):
+#     pass
+#
+# class Figure2(Figure1):
+#     pass
+#
+# class Figure3(Figure2):
+#     pass
+#
+#
+# print(Figure3.__mro__)
+#
+# def mro_names(cls : type)-> tuple[str] :
+#     return tuple(x.__name__ for x in cls.__mro__)
+# #
+# # print(Figure3.mro())
+# # print(mro_names(Figure3))
+#
+# class A : pass
+# class B(A) : pass
+# class C(A) : pass
+# class D(B,C) : pass
+# class E(C,B) : pass
+# print(mro_names(D)) #--> ('D', 'B', 'C', 'A', 'object')
+# print(mro_names(E)) #--> ('E', 'C', 'B', 'A', 'object')
+
+
 
 
 # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #                УСПАДКУВАННЯ (Inheritance)
 #############################################
-#
+
 # class Human:
 #
 #     def __init__(self, name='NoName', surname='NoSurname', age=0):
@@ -281,7 +360,7 @@ from lxml.html.builder import OBJECT
 #
 # class Student(Human):
 #
-#     def __init__(self, name='NoName', surname='NoSurname', age=0, group=0):
+#     def __init__(self, name='NoName', surname='NoSurname', age=18, group=0):
 #         Human.__init__(self, name, surname, age)
 #         self.group = group
 #
@@ -293,18 +372,19 @@ from lxml.html.builder import OBJECT
 # n1 = Human()
 # n2 = Student()
 # n3 = Student(age=21, name='Petya', group=555, surname="Pupkin")
-# # print(n1)
-# # print(n2)
-# # print(n3)
+# print(n1)
+# print(n2)
+# print(n3)
 #
 # print(isinstance(n3, Human), type(n3))
 # print(type(n3) == Human)
 #
-# # print(n2.group, n2.name, n2.surname, n2.age)
-# # print('!!!', n2)
-# # print(n3.group, n3.name, n3.surname, n3.age)
-# # print(n3)
-# # print(n1)
+#
+# print(n2.group, n2.name, n2.surname, n2.age)
+# print('!!!', n2)
+# print(n3.group, n3.name, n3.surname, n3.age)
+# print(n3)
+# print(n1)
 ############################################################
 
 
@@ -312,7 +392,7 @@ from lxml.html.builder import OBJECT
 ############ Stack (LIFO) ############################
 ######################################################
 
-
+#
 # class Stack:
 #
 #     def __init__(self):
@@ -346,7 +426,7 @@ from lxml.html.builder import OBJECT
 # print(a.pop())
 
 
-
+#
 # class Stack:
 #
 #     def __init__(self):
@@ -385,6 +465,7 @@ from lxml.html.builder import OBJECT
 # print(type(a))
 # print(a.number)
 # print(b.number)
+# print(c.number)
 #
 # print(b.pop())
 # print(b.pop())
@@ -401,7 +482,7 @@ from lxml.html.builder import OBJECT
 
 ######################################################################
 ###################### __del__() #################################
-
+#
 # class Car:
 #
 #     def __init__(self, model='BMW'):
@@ -424,6 +505,9 @@ from lxml.html.builder import OBJECT
 # print(car2, 'is the best!')
 # del car3
 # # print(car3)
+# a = 3
+# a = 7
+#
 #
 # print('\nEND of the Program!!!!!!!!!!!!\n\n')
 
@@ -449,16 +533,22 @@ from lxml.html.builder import OBJECT
 #     def s_method():
 #         return 'static method called. Hello, world!'
 #
+#     def __str__(self):
+#         return f'{self.name}, {self.colour}'
+#
 #
 #
 # obj = ToyClass('Ball')
-#
+# print(obj)
 # print(obj.i_method())
 # print(obj.c_method())
 # print(obj.s_method())
 #
+# print(obj)
+#
 # print(ToyClass.c_method())
 # print(ToyClass.s_method())
+# print(obj)
 #
 # print(obj.colour)
 #
@@ -473,7 +563,7 @@ from lxml.html.builder import OBJECT
 #############     ІНКАПСУЛЯЦІЯ (Encapsulation)     ####################
 #######################################################################
 
-
+#
 # class StudentUniver:
 #     animal = 'Human'
 #
@@ -515,14 +605,15 @@ from lxml.html.builder import OBJECT
 # print(s2)
 # s1._health_change('Very nice!')
 # print(s1)
+# print(*dir(s1), sep='\n')
 # # s1.__ill('so bed!')
-# s1.fill_bed('very bed!')
-# print(s1)
+# # s1.fill_bed('very bed!')
+# # print(s1)
 #
-# # print(*dir(s2), sep='\n')
+#
 #
 # s1._StudentUniver__ill('bed!!!!')
-# #
+#
 # print(s1)
 # s1.animal = 'Got'
 # print(StudentUniver.__average__(s1, s2))
@@ -532,6 +623,125 @@ from lxml.html.builder import OBJECT
 #
 # StudentUniver.get_hello()
 # s1.get_hello()
+
+# ################################ Encapsulation  mut/immut !!!!!!!!!!
+# class Rationnel:
+#
+#     @property
+#     def num(self)-> int :
+#         return self._num
+#
+#     @property
+#     def denom(self)-> int :
+#         return self.__denom
+#
+#     @num.setter
+#     def num(self, num: int) -> None:
+#         self._num = num
+#
+#     @denom.setter
+#     def denom(self, denom: int) -> None:
+#         self.__denom = denom
+#
+#
+#     def __init__(self, num: int = 0, denom: int = 1):
+#         if denom == 0:
+#             raise ZeroDivisionError()
+#         self._num = num
+#         self.__denom = denom
+
+
+
+######################################################
+##########  ABC  abstract_method #####################
+######################################################
+
+# from abc import ABC, abstractmethod
+#
+#
+# # 1. Створюємо абстрактний базовий клас
+# class NotificationService(ABC):
+#     """
+#     Абстрактний клас, який задає єдиний контракт (інтерфейс)
+#     для всіх майбутніх служб сповіщень.
+#     """
+#
+#     @abstractmethod
+#     def send(self, message: str) -> None:
+#         """
+#         Абстрактний метод. У нього немає реалізації тут.
+#         Він гарантує, що кожен дочірній клас ЗОБОВ'ЯЗАНИЙ
+#         написати власний метод send().
+#         """
+#         pass
+#
+#     def log_notification(self, message: str) -> None:
+#         """
+#         Звичайний (конкретний) метод.
+#         Він є спільним для всіх сервісів і не потребує переписування.
+#         """
+#         print(f"[LOG] Підготовка до надсилання: '{message}'")
+#
+#
+# # 2. Створюємо дочірній клас для SMS
+# class SMSNotification(NotificationService):
+#
+#     def send(self, message: str) -> None:
+#         # Реалізуємо абстрактний метод під специфіку SMS
+#         print(f"Надсилаємо SMS-повідомлення: {message}")
+#
+#
+# # 3. Створюємо дочірній клас для Email
+# class EmailNotification(NotificationService):
+#
+#     def send(self, message: str) -> None:
+#         # Реалізуємо абстрактний метод під специфіку Email
+#         print(f"Надсилаємо Email-листа: {message}")
+#
+#
+# # 4. Створюємо дочірній клас для Push-сповіщень
+# class PushNotification(NotificationService):
+#
+#     def send(self, message: str) -> None:
+#         # Реалізуємо абстрактний метод під специфіку Push
+#         print(f"Надсилаємо Push-сповіщення на екран: {message}")
+#
+#
+# # # Якщо хтось спробує створити клас без методу send(), наприклад:
+# # class BadService(NotificationService):
+# #     pass
+#
+#
+# # === ЕФЕКТИВНІСТЬ АБСТРАКЦІЇ (Поліморфізм) ===
+#
+# def process_user_notification(service: NotificationService, message: str) -> None:
+#     """
+#     Ця функція 'не знає' і 'не повинна знати', з яким саме сервісом
+#     вона працює (SMS, Email чи Push).
+#     Вона покладається на контракт абстрактного класу NotificationService:
+#     у переданого об'єкта гарантовано є методи log_notification та send.
+#     """
+#     service.log_notification(message)
+#     service.send(message)
+#     print("-" * 30)
+#
+#
+# # Демонстрація роботи програми
+# if __name__ == "__main__":
+#     # Створюємо екземпляри конкретних сервісів
+#     sms_service = SMSNotification()
+#     email_service = EmailNotification()
+#     push_service = PushNotification()
+#
+#     text = "Ваш код верифікації: 9876"
+#
+#     # Універсальна функція успішно працює з будь-яким класом завдяки абстракції
+#     process_user_notification(sms_service, text)
+#     process_user_notification(email_service, text)
+#     process_user_notification(push_service, text)
+#
+#
+#     # b = BadService() # Python одразу викине помилку TypeError ще до запуску логіки!
 
 
 ######################################################
@@ -548,14 +758,16 @@ from lxml.html.builder import OBJECT
 #         self.age = age
 #         SchoolMember.count_members += 1
 #         print(f'(Created SchoolMember: {self.name}). We are {SchoolMember.count_members}.', end=' ')
+#         # print(f'(Created SchoolMember: {self.name}). We are {SchoolMember.count_members}.', end='\n')
 #
 #
 #     def tell(self):
 #         # print(f'Name:"{self.name}" Surname:"{self.surname}" Age:"{self.age}"')
 #         print(f'Name:"{self.name}" Surname:"{self.surname}" Age:"{self.age}"', end=" ")
 #
-#     # def __del__(self):
-#     #     print(self.name, 'Deleted!!!!!!!!!!!!!')
+#     def __del__(self):
+#         SchoolMember.count_members -= 1
+#         print(self.name, 'Deleted!!!!!!!!!!!!!')
 #
 #
 #
@@ -572,7 +784,8 @@ from lxml.html.builder import OBJECT
 # class Teacher(SchoolMember):
 #     status = '<teacher>'
 #
-#     def __init__(self, name='Noname', age=25, surname='NoSurname', salary=1000):
+#     def __init__(self, name='Noname', age=25, surname='NoSurname', salary=10000):
+#         # super.__init__(self, name, age, surname)
 #         SchoolMember.__init__(self, name, age, surname)
 #         self.salary = salary
 #         print(f'(Created Teacher: {self.name}).')
@@ -581,14 +794,14 @@ from lxml.html.builder import OBJECT
 #         SchoolMember.tell(self)
 #         print(self.status, 'Salary: "{0:d}" grn.'.format(self.salary))
 #
-#
-# # t1 = Teacher(name='Ben', age=45, salary=1000)
-# # t2 = Teacher(name='Nick', surname='Koval', salary=5500, age=35)
-# # t1.tell()
-# # t2.tell()
-#
-#
-#
+
+# t1 = Teacher(name='Ben', age=45, salary=10000)
+# t2 = Teacher(name='Nick', surname='Koval', salary=5500, age=35)
+# t1.tell()
+# t2.tell()
+
+
+
 # class Student(SchoolMember):
 #     status = '<student>'
 #
@@ -609,27 +822,25 @@ from lxml.html.builder import OBJECT
 #
 #
 # t1 = Teacher(name='Vasiliy', surname='Mr. Shevchenko', age=35, salary=20000)
-# print(SchoolMember.count_members)
 # t2 = Teacher(name='Oleg', surname='Dr. Koval', age=40, salary=30000)
-# print(SchoolMember.count_members)
 # s1 = Student(name='Mykola', surname='Petrov', age=20, marks=100)
-# print(SchoolMember.count_members)
 # s2 = Student(surname='Hmara', name='Petro', marks=90, age=19)
-#
+# print(SchoolMember.count_members)
 # # s2 = s1
+# print(SchoolMember.count_members)
 # print(id(s1))
 # print(id(s2))
 # t1.tell()
 # t2.tell()
 # s1.tell()
 # s2.tell()
-# # s1.name = 'MAX'
-# # print(id(s1))
-# # print(id(s2))
-# # s1.tell()
-# # s2.tell()
+# s1.name = 'MAX'
+# print(id(s1))
+# print(id(s2))
+# s1.tell()
+# s2.tell()
 #
-# #
+#
 # print(SchoolMember.count_members)
 #
 # sm1 = SchoolMember(name='Olena', surname='Grineva', age=17)
@@ -646,13 +857,166 @@ from lxml.html.builder import OBJECT
 #     print('.'*80)
 #
 #
-# # s1=s2
+# # # s1=s2
 # # print(*dir(s1), sep='\n')
-# print(s1==s2)
-# print(id(s1))
-# print(id(s2))
+# # print(s1==s2)
+# # print(id(s1))
+# # print(id(s2))
 
 ####################################### END
+####################################### PlayList!!!!!!!!!!!!!!!!
+""" petites classes pour gérer une liste de morceaux de musique """
+
+
+# class Morceau:
+#     def __init__(self, titre: str, duree: float):
+#         self._titre = titre
+#         if duree < 0:
+#             raise ValueError("La durée ne peut pas être négative.")
+#         self._duree = duree
+#
+#     def __str__(self) -> str:
+#         return f"Morceau(titre='{self._titre}', duree={self._duree})"
+#
+#     # m1 = Morceau("Salut", 3.67)
+#     # print(m1)
+#
+#     @property
+#     def titre(self) -> str:
+#         return self._titre
+#
+#     @property
+#     def duree(self) -> float:
+#         return self._duree
+#
+#     # m1 = Morceau("Salut", 3.67)
+#     # print(m1)
+#     # print(m1.titre)
+#     # print(m1.duree)
+#
+#     @duree.setter
+#     def duree(self, value: float) -> None:
+#         if value < 0:
+#             raise ValueError("La durée ne peut pas être négative.")
+#         self._duree = value
+#
+#
+# # m1 = Morceau("Salut", 3.67)
+# # print(m1)
+# # m1.duree = 4.7687687
+# # print(m1)
+
+# class Playlist:
+#     def __init__(self, auteur: str = "NoName",morceaux : list[Morceau] = None):
+#         # si l'on initialise par défaut la liste des morceaux à [],
+#         # cela crée une liste partagée entre toutes les instances de Playlist,
+#         # ce qui n'est pas souhaitable. Il vaut mieux utiliser None et créer une nouvelle liste dans le constructeur.
+#         # voir un petit exemple fonctionnelci-dessous pour comprendre le problème
+#         self._auteur = auteur
+#         if morceaux is None:
+#             self._morceaux = []
+#         else:
+#             self._morceaux = list(morceaux)
+
+#     @property
+#     def auteur(self) -> str:
+#         return self._auteur
+
+#     @property
+#     def morceaux(self) -> list[Morceau]:
+#         return self._morceaux
+
+#     def ajouter_morceau(self, morceau : Morceau) -> None:
+#         self._morceaux.append(morceau)
+
+
+#     def __str__(self) -> str:
+#         """ l'auteur en entête puis la liste des morceaux, chacun sur une ligne avec le titre et la durée """
+#         result = f"Playlist(auteur='{self._auteur}', morceaux=[\n"
+#         for m in range(len(self.morceaux)-1):
+#             result += f"  {self.morceaux[m]}\n"
+#         if self.morceaux:
+#             result += f"  {self.morceaux[-1]}\n"
+#         result += "])"
+#         # même chose, mais avec un join
+#         # result = f"Playlist(auteur='{self._auteur}', morceaux=["
+#         # result += ", ".join(str(m) for m in self.morceaux)
+#         # result += "])"
+#         return result
+
+
+# # pl1 = Playlist("FrMusic")
+# # print(pl1)
+# # m1 = Morceau("Salut", 3.67)
+# # m2 = Morceau("Bonjour", 4.59)
+# # m3 = Morceau("Bravo", 5.32)
+# # pl1.ajouter_morceau(m1)
+# # print(pl1)
+# # pl1.ajouter_morceau(m2)
+# # pl1.ajouter_morceau(m1)
+# # pl1.ajouter_morceau(m2)
+# # pl1.ajouter_morceau(m3)
+# # print(pl1)
+
+
+#     def trouve_par_duree(self, duree : float) -> Morceau:
+#         """trouve le morceau dont la durée est la plus proche de la durée donnée"""
+#         if not self.morceaux:
+#             raise ValueError("La playlist est vide.")
+#         morceau_proche = self.morceaux[0]
+#         for morceau in self.morceaux:
+#             if abs(morceau.duree - duree) < abs(morceau_proche.duree - duree):
+#                 morceau_proche = morceau
+#         return morceau_proche
+
+
+# def probleme_liste_partagee(liste : list[int] = []) -> None:
+#     """ montre le problème de la liste partagée entre toutes les instances de Playlist """
+#     liste.append(len(liste))
+#     liste.append("Encore!")
+#     print(f"Liste actuelle : {liste}")
+
+# def probleme_liste_partagee1(liste : list[int] = None) -> None:
+#     """ montre le problème de la liste partagée entre toutes les instances de Playlist """
+#     if liste == None:
+#         liste = []
+#     liste.append(len(liste))
+#     liste.append("Encore!")
+#     print(f"Liste actuelle : {liste}")
+
+
+# def test_probleme_liste_partagee() -> None:
+#     print("Test du problème de la liste partagée entre toutes les appels de la fonction")
+#     probleme_liste_partagee()
+#     probleme_liste_partagee()
+#     probleme_liste_partagee()
+#     probleme_liste_partagee()
+#     probleme_liste_partagee1()
+#     probleme_liste_partagee1()
+#     probleme_liste_partagee1()
+
+# def test1() -> None:
+#     # test de la classe Morceau
+#     m1 = Morceau("Trop super", 3.5)
+#     m2 = Morceau("Max bien", 4.0)
+#     print(m1)
+#     print(m2)
+#     # test de la classe Playlist
+#     p = Playlist("Toto")
+#     p.ajouter_morceau(m1)
+#     p.ajouter_morceau(m2)
+#     print(p)
+#     # test de la méthode trouve_par_duree
+#     duree_test = 3.8
+#     morceau_proche = p.trouve_par_duree(duree_test)
+#     print(f"Le morceau le plus proche de {duree_test} est : {morceau_proche}")
+
+# if __name__ == "__main__":
+#     test_probleme_liste_partagee()
+#     test1()
+
+
+
 
 
 

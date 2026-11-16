@@ -1,4 +1,4 @@
-# # Базовий клас для обробників
+# Базовий клас для обробників
 # class Handler:
 #     def __init__(self, successor=None):
 #         self._successor = successor
@@ -56,7 +56,7 @@
 #             print(result)
 #         else:
 #             print(f"No handler could process the request: {request}")
-
+#
 
 """
 Патерн "Ланцюжок відповідальності" дозволяє передавати запити 
@@ -84,107 +84,100 @@ ConcreteHandlerA, ConcreteHandlerB і ConcreteHandlerC - це конкретні
 поки один з них не впорається з обробкою.
 """
 
-# ==============================================
-# Приклад обробки документів
-# ==============================================
-
-
-# Базовий клас обробника документа
-class DocumentHandler:
-    def __init__(self, name):
-        self.name = name
-        self.next_handler = None
-
-    def set_next_handler(self, next_handler):
-        self.next_handler = next_handler
-
-    def can_handle(self, document_type):
-        return False
-
-    def process_document(self, document_type):
-        pass
-
-    def handle_document(self, document_type):
-        if self.can_handle(document_type):
-            self.process_document(document_type)
-        elif self.next_handler:
-            self.next_handler.handle_document(document_type)
-        else:
-            print(f"No handler available for {document_type}")
-
-
-# Конкретні обробники документів
-class PDFHandler(DocumentHandler):
-    def can_handle(self, document_type):
-        return document_type.lower() == "pdf"
-
-    def process_document(self, document_type):
-        print(f"{self.name} handles {document_type} document")
-
-
-class WordHandler(DocumentHandler):
-    def can_handle(self, document_type):
-        return document_type.lower() == "word"
-
-    def process_document(self, document_type):
-        print(f"{self.name} handles {document_type} document")
-
-
-class TextHandler(DocumentHandler):
-    def can_handle(self, document_type):
-        return document_type.lower() == "text"
-
-    def process_document(self, document_type):
-        print(f"{self.name} handles {document_type} document")
-
-
-class JpegHandler(DocumentHandler):
-    def can_handle(self, document_type):
-        return document_type.lower() == "jpeg" or document_type.lower() == 'jpg'
-
-    def process_document(self, document_type):
-        print(f"{self.name} handles {document_type} document")
-
-
-# Приклад використання
-if __name__ == "__main__":
-    pdf_handler = PDFHandler("PDF Handler")
-    word_handler = WordHandler("Word Handler")
-    text_handler = TextHandler("Text Handler")
-    jpeg_handler = JpegHandler("Jpeg Handler")
-
-    pdf_handler.set_next_handler(word_handler)
-    word_handler.set_next_handler(text_handler)
-    text_handler.set_next_handler(jpeg_handler)
-
-    # pdf_handler.handle_document("Word")   # Word Handler handles Word document
-    # pdf_handler.handle_document("PDF")    # PDF Handler handles PDF document
-    # pdf_handler.handle_document("Text")   # Text Handler handles Text document
-    # pdf_handler.handle_document("Excel")  # No handler available for Excel
-
-
-    list_of_documents = [
-        'Word',
-        'PDF',
-        'Text',
-        'Excel',
-        'Word',
-        'PDF',
-        'PDF',
-        'Jpeg'
-    ]
-
-    for el in list_of_documents:
-        pdf_handler.handle_document(el)
-
-
-    # while True:
-    #     doc = input('Input type of the document : ')
-    #     if doc != 'exit':
-    #         pdf_handler.handle_document(doc)
-    #         print('*' * 80)
-    #     else:
-    #         break
+# # ==============================================
+# # Приклад обробки документів
+# # ==============================================
+#
+#
+# # Базовий клас обробника документа
+# class DocumentHandler:
+#     def __init__(self, name):
+#         self.name = name
+#         self.next_handler = None
+#
+#     def set_next_handler(self, next_handler):
+#         self.next_handler = next_handler
+#
+#     def can_handle(self, document_type):
+#         return False
+#
+#     def process_document(self, document_type):
+#         pass
+#
+#     def handle_document(self, document_type):
+#         if self.can_handle(document_type):
+#             self.process_document(document_type)
+#         elif self.next_handler:
+#             self.next_handler.handle_document(document_type)
+#         else:
+#             print(f"No handler available for {document_type}")
+#
+#
+# # Конкретні обробники документів
+# class PDFHandler(DocumentHandler):
+#     def can_handle(self, document_type):
+#         return document_type.lower() == "pdf"
+#
+#     def process_document(self, document_type):
+#         print(f"{self.name} handles {document_type} document")
+#
+#
+# class WordHandler(DocumentHandler):
+#     def can_handle(self, document_type):
+#         return document_type.lower() == "word"
+#
+#     def process_document(self, document_type):
+#         print(f"{self.name} handles {document_type} document")
+#
+#
+# class TextHandler(DocumentHandler):
+#     def can_handle(self, document_type):
+#         return document_type.lower() == "text"
+#
+#     def process_document(self, document_type):
+#         print(f"{self.name} handles {document_type} document")
+#
+#
+#
+# # Приклад використання
+# if __name__ == "__main__":
+#     pdf_handler = PDFHandler("PDF Handler")
+#     word_handler = WordHandler("Word Handler")
+#     text_handler = TextHandler("Text Handler")
+#
+#     pdf_handler.set_next_handler(word_handler)
+#     word_handler.set_next_handler(text_handler)
+#     #
+#     # pdf_handler.handle_document("Word")   # Word Handler handles Word document
+#     # pdf_handler.handle_document("PDF")    # PDF Handler handles PDF document
+#     # pdf_handler.handle_document("Text")   # Text Handler handles Text document
+#     # pdf_handler.handle_document("Excel")  # No handler available for Excel
+#     # pdf_handler.handle_document("Jpeg")  # No handler available for Excel
+#
+#
+#     list_of_documents = [
+#         'Word',
+#         'PDF',
+#         'Text',
+#         'Excel',
+#         'Word',
+#         'PDF',
+#         'PDF',
+#         'jpeg',
+#         'HTML'
+#     ]
+#
+#     for el in list_of_documents:
+#         pdf_handler.handle_document(el)
+#
+#
+#     while True:
+#         doc = input('Input type of the document : ')
+#         if doc != 'exit':
+#             pdf_handler.handle_document(doc)
+#             print('*' * 80)
+#         else:
+#             break
 
 
 

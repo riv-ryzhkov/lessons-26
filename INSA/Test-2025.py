@@ -1,7 +1,7 @@
-# def ma_fonction(a, b=10):
-#     return a + b
+# def ma_fonction(a, b=10, c=20):
+#     return a + b + c
 #
-# print(ma_fonction(5))
+# print(ma_fonction(5, 15))
 ###########################################
 # print([ i for i in range(6) if i % 2 == 0 ])
 ###########################################

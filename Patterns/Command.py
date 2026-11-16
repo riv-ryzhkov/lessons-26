@@ -128,7 +128,7 @@
 
 
 
-
+#
 # # Отримувач (Receiver)
 # class Computer:
 #     _state = 'off'

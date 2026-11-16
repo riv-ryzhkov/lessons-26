@@ -19,18 +19,21 @@ y = digits.target[:-10]
 # Обучаем модель
 clf.fit(X, y)
 
-# Предсказываем цифру для одного изображения
-# d_img = -1
-#
-# print("Prediction:", clf.predict([digits.data[d_img]]))
-
-# Показываем изображение
-
-
-
 for d_img in range(1796):
     plt.imshow(digits.images[d_img], cmap=plt.cm.gray_r, interpolation="nearest")
     print("Prediction:", clf.predict([digits.data[d_img]]))
     plt.show()
 
+
+
+
+# Предсказываем цифру для одного изображения
+d_img = -8
+
+print("Prediction:", clf.predict([digits.data[d_img]]))
+
+
+# Показываем изображение
+plt.imshow(digits.images[d_img], cmap=plt.cm.gray_r, interpolation="nearest")
+plt.show()
 

@@ -6,69 +6,72 @@
 Іншими словами, інтерфейси повинні бути специфічними для потреб клієнтів.
 """
 
-#
-# class Worker:
-#     def work(self):
-#         pass
-#
-#     def get_paid(self):
-#         pass
-#
-#     def track_hours(self):
-#         pass
-#
-#     def get_vacation(self):
-#         pass
-#
-#
-# class Employee(Worker):
-#     def work(self):
-#         print("Employee is working")
-#
-#     def get_paid(self):
-#         print("Employee is getting paid")
-#
-#     def get_vacation(self):
-#         print('Employee has vacation')
-#
-#
-# class Freelancer(Worker):
-#     def work(self):
-#         print("Freelancer is working")
-#
-#     def get_paid(self):
-#         print("Freelancer is getting paid")
-#
-#     def track_hours(self):
-#         print("Freelancer is tracking hours")
-#
-#
-# class Gigalo(Worker):
-#     def get_vacation(self):
-#         print('Gigaslo has vacation')
-#
-#     def get_paid(self):
-#         print("Gigalo is getting paid")
-#
-#
-#
-# user1 = Employee()
-# user2 = Freelancer()
-# user3 = Employee()
-# user4 = Gigalo()
-#
-#
-#
-# # workers = [user1, user2, user3]
-# workers = [user1, user2, user3, user4]
-#
-#
-# for human in workers:
-#     human.work()
-#     human.get_paid()
-#     human.track_hours()
-#     human.get_vacation()
-#     print('.' * 80)
+
+class Worker:
+    def work(self):
+        pass
+
+    def get_paid(self):
+        pass
+
+    def track_hours(self):
+        pass
+
+    def get_vacation(self):
+        pass
+
+
+class Employee(Worker):
+    def work(self):
+        print("Employee is working")
+
+    def get_paid(self):
+        print("Employee is getting paid")
+
+    def get_vacation(self):
+        print('Employee has vacation')
+
+
+class Freelancer(Worker):
+    def work(self):
+        print("Freelancer is working")
+
+    def get_paid(self):
+        print("Freelancer is getting paid")
+
+    def track_hours(self):
+        print("Freelancer is tracking hours")
+
+
+class Gigalo(Worker):
+    def get_vacation(self):
+        print('Gigaslo has vacation')
+
+    def get_paid(self):
+        print("Gigalo is getting paid")
+
+
+
+
+
+user1 = Employee()
+user2 = Freelancer()
+user3 = Employee()
+user4 = Gigalo()
+user5 = Robot()
+
+
+
+# workers = [user1, user2, user3]
+workers = [user1, user2, user3, user4, user5]
+
+
+for human in workers:
+    human.work()
+    human.get_paid()
+    human.track_hours()
+    human.get_vacation()
+    print('.' * 80)
 
 
 """
